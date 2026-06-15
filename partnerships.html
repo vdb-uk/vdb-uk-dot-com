@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="Science &amp; Engineering — VDB UK" data-title-cy="Gwyddoniaeth a Pheirianneg — VDB UK">Science &amp; Engineering — VDB UK</title>
-  <meta name="description" content="From the lab bench to the market. VDB builds demonstrators, runs field trials, and creates scalable solutions that move from concept to validated product." data-content-en="From the lab bench to the market. VDB builds demonstrators, runs field trials, and creates scalable solutions that move from concept to validated product." data-content-cy="O'r fainc labordy i'r farchnad. Mae VDB yn adeiladu arddangoswyr, yn cynnal treialon maes, ac yn creu atebion graddadwy sy'n symud o gysyniad i gynnyrch dilysedig.">
+  <title data-title-en="Partnerships — VDB UK" data-title-cy="Partneriaethau — VDB UK">Partnerships — VDB UK</title>
+  <meta name="description" content="VDB UK leads complex operational and research programmes, with Higher Level Software as its technical delivery partner for software, hosting and human-supervised agentic systems." data-content-en="VDB UK leads complex operational and research programmes, with Higher Level Software as its technical delivery partner for software, hosting and human-supervised agentic systems." data-content-cy="VDB UK leads complex operational and research programmes, with Higher Level Software as its technical delivery partner for software, hosting and human-supervised agentic systems.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -24,6 +24,7 @@
       --slate-800: #252838;
       --slate-700: #363a4d;
       --slate-600: #4a4f66;
+      --slate-500: #636880;
       --slate-400: #8b91a8;
       --slate-300: #b0b5c8;
       --slate-200: #d4d7e3;
@@ -322,6 +323,37 @@
     .header__cta:hover { background: var(--red-500); }
 
     /* ═══════════════════════════════════════
+       THEME TOGGLE
+       ═══════════════════════════════════════ */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      background: var(--slate-800);
+      border-radius: 6px;
+      padding: 2px;
+    }
+
+    .theme-toggle__btn {
+      padding: 6px 10px;
+      border-radius: 4px;
+      color: var(--slate-400);
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+    }
+
+    .theme-toggle__btn--active {
+      background: var(--red-600);
+      color: white;
+    }
+
+    .theme-toggle__btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ═══════════════════════════════════════
        BUTTONS
        ═══════════════════════════════════════ */
     .btn {
@@ -377,72 +409,36 @@
     }
 
     /* ═══════════════════════════════════════
-       BREADCRUMB
-       ═══════════════════════════════════════ */
-    .breadcrumb {
-      padding: var(--space-md) 0;
-      padding-top: calc(var(--header-height) + var(--space-md));
-      background: var(--slate-950);
-    }
-
-    .breadcrumb__inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 var(--space-xl);
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-      font-size: 0.8rem;
-      color: var(--slate-400);
-    }
-
-    .breadcrumb a {
-      color: var(--slate-400);
-      transition: color 0.2s;
-    }
-
-    .breadcrumb a:hover {
-      color: var(--slate-200);
-    }
-
-    .breadcrumb__sep {
-      color: var(--slate-600);
-    }
-
-    .breadcrumb__current {
-      color: var(--slate-200);
-    }
-
-    /* ═══════════════════════════════════════
-       PAGE HERO — 40vh with background image
+       PAGE HERO — image background variant
        ═══════════════════════════════════════ */
     .page-hero {
       position: relative;
       min-height: 40vh;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       background: var(--slate-950);
       overflow: hidden;
+      padding-top: var(--header-height);
     }
 
-    .page-hero__image {
+    .page-hero__bg {
       position: absolute;
       inset: 0;
-      z-index: 0;
+      background-image: url('/images/contact-bristol.jpg');
+      background-size: cover;
+      background-position: center;
     }
 
-    .page-hero__image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .page-hero__image::after {
+    .page-hero__bg::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(15,17,24,0.85) 0%, rgba(15,17,24,0.6) 100%);
-      z-index: 1;
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 17, 24, 0.55) 0%,
+        rgba(15, 17, 24, 0.75) 60%,
+        rgba(15, 17, 24, 0.92) 100%
+      );
     }
 
     .page-hero__content {
@@ -450,28 +446,40 @@
       z-index: 2;
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: var(--space-4xl) var(--space-xl);
+      padding: var(--space-4xl) var(--space-xl) var(--space-3xl);
       width: 100%;
     }
 
-    .page-hero__eyebrow {
-      display: inline-flex;
+    .page-hero__breadcrumb {
+      display: flex;
       align-items: center;
       gap: var(--space-sm);
+      font-size: 0.85rem;
+      color: var(--slate-400);
       margin-bottom: var(--space-lg);
     }
 
-    .page-hero__eyebrow::before {
-      content: '';
-      width: 32px;
-      height: 2px;
-      background: var(--red-500);
+    .page-hero__breadcrumb a {
+      color: var(--slate-400);
+      transition: color 0.2s;
+    }
+
+    .page-hero__breadcrumb a:hover {
+      color: white;
+    }
+
+    .page-hero__breadcrumb span.sep {
+      color: var(--slate-600);
+    }
+
+    .page-hero__breadcrumb span.current {
+      color: var(--slate-300);
     }
 
     .page-hero h1 {
       color: white;
-      margin-bottom: var(--space-md);
       max-width: 700px;
+      margin-bottom: var(--space-md);
     }
 
     .page-hero__subtitle {
@@ -482,421 +490,283 @@
     }
 
     /* ═══════════════════════════════════════
-       OVERVIEW SECTION
+       CONTACT SECTION — two-column layout
        ═══════════════════════════════════════ */
-    .overview {
+    .contact {
       padding: var(--space-5xl) 0;
       background: var(--stone-50);
     }
 
-    .overview__inner {
+    .contact__inner {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 var(--space-xl);
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: var(--space-4xl);
       align-items: start;
     }
 
-    .overview__text p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--slate-700);
-      margin-bottom: var(--space-lg);
-    }
-
-    .overview__text p:last-child {
-      margin-bottom: 0;
-    }
-
-    .overview__aside {
-      background: white;
-      border: 1px solid var(--slate-200);
-      border-radius: 12px;
-      padding: var(--space-2xl);
-      position: sticky;
-      top: calc(var(--header-height) + var(--space-xl));
-    }
-
-    .overview__aside h3 {
+    /* --- Details column (left) --- */
+    .contact__details h2 {
       color: var(--slate-900);
-      margin-bottom: var(--space-lg);
-    }
-
-    .overview__aside ul {
-      list-style: none;
-    }
-
-    .overview__aside li {
-      font-size: 0.92rem;
-      color: var(--slate-600);
-      padding: var(--space-sm) 0;
-      border-bottom: 1px solid var(--slate-100);
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-    }
-
-    .overview__aside li:last-child {
-      border-bottom: none;
-    }
-
-    .overview__aside li::before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--red-500);
-      flex-shrink: 0;
-    }
-
-    /* ═══════════════════════════════════════
-       APPROACH STEPS — 4-step process
-       ═══════════════════════════════════════ */
-    .approach-steps {
-      padding: var(--space-5xl) 0;
-      background: var(--slate-900);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .approach-steps__bg {
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(200,40,63,0.06) 0%, transparent 70%);
-    }
-
-    .approach-steps__header {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 var(--space-xl);
-      margin-bottom: var(--space-3xl);
-      position: relative;
-      z-index: 1;
-    }
-
-    .approach-steps__header h2 {
-      color: white;
       margin-top: var(--space-sm);
+      margin-bottom: var(--space-2xl);
     }
 
-    .approach-steps__grid {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 var(--space-xl);
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-lg);
-      position: relative;
-      z-index: 1;
-    }
-
-    .step-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      padding: var(--space-2xl);
-      transition: border-color 0.3s;
-    }
-
-    .step-card:hover {
-      border-color: rgba(255,255,255,0.12);
-    }
-
-    .step-card__number {
-      font-family: var(--font-display);
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: var(--space-md);
-      opacity: 0.9;
-    }
-
-    .step-card:nth-child(1) .step-card__number { color: var(--red-500); }
-    .step-card:nth-child(2) .step-card__number { color: var(--gold-400); }
-    .step-card:nth-child(3) .step-card__number { color: var(--slate-400); }
-    .step-card:nth-child(4) .step-card__number { color: var(--red-400); }
-
-    .step-card h3 {
-      color: white;
-      font-size: 1.3rem;
-      margin-bottom: var(--space-md);
-    }
-
-    .step-card__list {
-      list-style: none;
-    }
-
-    .step-card__list li {
-      font-size: 0.88rem;
-      color: var(--slate-300);
-      padding: var(--space-sm) 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
+    .contact__item {
       display: flex;
       align-items: flex-start;
-      gap: var(--space-sm);
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
     }
 
-    .step-card__list li:last-child {
-      border-bottom: none;
-    }
-
-    .step-card__list li::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      margin-top: 7px;
+    .contact__icon {
       flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--red-100);
+      color: var(--red-600);
     }
 
-    .step-card:nth-child(1) .step-card__list li::before { background: var(--red-500); }
-    .step-card:nth-child(2) .step-card__list li::before { background: var(--gold-400); }
-    .step-card:nth-child(3) .step-card__list li::before { background: var(--slate-500); }
-    .step-card:nth-child(4) .step-card__list li::before { background: var(--red-400); }
+    .contact__icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .contact__item-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--slate-400);
+      margin-bottom: var(--space-xs);
+    }
+
+    .contact__item-value {
+      font-size: 0.95rem;
+      color: var(--slate-700);
+      line-height: 1.6;
+    }
+
+    .contact__item-value a {
+      color: var(--red-600);
+      transition: color 0.2s;
+    }
+
+    .contact__item-value a:hover {
+      color: var(--red-500);
+      text-decoration: underline;
+    }
+
+    /* --- Form column (right) --- */
+    .contact__form-wrap {
+      background: var(--slate-900);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: var(--space-2xl);
+    }
+
+    .contact__form-wrap h3 {
+      color: white;
+      margin-bottom: var(--space-xl);
+    }
+
+    .form__group {
+      margin-bottom: var(--space-lg);
+    }
+
+    .form__label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--slate-300);
+      margin-bottom: var(--space-sm);
+    }
+
+    .form__label .optional {
+      font-weight: 400;
+      color: var(--slate-500);
+      font-size: 0.8rem;
+    }
+
+    .form__input,
+    .form__textarea {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      padding: 12px 16px;
+      border: 1px solid var(--slate-700);
+      border-radius: 6px;
+      background: var(--slate-800);
+      color: white;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form__input::placeholder,
+    .form__textarea::placeholder {
+      color: var(--slate-500);
+    }
+
+    .form__input:focus,
+    .form__textarea:focus {
+      border-color: var(--red-500);
+      box-shadow: 0 0 0 3px rgba(200, 40, 63, 0.15);
+    }
+
+    .form__textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form__submit {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: 14px 32px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background: var(--red-600);
+      color: white;
+      transition: all 0.25s ease;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .form__submit:hover {
+      background: var(--red-500);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+    }
+
+    .form__submit .btn__arrow {
+      transition: transform 0.2s;
+    }
+
+    .form__submit:hover .btn__arrow {
+      transform: translateX(3px);
+    }
 
     /* ═══════════════════════════════════════
-       KEY OUTCOMES
+       WHAT TO EXPECT
        ═══════════════════════════════════════ */
-    .outcomes {
-      padding: var(--space-5xl) 0;
+    .expect {
+      padding: var(--space-4xl) 0;
       background: var(--stone-100);
     }
 
-    .outcomes__inner {
+    .expect__inner {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 var(--space-xl);
     }
 
-    .outcomes__header {
-      margin-bottom: var(--space-3xl);
+    .expect__header {
+      margin-bottom: var(--space-2xl);
     }
 
-    .outcomes__header h2 {
+    .expect__header h2 {
       color: var(--slate-900);
       margin-top: var(--space-sm);
     }
 
-    .outcomes__grid {
+    .expect__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-lg);
     }
 
-    .outcome-card {
+    .expect-card {
       background: white;
       border: 1px solid var(--slate-200);
       border-radius: 12px;
       padding: var(--space-2xl);
-      text-align: center;
+      position: relative;
+      overflow: hidden;
       transition: all 0.3s ease;
     }
 
-    .outcome-card:hover {
-      border-color: var(--slate-300);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    .expect-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--slate-200);
+      transition: background 0.3s;
     }
 
-    .outcome-card__icon {
+    .expect-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      border-color: var(--slate-300);
+    }
+
+    .expect-card:hover::before { background: var(--red-500); }
+
+    .expect-card:nth-child(1)::before { background: var(--red-500); }
+    .expect-card:nth-child(2)::before { background: var(--gold-500); }
+    .expect-card:nth-child(3)::before { background: var(--red-500); }
+
+    .expect-card__icon {
       width: 56px;
       height: 56px;
-      border-radius: 50%;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto var(--space-lg);
+      margin-bottom: var(--space-lg);
     }
 
-    .outcome-card:nth-child(1) .outcome-card__icon { background: var(--gold-100); color: var(--gold-600); }
-    .outcome-card:nth-child(2) .outcome-card__icon { background: var(--red-100); color: var(--red-600); }
-    .outcome-card:nth-child(3) .outcome-card__icon { background: var(--slate-100); color: var(--slate-700); }
+    .expect-card:nth-child(1) .expect-card__icon { background: var(--red-100); color: var(--red-600); }
+    .expect-card:nth-child(2) .expect-card__icon { background: var(--gold-100); color: var(--gold-600); }
+    .expect-card:nth-child(3) .expect-card__icon { background: var(--slate-100); color: var(--slate-700); }
 
-    .outcome-card__value {
+    .expect-card__title {
       font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: var(--space-sm);
+      font-size: 1.15rem;
+      font-weight: 600;
       color: var(--slate-900);
-    }
-
-    .outcome-card__desc {
-      font-size: 0.9rem;
-      color: var(--slate-600);
-      line-height: 1.5;
+      line-height: 1.35;
     }
 
     /* ═══════════════════════════════════════
-       CASE STUDIES
+       MAP SECTION
        ═══════════════════════════════════════ */
-    .related {
-      padding: var(--space-5xl) 0;
+    .map-section {
+      padding: var(--space-4xl) 0;
       background: var(--stone-50);
     }
 
-    .related__inner {
+    .map-section__inner {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 var(--space-xl);
     }
 
-    .related__header {
-      margin-bottom: var(--space-3xl);
+    .map-section__header {
+      margin-bottom: var(--space-xl);
     }
 
-    .related__header h2 {
+    .map-section__header h2 {
       color: var(--slate-900);
       margin-top: var(--space-sm);
     }
 
-    .related__grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-lg);
-    }
-
-    .related-card {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      background: white;
-      border: 1px solid var(--slate-200);
+    .map-section__embed {
       border-radius: 12px;
       overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .related-card:hover {
-      border-color: var(--slate-300);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-    }
-
-    .related-card__image {
-      background: var(--slate-200);
-      min-height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .related-card__image::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      opacity: 0.35;
-    }
-
-    .related-card:nth-child(1) .related-card__image::after { background: linear-gradient(135deg, #1a3a2a, #2d5a3e); }
-    .related-card:nth-child(2) .related-card__image::after { background: linear-gradient(135deg, #1a2a3a, #2d4a5e); }
-
-    .related-card__image span {
-      position: relative;
-      z-index: 2;
-      color: var(--slate-300);
-      font-size: 0.7rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      padding: var(--space-md);
-    }
-
-    .related-card__body {
-      padding: var(--space-xl);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .related-card__partner {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--red-600);
-      margin-bottom: var(--space-sm);
-    }
-
-    .related-card__title {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--slate-900);
-      margin-bottom: var(--space-sm);
-      line-height: 1.3;
-    }
-
-    .related-card__desc {
-      font-size: 0.88rem;
-      color: var(--slate-600);
-      line-height: 1.6;
-      flex: 1;
-    }
-
-    .related-card__link {
-      margin-top: var(--space-md);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--red-600);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: gap 0.2s;
-    }
-
-    .related-card:hover .related-card__link { gap: 10px; }
-
-    /* ═══════════════════════════════════════
-       CTA BANNER
-       ═══════════════════════════════════════ */
-    .cta-banner {
-      padding: var(--space-5xl) 0;
-      background: var(--red-700);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-banner__pattern {
-      position: absolute;
-      inset: 0;
-      opacity: 0.08;
-      background-image:
-        repeating-linear-gradient(
-          -45deg,
-          transparent,
-          transparent 40px,
-          rgba(255,255,255,0.1) 40px,
-          rgba(255,255,255,0.1) 42px
-        );
-    }
-
-    .cta-banner__inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 var(--space-xl);
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-banner h2 {
-      color: white;
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: var(--space-md);
-    }
-
-    .cta-banner__desc {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.8);
-      max-width: 520px;
-      margin: 0 auto var(--space-2xl);
+      border: 1px solid var(--slate-200);
     }
 
     /* ═══════════════════════════════════════
@@ -985,6 +855,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     .animate-in {
       opacity: 0;
       animation: fadeInUp 0.7s ease forwards;
@@ -994,7 +869,9 @@
     .animate-in--delay-2 { animation-delay: 0.2s; }
     .animate-in--delay-3 { animation-delay: 0.3s; }
     .animate-in--delay-4 { animation-delay: 0.4s; }
+    .animate-in--delay-5 { animation-delay: 0.5s; }
 
+    /* Scroll-triggered reveal */
     .reveal--hidden {
       opacity: 0;
       transform: translateY(20px);
@@ -1010,11 +887,8 @@
        RESPONSIVE
        ═══════════════════════════════════════ */
     @media (max-width: 1024px) {
-      .overview__inner { grid-template-columns: 1fr; }
-      .overview__aside { position: static; }
-      .approach-steps__grid { grid-template-columns: 1fr; }
-      .outcomes__grid { grid-template-columns: repeat(2, 1fr); }
-      .related__grid { grid-template-columns: 1fr; }
+      .contact__inner { grid-template-columns: 1fr; gap: var(--space-2xl); }
+      .expect__grid { grid-template-columns: 1fr; }
       .footer__top { grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
     }
 
@@ -1101,16 +975,13 @@
         flex-wrap: wrap;
         row-gap: var(--space-xs);
       }
-      .outcomes__grid { grid-template-columns: 1fr; }
-      .related-card { grid-template-columns: 1fr; }
-      .related-card__image { min-height: 120px; }
       .footer__top { grid-template-columns: 1fr; }
-      .footer__bottom { flex-direction: column; gap: var(--space-md); text-align: center; }
+      .page-hero { min-height: 35vh; }
     }
 
     @media (max-width: 480px) {
-      .page-hero { min-height: 50vh; }
-      .btn { justify-content: center; }
+      .page-hero h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+      .footer__bottom { flex-direction: column; gap: var(--space-md); text-align: center; }
     }
 
     /* ═══════════════════════════════════════
@@ -1127,6 +998,7 @@
       display: initial;
     }
 
+    /* Block-level bilingual elements */
     [data-lang="en"] [data-cy-block],
     [data-lang="cy"] [data-en-block] {
       display: none;
@@ -1137,6 +1009,7 @@
       display: block;
     }
 
+    /* Flex bilingual elements */
     [data-lang="en"] [data-cy-flex],
     [data-lang="cy"] [data-en-flex] {
       display: none;
@@ -1147,6 +1020,7 @@
       display: flex;
     }
 
+    /* Grid bilingual elements */
     [data-lang="en"] [data-cy-grid],
     [data-lang="cy"] [data-en-grid] {
       display: none;
@@ -1158,49 +1032,16 @@
     }
 
     /* ═══════════════════════════════════════
-       THEME TOGGLE
-       ═══════════════════════════════════════ */
-    .theme-toggle {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      background: var(--slate-800);
-      border-radius: 6px;
-      padding: 2px;
-    }
-
-    .theme-toggle__btn {
-      padding: 6px 10px;
-      border-radius: 4px;
-      color: var(--slate-400);
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-    }
-
-    .theme-toggle__btn--active {
-      background: var(--red-600);
-      color: white;
-    }
-
-    .theme-toggle__btn svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    /* ═══════════════════════════════════════
        LIGHT THEME OVERRIDES
        ═══════════════════════════════════════ */
 
-    /* Smooth theme transitions */
+    /* Smooth theme transitions on key sections */
     .page-hero,
-    .overview,
-    .approach-steps,
-    .step-card,
-    .outcomes,
-    .outcome-card,
-    .related,
-    .related-card,
+    .contact,
+    .contact__form-wrap,
+    .expect,
+    .expect-card,
+    .map-section,
     .footer {
       transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
@@ -1253,34 +1094,18 @@
       stroke: var(--slate-300);
     }
 
-    /* --- Breadcrumb --- */
-    [data-theme="light"] .breadcrumb {
-      background: var(--stone-50);
-    }
-
-    [data-theme="light"] .breadcrumb a {
-      color: var(--slate-500);
-    }
-
-    [data-theme="light"] .breadcrumb a:hover {
-      color: var(--slate-800);
-    }
-
-    [data-theme="light"] .breadcrumb__current {
-      color: var(--slate-800);
-    }
-
-    [data-theme="light"] .breadcrumb__sep {
-      color: var(--slate-300);
-    }
-
     /* --- Page Hero --- */
     [data-theme="light"] .page-hero {
       background: var(--stone-100);
     }
 
-    [data-theme="light"] .page-hero__image::after {
-      background: linear-gradient(135deg, rgba(248,246,241,0.85) 0%, rgba(248,246,241,0.6) 100%);
+    [data-theme="light"] .page-hero__bg::after {
+      background: linear-gradient(
+        to bottom,
+        rgba(248, 246, 241, 0.4) 0%,
+        rgba(248, 246, 241, 0.6) 60%,
+        rgba(248, 246, 241, 0.9) 100%
+      );
     }
 
     [data-theme="light"] .page-hero h1 {
@@ -1291,78 +1116,64 @@
       color: var(--slate-600);
     }
 
-    [data-theme="light"] .page-hero__eyebrow {
-      color: var(--gold-600);
-    }
-
-    /* --- Overview --- */
-    [data-theme="light"] .overview {
-      background: white;
-    }
-
-    [data-theme="light"] .overview__text p {
-      color: var(--slate-700);
-    }
-
-    [data-theme="light"] .overview__aside {
-      background: var(--stone-50);
-      border-color: var(--slate-200);
-    }
-
-    /* --- Approach Steps --- */
-    [data-theme="light"] .approach-steps {
-      background: var(--stone-100);
-    }
-
-    [data-theme="light"] .approach-steps__bg {
-      background: radial-gradient(circle, rgba(200,40,63,0.04) 0%, transparent 70%);
-    }
-
-    [data-theme="light"] .approach-steps__header h2 {
-      color: var(--slate-900);
-    }
-
-    [data-theme="light"] .approach-steps__header .label {
+    [data-theme="light"] .page-hero__breadcrumb a {
       color: var(--slate-500);
     }
 
-    [data-theme="light"] .step-card {
+    [data-theme="light"] .page-hero__breadcrumb a:hover {
+      color: var(--slate-900);
+    }
+
+    [data-theme="light"] .page-hero__breadcrumb span.sep {
+      color: var(--slate-400);
+    }
+
+    [data-theme="light"] .page-hero__breadcrumb span.current {
+      color: var(--slate-700);
+    }
+
+    /* --- Contact section --- */
+    [data-theme="light"] .contact {
       background: white;
+    }
+
+    [data-theme="light"] .contact__form-wrap {
+      background: var(--stone-100);
       border-color: var(--slate-200);
     }
 
-    [data-theme="light"] .step-card:hover {
-      border-color: var(--slate-300);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-    }
-
-    [data-theme="light"] .step-card h3 {
+    [data-theme="light"] .contact__form-wrap h3 {
       color: var(--slate-900);
     }
 
-    [data-theme="light"] .step-card__list li {
+    [data-theme="light"] .form__label {
       color: var(--slate-700);
-      border-bottom-color: var(--slate-100);
     }
 
-    /* --- Outcomes --- */
-    [data-theme="light"] .outcomes {
+    [data-theme="light"] .form__label .optional {
+      color: var(--slate-400);
+    }
+
+    [data-theme="light"] .form__input,
+    [data-theme="light"] .form__textarea {
+      background: white;
+      border-color: var(--slate-200);
+      color: var(--slate-900);
+    }
+
+    [data-theme="light"] .form__input::placeholder,
+    [data-theme="light"] .form__textarea::placeholder {
+      color: var(--slate-400);
+    }
+
+    /* --- Expect section --- */
+    [data-theme="light"] .expect {
       background: var(--stone-50);
     }
 
-    [data-theme="light"] .outcome-card {
+    /* --- Map section --- */
+    [data-theme="light"] .map-section {
       background: white;
-    }
-
-    /* --- Case Studies --- */
-    [data-theme="light"] .related {
-      background: white;
-    }
-
-    /* --- Section utilities --- */
-    [data-theme="light"] .section--dark {
-      background: var(--stone-100);
-      color: var(--slate-900);
     }
 
     /* --- Footer --- */
@@ -1415,6 +1226,211 @@
     [data-theme="light"] .label--gold {
       color: var(--gold-600);
     }
+
+    /* ═══════════════════════════════════════
+       PARTNERSHIPS PAGE
+       — HLS technical-delivery partnership.
+       One restrained HLS-purple accent is used
+       only in the software / agentic components.
+       ═══════════════════════════════════════ */
+    :root {
+      --hls-purple: oklch(0.52 0.19 295);
+      --hls-purple-soft: oklch(0.52 0.19 295 / 0.10);
+      --hls-purple-line: oklch(0.52 0.19 295 / 0.35);
+    }
+
+    /* --- Hero: two-column copy + diagram --- */
+    .page-hero--partner { min-height: 46vh; }
+
+    .page-hero--partner .page-hero__content {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: var(--space-3xl);
+      align-items: center;
+    }
+
+    .pt-hero__art {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      --pt-stroke: rgba(255,255,255,0.42);
+      --pt-text: rgba(255,255,255,0.92);
+      --pt-muted: rgba(255,255,255,0.58);
+      --pt-vdb: var(--red-400);
+    }
+
+    [data-theme="light"] .pt-hero__art {
+      --pt-stroke: var(--slate-400);
+      --pt-text: var(--slate-800);
+      --pt-muted: var(--slate-500);
+      --pt-vdb: var(--red-600);
+    }
+
+    .pt-hero__art svg { width: 100%; max-width: 420px; height: auto; }
+    .pt-ha-node { fill: none; stroke: var(--pt-stroke); stroke-width: 1.25; }
+    .pt-ha-node--vdb { stroke: var(--pt-vdb); stroke-width: 1.5; }
+    .pt-ha-node--hls { stroke: var(--hls-purple); stroke-width: 1.5; }
+    .pt-ha-conn { stroke: var(--pt-stroke); stroke-width: 1; fill: none; }
+    .pt-ha-t { font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: 0.04em; fill: var(--pt-text); }
+    .pt-ha-t--vdb { fill: var(--pt-vdb); }
+    .pt-ha-t--hls { fill: var(--hls-purple); }
+    .pt-ha-s { font-family: var(--font-body); font-size: 9px; font-weight: 500; letter-spacing: 0.04em; fill: var(--pt-muted); }
+    [data-theme="light"] .pt-ha-t--hls,
+    .pt-ha-t--hls { fill: var(--hls-purple); }
+
+    /* --- Assurance strip (dark accent, both themes) --- */
+    .pt-assure { background: var(--slate-950); padding: var(--space-xl) 0; }
+    .pt-assure__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-md) var(--space-2xl);
+    }
+    .pt-assure__item {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--slate-200);
+    }
+    .pt-assure__dot {
+      width: 7px; height: 7px; border-radius: 999px;
+      background: var(--red-500); flex-shrink: 0;
+    }
+    .pt-assure__item--ai .pt-assure__dot { background: var(--hls-purple); }
+
+    /* --- Roles: split text + responsibility map --- */
+    .pt-roles { padding: var(--space-5xl) 0; background: var(--stone-50); }
+    [data-theme="light"] .pt-roles { background: white; }
+    .pt-roles__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-xl);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4xl);
+      align-items: center;
+    }
+    .pt-roles__copy h2 { color: var(--slate-900); margin: var(--space-sm) 0 var(--space-lg); }
+    .pt-roles__copy p { color: var(--slate-700); max-width: 52ch; margin-bottom: var(--space-md); }
+    .pt-link {
+      display: inline-flex; align-items: center; gap: var(--space-xs);
+      margin-top: var(--space-sm);
+      font-weight: 600; color: var(--red-600);
+      transition: gap 0.2s, color 0.2s;
+    }
+    .pt-link:hover { gap: var(--space-sm); color: var(--red-500); }
+    .pt-link--hls { color: var(--hls-purple); }
+    .pt-link--hls:hover { color: var(--hls-purple); opacity: 0.82; }
+
+    /* Responsibility map SVG */
+    .pt-respmap { display: flex; justify-content: center; }
+    .pt-respmap svg { width: 100%; max-width: 380px; height: auto; }
+    .pt-rm-box { fill: none; stroke: var(--slate-300); stroke-width: 1.25; }
+    .pt-rm-box--vdb { stroke: var(--red-500); stroke-width: 1.5; }
+    .pt-rm-box--hls { stroke: var(--hls-purple); stroke-width: 1.5; fill: var(--hls-purple-soft); }
+    .pt-rm-box--oversight { stroke: var(--slate-400); fill: var(--stone-100); }
+    .pt-rm-conn { stroke: var(--slate-400); stroke-width: 1.25; fill: none; }
+    .pt-rm-t { font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: 0.02em; fill: var(--slate-900); }
+    .pt-rm-s { font-family: var(--font-body); font-size: 9px; font-weight: 500; letter-spacing: 0.03em; fill: var(--slate-500); }
+    .pt-rm-t--hls { fill: var(--hls-purple); }
+
+    /* --- Lead / Build / Operate flow --- */
+    .pt-flow { padding: var(--space-5xl) 0; background: var(--stone-100); }
+    [data-theme="light"] .pt-flow { background: var(--stone-50); }
+    .pt-flow__inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-xl); }
+    .pt-flow__header { margin-bottom: var(--space-2xl); }
+    .pt-flow__header h2 { color: var(--slate-900); margin-top: var(--space-sm); }
+    .pt-flow__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+    .pt-step {
+      position: relative; overflow: hidden;
+      background: white; border: 1px solid var(--slate-200);
+      border-radius: 12px; padding: var(--space-2xl);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    [data-theme="light"] .pt-step { background: white; }
+    .pt-step:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.06); border-color: var(--slate-300); }
+    .pt-step::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 100%; height: 3px; background: var(--slate-200);
+    }
+    .pt-step--vdb::before { background: var(--red-500); }
+    .pt-step--hls::before { background: var(--hls-purple); }
+    .pt-step--ops::before { background: var(--gold-500); }
+    .pt-step__tag {
+      font-family: var(--font-body); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-400);
+    }
+    .pt-step--vdb .pt-step__tag { color: var(--red-600); }
+    .pt-step--hls .pt-step__tag { color: var(--hls-purple); }
+    .pt-step--ops .pt-step__tag { color: var(--gold-600); }
+    .pt-step__verb {
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 600;
+      color: var(--slate-900); margin: var(--space-xs) 0 var(--space-sm);
+    }
+    .pt-step__desc { font-size: 0.95rem; color: var(--slate-600); line-height: 1.6; }
+
+    /* --- Human oversight principle (dark accent, both themes) --- */
+    .pt-principle { padding: var(--space-5xl) 0; background: var(--slate-900); color: var(--slate-100); }
+    .pt-principle__inner { max-width: 820px; margin: 0 auto; padding: 0 var(--space-xl); }
+    .pt-principle__header h2 { color: white; margin-top: var(--space-sm); }
+    .pt-principle__lede { color: var(--slate-300); font-size: 1.1rem; max-width: 56ch; margin-top: var(--space-md); }
+    .pt-principle__quote {
+      margin-top: var(--space-2xl);
+      padding-left: var(--space-xl);
+      border-left: 3px solid var(--hls-purple);
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+      line-height: 1.5;
+      color: var(--slate-50);
+    }
+
+    /* --- Where this matters --- */
+    .pt-where { padding: var(--space-5xl) 0; background: var(--stone-50); }
+    [data-theme="light"] .pt-where { background: white; }
+    .pt-where__inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-xl); }
+    .pt-where__header { margin-bottom: var(--space-2xl); max-width: 60ch; }
+    .pt-where__header h2 { color: var(--slate-900); margin-top: var(--space-sm); }
+    .pt-where__header p { color: var(--slate-600); margin-top: var(--space-md); }
+    .pt-where__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md) var(--space-2xl); }
+    .pt-where__item {
+      display: flex; align-items: flex-start; gap: var(--space-md);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--slate-200);
+      color: var(--slate-800); font-size: 1.02rem;
+    }
+    .pt-where__check { flex-shrink: 0; width: 22px; height: 22px; color: var(--red-600); margin-top: 2px; }
+    .pt-where__check svg { width: 22px; height: 22px; }
+
+    /* --- CTA cross-link --- */
+    .pt-cta { padding: var(--space-5xl) 0; background: var(--red-700); color: white; }
+    .pt-cta__inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-xl);
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-3xl); align-items: center;
+    }
+    .pt-cta__inner h2 { color: white; }
+    .pt-cta__inner p { color: rgba(255,255,255,0.86); margin-top: var(--space-md); max-width: 48ch; }
+    .pt-cta__actions { display: flex; flex-direction: column; gap: var(--space-md); align-items: flex-start; }
+    .pt-cta__actions .btn { width: auto; }
+    .btn--on-red-ghost { border: 1px solid rgba(255,255,255,0.5); color: white; }
+    .btn--on-red-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+    /* --- Partnerships responsive --- */
+    @media (max-width: 900px) {
+      .page-hero--partner .page-hero__content { grid-template-columns: 1fr; gap: var(--space-xl); }
+      .pt-hero__art { display: none; }
+      .pt-roles__inner { grid-template-columns: 1fr; gap: var(--space-2xl); }
+      .pt-flow__grid { grid-template-columns: 1fr; }
+      .pt-where__grid { grid-template-columns: 1fr; gap: 0; }
+      .pt-cta__inner { grid-template-columns: 1fr; gap: var(--space-xl); }
+    }
   </style>
 </head>
 <body>
@@ -1425,11 +1441,17 @@
   <header class="header">
     <div class="header__inner">
       <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
+        <!-- VDB UK Logo — geometric monogram -->
         <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- V chevron mark -->
           <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- D -->
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
+          <!-- B -->
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
+          <!-- Divider -->
           <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
+          <!-- UK text -->
           <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
@@ -1445,10 +1467,10 @@
 
       <nav class="header__nav" id="site-nav">
         <ul class="header__links">
+          <li><a href="/"><span data-en>Home</span><span data-cy>Hafan</span></a></li>
           <li><a href="/#capabilities"><span data-en>Capabilities</span><span data-cy>Galluoedd</span></a></li>
-          <li><a href="/#approach"><span data-en>Our Approach</span><span data-cy>Ein Dull</span></a></li>
           <li><a href="/case-studies/"><span data-en>Case Studies</span><span data-cy>Astudiaethau Achos</span></a></li>
-          <li><a href="/#about"><span data-en>About</span><span data-cy>Amdanom</span></a></li>
+          <li><a href="/about.html"><span data-en>About</span><span data-cy>Amdanom</span></a></li>
           <li><a href="/partnerships.html"><span data-en>Partnerships</span><span data-cy>Partneriaethau</span></a></li>
         </ul>
 
@@ -1466,7 +1488,7 @@
           </button>
         </div>
 
-        <a href="mailto:hannah@vandenberghuk.com" class="header__cta">
+        <a href="/contact.html" class="header__cta">
           <span data-en>Contact Us</span><span data-cy>Cysylltwch &acirc; ni</span>
         </a>
       </nav>
@@ -1474,280 +1496,265 @@
   </header>
 
   <!-- ═══════════════════════════════════════
-       BREADCRUMB
-       ═══════════════════════════════════════ -->
-  <nav class="breadcrumb" aria-label="Breadcrumb" data-aria-label-en="Breadcrumb" data-aria-label-cy="Llwybr briwsion">
-    <div class="breadcrumb__inner">
-      <a href="/"><span data-en>Home</span><span data-cy>Hafan</span></a>
-      <span class="breadcrumb__sep">/</span>
-      <a href="/#capabilities"><span data-en>Capabilities</span><span data-cy>Galluoedd</span></a>
-      <span class="breadcrumb__sep">/</span>
-      <span class="breadcrumb__current"><span data-en>Science &amp; Engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></span>
-    </div>
-  </nav>
-
-  <!-- ═══════════════════════════════════════
        PAGE HERO
        ═══════════════════════════════════════ -->
-  <section class="page-hero">
-    <div class="page-hero__image">
-      <img src="/images/hero-science.jpg" alt="Laboratory research and engineering — scientist working with equipment" data-alt-en="Laboratory research and engineering — scientist working with equipment" data-alt-cy="Ymchwil labordy a pheirianneg — gwyddonydd yn gweithio gydag offer">
-    </div>
+  <section class="page-hero page-hero--partner">
     <div class="page-hero__content">
-      <div class="page-hero__eyebrow label label--gold animate-in">
-        <span data-en>Capability</span>
-        <span data-cy>Gallu</span>
-      </div>
-      <h1 class="animate-in animate-in--delay-1">
-        <span data-en>Science &amp; Engineering</span>
-        <span data-cy>Gwyddoniaeth a Pheirianneg</span>
-      </h1>
-      <p class="page-hero__subtitle animate-in animate-in--delay-2">
-        <span data-en>From the lab bench to the market. We build what others only theorise.</span>
-        <span data-cy>O'r fainc labordy i'r farchnad. Rydym yn adeiladu'r hyn y mae eraill ond yn damcaniaethu amdano.</span>
-      </p>
-    </div>
-  </section>
+      <div class="pt-hero__copy">
+        <nav class="page-hero__breadcrumb animate-in" aria-label="Breadcrumb" data-aria-label-en="Breadcrumb" data-aria-label-cy="Briwsion bara">
+          <a href="/"><span data-en>Home</span><span data-cy>Hafan</span></a>
+          <span class="sep">/</span>
+          <span class="current"><span data-en>Partnerships</span><span data-cy>Partneriaethau</span></span>
+        </nav>
 
-  <!-- ═══════════════════════════════════════
-       OVERVIEW
-       ═══════════════════════════════════════ -->
-  <section class="overview reveal">
-    <div class="overview__inner">
-      <div class="overview__text">
-        <div data-en-block>
-          <p>VDB doesn't just consult — we build. Our science and engineering teams develop demonstrators, run field trials, and create scalable solutions that move from concept to validated product. From bio-fertiliser chemistry to medical sensor technology, we bring the technical depth to turn funded research into real-world impact.</p>
-          <p>Our first spin-out, NPK Recovery, is proof of the model: lab research validated at the Royal Agricultural University, deployed at UK festivals, and now growing native trees in the Brecon Beacons.</p>
-        </div>
-        <div data-cy-block>
-          <p>Nid dim ond ymgynghori y mae VDB — rydym yn adeiladu. Mae ein timau gwyddoniaeth a pheirianneg yn datblygu arddangoswyr, yn rhedeg treialon maes, ac yn creu atebion graddadwy sy'n symud o gysyniad i gynnyrch dilysiedig. O gemeg bio-wrtaith i dechnoleg synwyryddion meddygol, rydym yn dod &acirc;'r dyfnder technegol i droi ymchwil a ariennir yn effaith byd go iawn.</p>
-          <p>Ein cwmni deillio cyntaf, NPK Recovery, yw prawf o'r model: ymchwil labordy wedi'i dilysu yn y Brifysgol Amaethyddol Frenhinol, wedi'i defnyddio mewn gwyliau ledled y DU, ac yn awr yn tyfu coed brodorol ym Mannau Brycheiniog.</p>
-        </div>
+        <h1 class="animate-in animate-in--delay-1">
+          <span data-en>Programme leadership with software delivery built in</span>
+          <span data-cy>Programme leadership with software delivery built in</span>
+        </h1>
+
+        <p class="page-hero__subtitle animate-in animate-in--delay-2">
+          <span data-en>VDB UK leads complex operational and research programmes &mdash; the science, stakeholder management, funding and governance. Where a contract needs serious software and agentic systems behind that work, we deliver it with Higher Level Software as our technical delivery partner.</span>
+          <span data-cy>VDB UK leads complex operational and research programmes &mdash; the science, stakeholder management, funding and governance. Where a contract needs serious software and agentic systems behind that work, we deliver it with Higher Level Software as our technical delivery partner.</span>
+        </p>
       </div>
 
-      <aside class="overview__aside">
-        <h3>
-          <span data-en>What we deliver</span>
-          <span data-cy>Beth rydym yn ei gyflawni</span>
-        </h3>
-        <ul>
-          <li><span data-en>Lab-scale R&amp;D and prototyping</span><span data-cy>Ymchwil a datblygu ar raddfa labordy a phrototeipiau</span></li>
-          <li><span data-en>Demonstrator design &amp; build</span><span data-cy>Dylunio ac adeiladu arddangoswyr</span></li>
-          <li><span data-en>Field trials &amp; data collection</span><span data-cy>Treialon maes a chasglu data</span></li>
-          <li><span data-en>Academic validation partnerships</span><span data-cy>Partneriaethau dilysu academaidd</span></li>
-          <li><span data-en>IP strategy &amp; spin-out creation</span><span data-cy>Strategaeth eiddo deallusol a chreu cwmn&iuml;au deillio</span></li>
-        </ul>
-      </aside>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════
-       APPROACH — 4 Steps
-       ═══════════════════════════════════════ -->
-  <section class="approach-steps reveal">
-    <div class="approach-steps__bg"></div>
-    <div class="approach-steps__header">
-      <span class="label label--gold">
-        <span data-en>Our approach</span>
-        <span data-cy>Ein dull</span>
-      </span>
-      <h2>
-        <span data-en>From feasibility to spin-out</span>
-        <span data-cy>O ddichonoldeb i gwmni deillio</span>
-      </h2>
-    </div>
-
-    <div class="approach-steps__grid">
-      <!-- Step 1 -->
-      <div class="step-card">
-        <div class="step-card__number">01</div>
-        <h3>
-          <span data-en>Feasibility &amp; Proof of Concept</span>
-          <span data-cy>Dichonoldeb a Phrawf o Gysyniad</span>
-        </h3>
-        <ul class="step-card__list">
-          <li><span data-en>Lab-scale experiments and prototyping</span><span data-cy>Arbrofion ar raddfa labordy a phrototeipiau</span></li>
-          <li><span data-en>Technical risk assessment and mitigation</span><span data-cy>Asesiad risg technegol a lliniaru</span></li>
-          <li><span data-en>Literature validation and prior art review</span><span data-cy>Dilysu llenyddiaeth ac adolygiad o'r celf flaenorol</span></li>
-        </ul>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="step-card">
-        <div class="step-card__number">02</div>
-        <h3>
-          <span data-en>Demonstrator Development</span>
-          <span data-cy>Datblygu Arddangoswyr</span>
-        </h3>
-        <ul class="step-card__list">
-          <li><span data-en>Scale-up from lab to pilot</span><span data-cy>Ehangu o labordy i beilot</span></li>
-          <li><span data-en>Build mobile/modular demonstrator systems</span><span data-cy>Adeiladu systemau arddangos symudol/modiwlar</span></li>
-          <li><span data-en>Design for field deployment conditions</span><span data-cy>Dylunio ar gyfer amodau defnyddio yn y maes</span></li>
-        </ul>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="step-card">
-        <div class="step-card__number">03</div>
-        <h3>
-          <span data-en>Field Trials &amp; Validation</span>
-          <span data-cy>Treialon Maes a Dilysu</span>
-        </h3>
-        <ul class="step-card__list">
-          <li><span data-en>Real-world deployment and data collection</span><span data-cy>Defnyddio yn y byd go iawn a chasglu data</span></li>
-          <li><span data-en>Independent validation with academic partners</span><span data-cy>Dilysu annibynnol gyda phartneriaid academaidd</span></li>
-          <li><span data-en>Iterate based on field performance</span><span data-cy>Ailadrodd yn seiliedig ar berfformiad maes</span></li>
-        </ul>
-      </div>
-
-      <!-- Step 4 -->
-      <div class="step-card">
-        <div class="step-card__number">04</div>
-        <h3>
-          <span data-en>Scale &amp; Spin-Out</span>
-          <span data-cy>Graddfa a Chwmn&iuml;au Deillio</span>
-        </h3>
-        <ul class="step-card__list">
-          <li><span data-en>Production-ready design and manufacturing partnerships</span><span data-cy>Dylunio parod i gynhyrchu a phartneriaethau gweithgynhyrchu</span></li>
-          <li><span data-en>IP protection and commercial strategy</span><span data-cy>Diogelu eiddo deallusol a strategaeth fasnachol</span></li>
-          <li><span data-en>Spin-out company creation and governance</span><span data-cy>Creu cwmni deillio a llywodraethu</span></li>
-        </ul>
+      <div class="pt-hero__art animate-in animate-in--delay-3" aria-hidden="true">
+        <svg viewBox="0 0 460 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- two roles -->
+          <circle class="pt-ha-node pt-ha-node--vdb" cx="70" cy="78" r="30"/>
+          <circle class="pt-ha-node pt-ha-node--hls" cx="70" cy="172" r="30"/>
+          <!-- connectors into the model -->
+          <line class="pt-ha-conn" x1="100" y1="90" x2="172" y2="116"/>
+          <line class="pt-ha-conn" x1="100" y1="160" x2="172" y2="134"/>
+          <line class="pt-ha-conn" x1="306" y1="125" x2="386" y2="125"/>
+          <path class="pt-ha-conn" d="M386 125 l -8 -4 M386 125 l -8 4"/>
+          <!-- one model + outcome -->
+          <rect class="pt-ha-node" x="174" y="98" width="132" height="54" rx="11"/>
+          <circle class="pt-ha-node" cx="418" cy="125" r="30"/>
+          <text class="pt-ha-t pt-ha-t--vdb" x="70" y="82" text-anchor="middle">VDB</text>
+          <text class="pt-ha-t pt-ha-t--hls" x="70" y="176" text-anchor="middle">HLS</text>
+          <text class="pt-ha-t" x="240" y="121" text-anchor="middle">one delivery</text>
+          <text class="pt-ha-t" x="240" y="136" text-anchor="middle">model</text>
+          <text class="pt-ha-s" x="418" y="121" text-anchor="middle">client</text>
+          <text class="pt-ha-s" x="418" y="134" text-anchor="middle">outcome</text>
+          <text class="pt-ha-s" x="230" y="234" text-anchor="middle">human oversight &#183; acceptance &#183; audit</text>
+        </svg>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       KEY OUTCOMES
+       ASSURANCE STRIP
        ═══════════════════════════════════════ -->
-  <section class="outcomes reveal">
-    <div class="outcomes__inner">
-      <div class="outcomes__header">
+  <section class="pt-assure">
+    <div class="pt-assure__inner">
+      <span class="pt-assure__item"><span class="pt-assure__dot"></span><span data-en>Human-led</span><span data-cy>Human-led</span></span>
+      <span class="pt-assure__item pt-assure__item--ai"><span class="pt-assure__dot"></span><span data-en>AI-assisted</span><span data-cy>AI-assisted</span></span>
+      <span class="pt-assure__item"><span class="pt-assure__dot"></span><span data-en>Audit-ready</span><span data-cy>Audit-ready</span></span>
+      <span class="pt-assure__item"><span class="pt-assure__dot"></span><span data-en>Clear escalation</span><span data-cy>Clear escalation</span></span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       HOW THE PARTNERSHIP WORKS
+       ═══════════════════════════════════════ -->
+  <section class="pt-roles reveal">
+    <div class="pt-roles__inner">
+      <div class="pt-roles__copy">
         <span class="label label--red">
-          <span data-en>Key outcomes</span>
-          <span data-cy>Canlyniadau allweddol</span>
+          <span data-en>How the partnership works</span>
+          <span data-cy>How the partnership works</span>
         </span>
         <h2>
-          <span data-en>Proven results from lab to field</span>
-          <span data-cy>Canlyniadau profedig o'r labordy i'r maes</span>
+          <span data-en>One delivery model, two clear roles</span>
+          <span data-cy>One delivery model, two clear roles</span>
         </h2>
+        <p>
+          <span data-en>VDB UK leads the client relationship and the operational programme: research, science, stakeholder management, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
+          <span data-cy>VDB UK leads the client relationship and the operational programme: research, science, stakeholder management, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
+        </p>
+        <p>
+          <span data-en>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both.</span>
+          <span data-cy>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both.</span>
+        </p>
+        <a class="pt-link pt-link--hls" href="https://higherlevelsoftware.com/partnerships.html">
+          <span data-en>About Higher Level Software</span><span data-cy>About Higher Level Software</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
 
-      <div class="outcomes__grid">
-        <div class="outcome-card">
-          <div class="outcome-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <div class="outcome-card__value">&pound;2m+</div>
-          <p class="outcome-card__desc">
-            <span data-en>NPK Recovery: first spin-out, RAU-validated</span>
-            <span data-cy>NPK Recovery: cwmni deillio cyntaf, wedi'i ddilysu gan RAU</span>
-          </p>
-        </div>
-
-        <div class="outcome-card">
-          <div class="outcome-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div class="outcome-card__value">8</div>
-          <p class="outcome-card__desc">
-            <span data-en>Scientists and engineers in the team</span>
-            <span data-cy>Gwyddonwyr a pheirianwyr yn y t&icirc;m</span>
-          </p>
-        </div>
-
-        <div class="outcome-card">
-          <div class="outcome-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <div class="outcome-card__value">3+</div>
-          <p class="outcome-card__desc">
-            <span data-en>Validated at Boomtown, TCS London Marathon, Bristol Pride</span>
-            <span data-cy>Wedi'i ddilysu yn Boomtown, Marathon Llundain TCS, Bristol Pride</span>
-          </p>
-        </div>
+      <div class="pt-respmap" aria-hidden="false">
+        <svg viewBox="0 0 360 282" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Responsibility map: the client outcome is led by VDB UK as programme lead, delivered technically by Higher Level Software, with human oversight and reporting across the whole partnership.">
+          <!-- connectors -->
+          <line class="pt-rm-conn" x1="180" y1="58" x2="180" y2="74"/>
+          <path class="pt-rm-conn" d="M176 66 l4 7 l4 -7"/>
+          <line class="pt-rm-conn" x1="180" y1="128" x2="180" y2="144"/>
+          <path class="pt-rm-conn" d="M176 136 l4 7 l4 -7"/>
+          <line class="pt-rm-conn" x1="180" y1="198" x2="180" y2="214"/>
+          <path class="pt-rm-conn" d="M176 206 l4 7 l4 -7"/>
+          <!-- client outcome -->
+          <rect class="pt-rm-box" x="60" y="10" width="240" height="46" rx="9"/>
+          <text class="pt-rm-t" x="180" y="38" text-anchor="middle">Client outcome</text>
+          <!-- VDB programme lead -->
+          <rect class="pt-rm-box pt-rm-box--vdb" x="60" y="78" width="240" height="48" rx="9"/>
+          <text class="pt-rm-t" x="180" y="100" text-anchor="middle">VDB &#183; programme lead</text>
+          <text class="pt-rm-s" x="180" y="115" text-anchor="middle">research &#183; science &#183; governance</text>
+          <!-- HLS technical delivery -->
+          <rect class="pt-rm-box pt-rm-box--hls" x="60" y="148" width="240" height="48" rx="9"/>
+          <text class="pt-rm-t pt-rm-t--hls" x="180" y="170" text-anchor="middle">HLS &#183; technical delivery</text>
+          <text class="pt-rm-s" x="180" y="185" text-anchor="middle">software &#183; hosting &#183; agents</text>
+          <!-- oversight -->
+          <rect class="pt-rm-box pt-rm-box--oversight" x="36" y="218" width="288" height="52" rx="9"/>
+          <text class="pt-rm-t" x="180" y="242" text-anchor="middle">Human oversight + reporting</text>
+          <text class="pt-rm-s" x="180" y="258" text-anchor="middle">acceptance &#183; audit trail &#183; escalation</text>
+        </svg>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       CASE STUDIES
+       LEAD / BUILD / OPERATE
        ═══════════════════════════════════════ -->
-  <section class="related reveal">
-    <div class="related__inner">
-      <div class="related__header">
+  <section class="pt-flow reveal">
+    <div class="pt-flow__inner">
+      <div class="pt-flow__header">
         <span class="label label--gold">
-          <span data-en>Case Studies</span>
-          <span data-cy>Astudiaethau Achos</span>
+          <span data-en>How it fits together</span>
+          <span data-cy>How it fits together</span>
         </span>
         <h2>
-          <span data-en>Science &amp; engineering in action</span>
-          <span data-cy>Gwyddoniaeth a pheirianneg ar waith</span>
+          <span data-en>Lead, build, operate</span>
+          <span data-cy>Lead, build, operate</span>
         </h2>
       </div>
-
-      <div class="related__grid">
-        <a href="/case-studies/npk-recovery.html" class="related-card">
-          <div class="related-card__image">
-            <span>NPK Recovery</span>
-          </div>
-          <div class="related-card__body">
-            <div class="related-card__partner">NPK Recovery</div>
-            <div class="related-card__title">
-              <span data-en>NPK Recovery</span>
-              <span data-cy>Adfer NPK</span>
-            </div>
-            <p class="related-card__desc">
-              <span data-en>Nutrient recovery from festival waste streams, validated at the Royal Agricultural University and deployed across UK events.</span>
-              <span data-cy>Adfer maetholion o ffrydiau gwastraff gwyliau, wedi'i ddilysu yn y Brifysgol Amaethyddol Frenhinol ac wedi'i ddefnyddio ar draws digwyddiadau'r DU.</span>
-            </p>
-            <span class="related-card__link">
-              <span data-en>View case study</span><span data-cy>Gweld astudiaeth achos</span> <span class="btn__arrow">&rarr;</span>
-            </span>
-          </div>
-        </a>
-
-        <a href="/case-studies/gripable.html" class="related-card">
-          <div class="related-card__image">
-            <span>GripAble</span>
-          </div>
-          <div class="related-card__body">
-            <div class="related-card__partner">GripAble Ltd</div>
-            <div class="related-card__title">
-              <span data-en>GripAble — SqueezAble</span>
-              <span data-cy>GripAble — SqueezAble</span>
-            </div>
-            <p class="related-card__desc">
-              <span data-en>Medical sensor technology for hand rehabilitation, from research prototype to clinical deployment across 350+ healthcare locations.</span>
-              <span data-cy>Technoleg synwyryddion meddygol ar gyfer adsefydlu dwylo, o brototeip ymchwil i ddefnydd clinigol ar draws 350+ o leoliadau gofal iechyd.</span>
-            </p>
-            <span class="related-card__link">
-              <span data-en>View case study</span><span data-cy>Gweld astudiaeth achos</span> <span class="btn__arrow">&rarr;</span>
-            </span>
-          </div>
-        </a>
+      <div class="pt-flow__grid">
+        <div class="pt-step pt-step--vdb">
+          <div class="pt-step__tag">VDB UK</div>
+          <div class="pt-step__verb"><span data-en>Lead</span><span data-cy>Lead</span></div>
+          <p class="pt-step__desc">
+            <span data-en>VDB UK leads the programme &mdash; research, science, stakeholder management, funding and governance &mdash; and stays accountable to the client.</span>
+            <span data-cy>VDB UK leads the programme &mdash; research, science, stakeholder management, funding and governance &mdash; and stays accountable to the client.</span>
+          </p>
+        </div>
+        <div class="pt-step pt-step--hls">
+          <div class="pt-step__tag">Higher Level Software</div>
+          <div class="pt-step__verb"><span data-en>Build</span><span data-cy>Build</span></div>
+          <p class="pt-step__desc">
+            <span data-en>Higher Level Software builds the software, hosting, integrations and agentic systems the programme runs on.</span>
+            <span data-cy>Higher Level Software builds the software, hosting, integrations and agentic systems the programme runs on.</span>
+          </p>
+        </div>
+        <div class="pt-step pt-step--ops">
+          <div class="pt-step__tag"><span data-en>Together</span><span data-cy>Together</span></div>
+          <div class="pt-step__verb"><span data-en>Operate</span><span data-cy>Operate</span></div>
+          <p class="pt-step__desc">
+            <span data-en>We run it under one cadence: reporting, support and oversight, with a named human accountable on each side.</span>
+            <span data-cy>We run it under one cadence: reporting, support and oversight, with a named human accountable on each side.</span>
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       CTA BANNER
+       HUMAN-LED, AI-ASSISTED
        ═══════════════════════════════════════ -->
-  <section class="cta-banner">
-    <div class="cta-banner__pattern"></div>
-    <div class="cta-banner__inner">
-      <h2>
-        <span data-en>Discuss a science &amp; engineering project with us</span>
-        <span data-cy>Trafodwch brosiect gwyddoniaeth a pheirianneg gyda ni</span>
-      </h2>
-      <p class="cta-banner__desc">
-        <span data-en>Whether you need feasibility research, a working demonstrator, or a path to spin-out — let's talk.</span>
-        <span data-cy>P'un a oes angen ymchwil dichonoldeb, arddangoswr gweithiol, neu lwybr i gwmni deillio — gadewch i ni siarad.</span>
-      </p>
-      <a href="mailto:hannah@vandenberghuk.com" class="btn btn--white">
-        <span data-en>Get in touch</span>
-        <span data-cy>Cysylltwch &acirc; ni</span>
-        <span class="btn__arrow">&rarr;</span>
-      </a>
+  <section class="pt-principle reveal">
+    <div class="pt-principle__inner">
+      <div class="pt-principle__header">
+        <span class="label label--gold">
+          <span data-en>Human-led, AI-assisted</span>
+          <span data-cy>Human-led, AI-assisted</span>
+        </span>
+        <h2>
+          <span data-en>People stay accountable</span>
+          <span data-cy>People stay accountable</span>
+        </h2>
+        <p class="pt-principle__lede">
+          <span data-en>Agents make the work faster and more consistent. People stay accountable for every decision that carries risk.</span>
+          <span data-cy>Agents make the work faster and more consistent. People stay accountable for every decision that carries risk.</span>
+        </p>
+      </div>
+      <blockquote class="pt-principle__quote">
+        <span data-en>VDB does not delegate accountability to agents. Agents draft, check, route, monitor and prepare evidence. Humans approve scope, architecture, release decisions, client commitments, exceptions and escalations.</span>
+        <span data-cy>VDB does not delegate accountability to agents. Agents draft, check, route, monitor and prepare evidence. Humans approve scope, architecture, release decisions, client commitments, exceptions and escalations.</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       WHERE THIS MATTERS
+       ═══════════════════════════════════════ -->
+  <section class="pt-where reveal">
+    <div class="pt-where__inner">
+      <div class="pt-where__header">
+        <span class="label label--red">
+          <span data-en>Where this matters</span>
+          <span data-cy>Where this matters</span>
+        </span>
+        <h2>
+          <span data-en>Contracts this suits</span>
+          <span data-cy>Contracts this suits</span>
+        </h2>
+        <p>
+          <span data-en>The partnership fits programmes where operational leadership and dependable software have to hold together, with evidence the client can audit.</span>
+          <span data-cy>The partnership fits programmes where operational leadership and dependable software have to hold together, with evidence the client can audit.</span>
+        </p>
+      </div>
+      <div class="pt-where__grid">
+        <div class="pt-where__item">
+          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span data-en>Secretariat and programme-management contracts</span><span data-cy>Secretariat and programme-management contracts</span></span>
+        </div>
+        <div class="pt-where__item">
+          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span data-en>Research-heavy and knowledge-work operations</span><span data-cy>Research-heavy and knowledge-work operations</span></span>
+        </div>
+        <div class="pt-where__item">
+          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span data-en>Reporting and evidence pipelines</span><span data-cy>Reporting and evidence pipelines</span></span>
+        </div>
+        <div class="pt-where__item">
+          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span data-en>Secure client portals and dashboards</span><span data-cy>Secure client portals and dashboards</span></span>
+        </div>
+        <div class="pt-where__item">
+          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span data-en>Help-desk and support workflows</span><span data-cy>Help-desk and support workflows</span></span>
+        </div>
+        <div class="pt-where__item">
+          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span><span data-en>Funding-backed programmes with reporting obligations</span><span data-cy>Funding-backed programmes with reporting obligations</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CTA / CROSS-LINK
+       ═══════════════════════════════════════ -->
+  <section class="pt-cta">
+    <div class="pt-cta__inner">
+      <div>
+        <h2>
+          <span data-en>A programme that needs both?</span>
+          <span data-cy>A programme that needs both?</span>
+        </h2>
+        <p>
+          <span data-en>If your contract needs operational leadership with serious software behind it, tell us the outcome and the controls you answer to.</span>
+          <span data-cy>If your contract needs operational leadership with serious software behind it, tell us the outcome and the controls you answer to.</span>
+        </p>
+      </div>
+      <div class="pt-cta__actions">
+        <a href="/contact.html" class="btn btn--white">
+          <span data-en>Talk to VDB UK</span><span data-cy>Talk to VDB UK</span>
+          <span class="btn__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a href="https://higherlevelsoftware.com/partnerships.html" class="btn btn--on-red-ghost">
+          <span data-en>Higher Level Software, our technical partner</span><span data-cy>Higher Level Software, our technical partner</span>
+          <span class="btn__arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1788,10 +1795,11 @@
             <span data-cy>Cwmni</span>
           </h4>
           <ul>
-            <li><a href="/about.html"><span data-en>About VDB</span><span data-cy>Yngl&#x0177;n &acirc; VDB</span></a></li>
+            <li><a href="/about.html"><span data-en>About VDB</span><span data-cy>Yngl&#375;n &acirc; VDB</span></a></li>
             <li><a href="/partnerships.html"><span data-en>Partnerships</span><span data-cy>Partneriaethau</span></a></li>
+
             <li><a href="/case-studies/"><span data-en>Case Studies</span><span data-cy>Astudiaethau Achos</span></a></li>
-            <li><a href="mailto:hannah@vandenberghuk.com"><span data-en>Contact</span><span data-cy>Cyswllt</span></a></li>
+            <li><a href="/contact.html"><span data-en>Contact</span><span data-cy>Cyswllt</span></a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -1845,12 +1853,9 @@
       document.querySelectorAll('[data-aria-label-en][data-aria-label-cy]').forEach((el) => {
         el.setAttribute('aria-label', isWelsh ? el.dataset.ariaLabelCy : el.dataset.ariaLabelEn);
       });
-
-      document.querySelectorAll('[data-alt-en][data-alt-cy]').forEach((el) => {
-        el.setAttribute('alt', isWelsh ? el.dataset.altCy : el.dataset.altEn);
-      });
     }
 
+    // Auto-detect browser language
     const browserLang = navigator.language || navigator.languages?.[0] || 'en';
     const savedLang = localStorage.getItem('vdb-lang');
     const initialLang = savedLang || (browserLang.startsWith('cy') ? 'cy' : 'en');

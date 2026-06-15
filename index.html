@@ -1758,6 +1758,46 @@
     [data-theme="light"] .label--gold {
       color: var(--gold-600);
     }
+
+    /* ═══════════════════════════════════════
+       PARTNERSHIP BAND (secondary)
+       — links to the HLS technical-delivery
+       partnership. One restrained HLS-purple
+       accent only.
+       ═══════════════════════════════════════ */
+    .partner-band { padding: var(--space-3xl) 0; background: var(--stone-50); }
+    [data-theme="light"] .partner-band { background: white; }
+    .partner-band__inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-xl); }
+    .partner-band__card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: var(--space-2xl);
+      background: var(--stone-100);
+      border: 1px solid var(--slate-200);
+      border-left: 3px solid oklch(0.52 0.19 295);
+      border-radius: 14px;
+      padding: var(--space-xl) var(--space-2xl);
+    }
+    [data-theme="light"] .partner-band__card { background: var(--stone-50); }
+    .partner-band__label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: oklch(0.52 0.19 295);
+    }
+    .partner-band__text {
+      color: var(--slate-700); font-size: 1.02rem; line-height: 1.6;
+      max-width: 64ch; margin-top: var(--space-xs);
+    }
+    .partner-band__text strong { color: var(--slate-900); font-weight: 600; }
+    .partner-band__link {
+      display: inline-flex; align-items: center; gap: var(--space-xs);
+      font-weight: 600; color: oklch(0.52 0.19 295); white-space: nowrap;
+      transition: gap 0.2s ease;
+    }
+    .partner-band__link:hover { gap: var(--space-sm); }
+    @media (max-width: 768px) {
+      .partner-band__card { grid-template-columns: 1fr; gap: var(--space-lg); }
+    }
   </style>
 </head>
 <body>
@@ -1797,6 +1837,7 @@
           <li><a href="#capabilities"><span data-en>Capabilities</span><span data-cy>Galluoedd</span></a></li>
           <li><a href="#case-studies"><span data-en>Case Studies</span><span data-cy>Astudiaethau Achos</span></a></li>
           <li><a href="/about.html"><span data-en>About</span><span data-cy>Amdanom</span></a></li>
+          <li><a href="/partnerships.html"><span data-en>Partnerships</span><span data-cy>Partneriaethau</span></a></li>
         </ul>
 
         <div class="lang-toggle" role="group" aria-label="Language" data-aria-label-en="Language" data-aria-label-cy="Iaith">
@@ -2146,6 +2187,30 @@
   </section>
 
   <!-- ═══════════════════════════════════════
+       PARTNERSHIP BAND (secondary)
+       ═══════════════════════════════════════ -->
+  <section class="partner-band reveal" aria-label="Technical delivery partnership">
+    <div class="partner-band__inner">
+      <div class="partner-band__card">
+        <div>
+          <span class="partner-band__label">
+            <span data-en>Technical delivery partner</span>
+            <span data-cy>Technical delivery partner</span>
+          </span>
+          <p class="partner-band__text">
+            <span data-en>For programmes that need specialist software, hosting and agentic knowledge-work systems, VDB UK works with <strong>Higher Level Software</strong> as its technical delivery partner.</span>
+            <span data-cy>For programmes that need specialist software, hosting and agentic knowledge-work systems, VDB UK works with <strong>Higher Level Software</strong> as its technical delivery partner.</span>
+          </p>
+        </div>
+        <a class="partner-band__link" href="/partnerships.html">
+          <span data-en>How the partnership works</span><span data-cy>How the partnership works</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
        SELECTED CASE STUDIES
        ═══════════════════════════════════════ -->
   <section class="projects" id="case-studies">
@@ -2363,6 +2428,7 @@
           </h4>
           <ul>
             <li><a href="/about.html"><span data-en>About VDB</span><span data-cy>Yngl&#375;n &acirc; VDB</span></a></li>
+            <li><a href="/partnerships.html"><span data-en>Partnerships</span><span data-cy>Partneriaethau</span></a></li>
             <li><a href="/case-studies/"><span data-en>Case Studies</span><span data-cy>Astudiaethau Achos</span></a></li>
             <li><a href="/contact.html"><span data-en>Contact</span><span data-cy>Cyswllt</span></a></li>
           </ul>
