@@ -64,8 +64,8 @@ The `secrets.env` file (gitignored) contains `VPS_IP` for SSH access.
 
 ## Design System
 
-- **Palette:** "Welsh Slate" — dark slate hero (#0f1118), Welsh red CTAs (#c8283f), warm gold stats (#d4a017), stone cream backgrounds (#f8f6f1)
-- **Fonts:** Crimson Pro (serif headings), Outfit (sans body) — loaded from Google Fonts
+- **Palette:** VDB brand — primary purple `#5E1A8E`, orange CTAs `#E89A3C`, teal secondary `#1C9C8E`, on the dark slate hero / stone-cream light backgrounds. NOTE: the rebrand (2026-06, see `docs/plans/30-06-2026-rebrand/`) remapped the token *values* in place — the `--red-*` custom properties now hold purple values, `--orange-500`/`--teal-500` are the accent tokens, and `--gold-*` is retained as a warm accent. So `var(--red-500)` renders purple. Don't be misled by the legacy token names.
+- **Fonts:** Outfit (headings, 600) + DM Sans (body, 16px/1.65) — loaded from Google Fonts. (Was Crimson Pro serif before the 2026-06 rebrand.)
 - **i18n:** All content bilingual EN/CY. Toggle in header. Auto-detect browser language. Content uses `data-en` / `data-cy` attributes on `<span>` elements, controlled by `data-lang` on `<html>`.
 
 ## Conventions
