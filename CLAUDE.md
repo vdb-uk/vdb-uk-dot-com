@@ -9,7 +9,7 @@ Static website for VDB UK (VandenberghUK Ltd) at https://vdb-uk.com/. Innovation
 - **Hosting:** VPS at 217.154.35.232, nginx container via `nginx-proxy` + `acme-companion`
 - **SSL:** Let's Encrypt (auto-renewing)
 - **DNS:** Cloudflare zone `vdb-uk.com` — A record to VPS, CNAME www to apex
-- **Repo:** `arbtechuk/vdb-uk-dot-com` (public)
+- **Repo:** `vdb-uk/vdb-uk-dot-com` (public) — moved from `arbtechuk` org 2026-06
 - **VPS path:** `/root/arbtechuk/vdb-uk-dot-com/`
 - **Container path:** `/home/node/.openclaw/arbtechuk/vdb-uk-dot-com/`
 
