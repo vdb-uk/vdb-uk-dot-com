@@ -86,7 +86,7 @@ Status legend: ✅ confirmed & buildable · 🟡 drafted, needs Hannah's sign-of
 | 05 | Capability cards | Replace all 6 | 3 + 6 | 🟡 |
 | 06 | "Our approach" | Develop→Design, move bullets | 3 | 🟡 |
 | 07 | Secretariat featured block | Remove | 3 | ✅ |
-| 08 | Whole site | Remove dashes | 2 | 🟡 (rule set; audit) |
+| 08 | Whole site | Remove dashes | 2 | ✅ **BUILT** (247 em dashes removed site-wide) |
 | 09 | Footer capabilities | Match new 6 | 3 + 6 | 🟡 |
 | 10 | Large portrait (**about.html**) | Remove | 4 | ✅ (replacement → Stage 7) |
 | 11 | "Working across UK" / Company Details (**about.html**) | Remove section | 4 | ✅ (Company Details Q → Stage 7) |
@@ -103,7 +103,7 @@ Status legend: ✅ confirmed & buildable · 🟡 drafted, needs Hannah's sign-of
 | 22 | Partnerships IA | New 5-part cadence | 5 | ✅ |
 | 23 | Partnerships | Add "Partnership with Braingraph" | 5 + 7 | ⏳ details |
 | 24 | Partnerships | Remove "Contracts this suits" | 5 | ✅ |
-| 25 | Site-wide | Domain/email → `@vdb-uk.com` | 2 | 🟡 (exact address → Stage 7) |
+| 25 | Site-wide | Domain/email → `@vdb-uk.com` | 2 | ✅ **BUILT** as `hannah@vdb-uk.com` (TODO: mailbox live before deploy) |
 | 26 | Partner strip (a: index "Trusted by"; b: about partners line) | NHS→Plus X, Cranswick→Welsh Govt | 3 + 4 | ✅ |
 | 27 | Case studies | New NPK green-tankering card | 3 | ✅ (image + which card → Stage 7) |
 
