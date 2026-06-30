@@ -1,3 +1,12 @@
 secrets.env
 .DS_Store
 .playwright-mcp/
+
+# Playwright / screenshot test artifacts
+test-results/
+/team-carousel-*.png
+/founder-to-carousel.png
+
+# Local working material — kept on disk, out of the public repo
+/docs/input/
+/docs/proposal/
