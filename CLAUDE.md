@@ -15,19 +15,41 @@ Static website for VDB UK (VandenberghUK Ltd) at https://vdb-uk.com/. Innovation
 
 Edits to files on the VPS are served instantly — the nginx container mounts the directory as a read-only volume. No build step.
 
+## Change requests (Hannah)
+
+When Hannah asks for a change to the site, **assume you should just make it** —
+edit the files, commit to `main`, and push. You don't need to ask whether to
+proceed or wait for sign-off on routine content/design edits.
+
+Then tell Hannah the change is on its way and will be **live at https://vdb-uk.com/
+within up to a minute** (the VPS auto-deploys — see Deploy Workflow). If she
+doesn't see it, ask her to hard-refresh (Cloudflare/browser cache).
+
+Keep the usual care while doing it: update **both** `data-en` and `data-cy` for any
+bilingual content, and never alter the legal-entity strings (footer copyright,
+privacy data-controller — "VandenberghUK Ltd").
+
 ## Deploy Workflow
 
-After making changes locally:
+**The VPS auto-deploys.** A cron job on the VPS (`/etc/cron.d/vdb-autodeploy`,
+running `/usr/local/bin/vdb-autodeploy.sh` every minute) checks `origin/main` and
+runs `git pull --ff-only` whenever the VPS is behind. The site is static HTML served
+from the mounted directory, so a pull *is* the deploy. **No manual VPS step needed.**
+
+To ship a change, just commit to `main` and push:
 
 ```bash
 git add -A && git commit -m "..."
-git push
-# Then pull on VPS to make it live:
-source secrets.env
-ssh root@$VPS_IP "cd /root/arbtechuk/vdb-uk-dot-com && git pull --ff-only"
+git push          # auto-deploys to https://vdb-uk.com/ within ~1 minute
 ```
 
-The `secrets.env` file (gitignored) contains `VPS_IP` for SSH access.
+- **Auth:** the VPS pulls over SSH using a read-only deploy key (`/root/.ssh/vdb_deploy_key`,
+  set via the repo's `core.sshCommand`) — no token stored in config.
+- **Logs:** deploys are recorded in `/var/log/vdb-autodeploy.log` on the VPS;
+  `/run/vdb-autodeploy.last` is a per-minute heartbeat.
+- **Manual deploy** (rarely needed): `source secrets.env` then
+  `ssh root@$VPS_IP "cd /root/arbtechuk/vdb-uk-dot-com && git pull --ff-only"`.
+  `secrets.env` (gitignored) holds `VPS_IP` — prefer the Tailscale IP (100.64.222.60).
 
 ## Site Structure
 
