@@ -1237,9 +1237,10 @@
        only in the software / agentic components.
        ═══════════════════════════════════════ */
     :root {
-      --hls-purple: oklch(0.52 0.19 295);
-      --hls-purple-soft: oklch(0.52 0.19 295 / 0.10);
-      --hls-purple-line: oklch(0.52 0.19 295 / 0.35);
+      /* Reconciled in 2026-06 rebrand: VDB primary is now purple, so the HLS accent moves to brand teal to keep the two firms visually distinct. (Token name kept to avoid churn.) */
+      --hls-purple: oklch(0.62 0.09 184);
+      --hls-purple-soft: oklch(0.62 0.09 184 / 0.10);
+      --hls-purple-line: oklch(0.62 0.09 184 / 0.35);
     }
 
     /* --- Hero: two-column copy + diagram --- */
@@ -1507,13 +1508,13 @@
         </nav>
 
         <h1 class="animate-in animate-in--delay-1">
-          <span data-en>Programme leadership with software delivery built in</span>
-          <span data-cy>Programme leadership with software delivery built in</span>
+          <span data-en>We build the right team for your needs</span>
+          <span data-cy>We build the right team for your needs</span>
         </h1>
 
         <p class="page-hero__subtitle animate-in animate-in--delay-2">
-          <span data-en>VDB leads complex operational and research programmes &mdash; the science, stakeholder management, funding and governance. Where a contract needs serious software and agentic systems behind that work, we deliver it with Higher Level Software as our technical delivery partner.</span>
-          <span data-cy>VDB leads complex operational and research programmes &mdash; the science, stakeholder management, funding and governance. Where a contract needs serious software and agentic systems behind that work, we deliver it with Higher Level Software as our technical delivery partner.</span>
+          <span data-en>VDB leads complex operational and research programmes. Through reliable partnerships we bring in the right specialists for each piece of work, so every programme gets the team it actually needs. Scroll on to meet the partners we work with and see what each one brings.</span>
+          <span data-cy>VDB leads complex operational and research programmes. Through reliable partnerships we bring in the right specialists for each piece of work, so every programme gets the team it actually needs. Scroll on to meet the partners we work with and see what each one brings.</span>
         </p>
       </div>
 
@@ -1542,17 +1543,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       ASSURANCE STRIP
-       ═══════════════════════════════════════ -->
-  <section class="pt-assure">
-    <div class="pt-assure__inner">
-      <span class="pt-assure__item"><span class="pt-assure__dot"></span><span data-en>Human-led</span><span data-cy>Human-led</span></span>
-      <span class="pt-assure__item pt-assure__item--ai"><span class="pt-assure__dot"></span><span data-en>AI-assisted</span><span data-cy>AI-assisted</span></span>
-      <span class="pt-assure__item"><span class="pt-assure__dot"></span><span data-en>Audit-ready</span><span data-cy>Audit-ready</span></span>
-      <span class="pt-assure__item"><span class="pt-assure__dot"></span><span data-en>Clear escalation</span><span data-cy>Clear escalation</span></span>
-    </div>
-  </section>
+  <!-- Assurance chip strip (Human-led / AI-assisted / Audit-ready / Clear escalation) removed in the 2026-06 rebrand (edit 17). -->
 
   <!-- ═══════════════════════════════════════
        HOW THE PARTNERSHIP WORKS
@@ -1561,20 +1552,20 @@
     <div class="pt-roles__inner">
       <div class="pt-roles__copy">
         <span class="label label--red">
-          <span data-en>How the partnership works</span>
-          <span data-cy>How the partnership works</span>
+          <span data-en>Our methodology</span>
+          <span data-cy>Our methodology</span>
         </span>
         <h2>
           <span data-en>One delivery model, two clear roles</span>
           <span data-cy>One delivery model, two clear roles</span>
         </h2>
         <p>
-          <span data-en>VDB leads the client relationship and the operational programme: research, science, stakeholder management, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
-          <span data-cy>VDB leads the client relationship and the operational programme: research, science, stakeholder management, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
+          <span data-en>VDB leads the client relationship and the operational programme: project management, stakeholder engagement, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
+          <span data-cy>VDB leads the client relationship and the operational programme: project management, stakeholder engagement, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
         </p>
         <p>
-          <span data-en>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both.</span>
-          <span data-cy>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both.</span>
+          <span data-en>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both. We run every programme through the same path: validate, design, build.</span>
+          <span data-cy>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both. We run every programme through the same path: validate, design, build.</span>
         </p>
         <a class="pt-link pt-link--hls" href="https://higherlevelsoftware.com/partnerships.html">
           <span data-en>About Higher Level Software</span><span data-cy>About Higher Level Software</span>
@@ -1593,11 +1584,11 @@
           <path class="pt-rm-conn" d="M176 206 l4 7 l4 -7"/>
           <!-- client outcome -->
           <rect class="pt-rm-box" x="60" y="10" width="240" height="46" rx="9"/>
-          <text class="pt-rm-t" x="180" y="38" text-anchor="middle">Client outcome</text>
+          <text class="pt-rm-t" x="180" y="38" text-anchor="middle">Client needs</text>
           <!-- VDB programme lead -->
           <rect class="pt-rm-box pt-rm-box--vdb" x="60" y="78" width="240" height="48" rx="9"/>
           <text class="pt-rm-t" x="180" y="100" text-anchor="middle">VDB &#183; programme lead</text>
-          <text class="pt-rm-s" x="180" y="115" text-anchor="middle">research &#183; science &#183; governance</text>
+          <text class="pt-rm-s" x="180" y="115" text-anchor="middle" textLength="232" lengthAdjust="spacingAndGlyphs">project management &#183; stakeholder engagement &#183; governance</text>
           <!-- HLS technical delivery -->
           <rect class="pt-rm-box pt-rm-box--hls" x="60" y="148" width="240" height="48" rx="9"/>
           <text class="pt-rm-t pt-rm-t--hls" x="180" y="170" text-anchor="middle">HLS &#183; technical delivery</text>
@@ -1622,33 +1613,33 @@
           <span data-cy>How it fits together</span>
         </span>
         <h2>
-          <span data-en>Lead, build, operate</span>
-          <span data-cy>Lead, build, operate</span>
+          <span data-en>Validate, design, build</span>
+          <span data-cy>Validate, design, build</span>
         </h2>
       </div>
       <div class="pt-flow__grid">
         <div class="pt-step pt-step--vdb">
           <div class="pt-step__tag">VDB</div>
-          <div class="pt-step__verb"><span data-en>Lead</span><span data-cy>Lead</span></div>
+          <div class="pt-step__verb"><span data-en>Validate</span><span data-cy>Validate</span></div>
           <p class="pt-step__desc">
-            <span data-en>VDB leads the programme &mdash; research, science, stakeholder management, funding and governance &mdash; and stays accountable to the client.</span>
-            <span data-cy>VDB leads the programme &mdash; research, science, stakeholder management, funding and governance &mdash; and stays accountable to the client.</span>
+            <span data-en>VDB leads the programme. We validate the need and shape the approach through project management, stakeholder engagement, funding and governance, and stay accountable to the client.</span>
+            <span data-cy>VDB leads the programme. We validate the need and shape the approach through project management, stakeholder engagement, funding and governance, and stay accountable to the client.</span>
+          </p>
+        </div>
+        <div class="pt-step pt-step--ops">
+          <div class="pt-step__tag"><span data-en>VDB and HLS</span><span data-cy>VDB and HLS</span></div>
+          <div class="pt-step__verb"><span data-en>Design</span><span data-cy>Design</span></div>
+          <p class="pt-step__desc">
+            <span data-en>Together we design the delivery model: the right team, the architecture and the cadence, agreed before build begins.</span>
+            <span data-cy>Together we design the delivery model: the right team, the architecture and the cadence, agreed before build begins.</span>
           </p>
         </div>
         <div class="pt-step pt-step--hls">
           <div class="pt-step__tag">Higher Level Software</div>
           <div class="pt-step__verb"><span data-en>Build</span><span data-cy>Build</span></div>
           <p class="pt-step__desc">
-            <span data-en>Higher Level Software builds the software, hosting, integrations and agentic systems the programme runs on.</span>
-            <span data-cy>Higher Level Software builds the software, hosting, integrations and agentic systems the programme runs on.</span>
-          </p>
-        </div>
-        <div class="pt-step pt-step--ops">
-          <div class="pt-step__tag"><span data-en>Together</span><span data-cy>Together</span></div>
-          <div class="pt-step__verb"><span data-en>Operate</span><span data-cy>Operate</span></div>
-          <p class="pt-step__desc">
-            <span data-en>We run it under one cadence: reporting, support and oversight, with a named human accountable on each side.</span>
-            <span data-cy>We run it under one cadence: reporting, support and oversight, with a named human accountable on each side.</span>
+            <span data-en>HLS builds the software, hosting, integrations and agentic systems the programme runs on, then we operate it with reporting, support and oversight, and a named human accountable on each side.</span>
+            <span data-cy>HLS builds the software, hosting, integrations and agentic systems the programme runs on, then we operate it with reporting, support and oversight, and a named human accountable on each side.</span>
           </p>
         </div>
       </div>
@@ -1681,53 +1672,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       WHERE THIS MATTERS
-       ═══════════════════════════════════════ -->
-  <section class="pt-where reveal">
-    <div class="pt-where__inner">
-      <div class="pt-where__header">
-        <span class="label label--red">
-          <span data-en>Where this matters</span>
-          <span data-cy>Where this matters</span>
-        </span>
-        <h2>
-          <span data-en>Contracts this suits</span>
-          <span data-cy>Contracts this suits</span>
-        </h2>
-        <p>
-          <span data-en>The partnership fits programmes where operational leadership and dependable software have to hold together, with evidence the client can audit.</span>
-          <span data-cy>The partnership fits programmes where operational leadership and dependable software have to hold together, with evidence the client can audit.</span>
-        </p>
-      </div>
-      <div class="pt-where__grid">
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Secretariat and programme-management contracts</span><span data-cy>Secretariat and programme-management contracts</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Research-heavy and knowledge-work operations</span><span data-cy>Research-heavy and knowledge-work operations</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Reporting and evidence pipelines</span><span data-cy>Reporting and evidence pipelines</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Secure client portals and dashboards</span><span data-cy>Secure client portals and dashboards</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Help-desk and support workflows</span><span data-cy>Help-desk and support workflows</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Funding-backed programmes with reporting obligations</span><span data-cy>Funding-backed programmes with reporting obligations</span></span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- "Contracts this suits" section removed in the 2026-06 rebrand (edit 24): VDB decides who the partnership suits. -->
 
   <!-- ═══════════════════════════════════════
        CTA / CROSS-LINK
