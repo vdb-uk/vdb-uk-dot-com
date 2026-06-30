@@ -24,6 +24,20 @@ and Partnerships page get significant structural and copy changes.
 
 ---
 
+## Build status (implemented 2026-06-30, branch `rebrand-2026-06`)
+
+Implemented and locally verified (Playwright, EN+CY / light+dark on flagship pages):
+
+- **Stage 1 ✅** palette red→purple, fonts→Outfit/DM Sans, logo (cleaned VDB monogram), CTAs orange — all 24 pages. (Brand-kit SVGs still a TODO; monogram used.)
+- **Stage 2 ✅** "VDB UK"→"VDB" (legal strings preserved), 247+5 dashes removed (literal + `&mdash;`/`&ndash;` entities), email→`hannah@vdb-uk.com`, accessibility.html legal-entity bug fixed.
+- **Stage 3 ✅** homepage: stats, hook, 6 capability cards, Validate/Design/Build, removed Secretariat block, partner strip, new NPK app card, footer caps.
+- **Stage 4 ✅** about: track-record Option B redesign, removed portrait + "Working across UK"/Company Details, partners line.
+- **Stage 5 ◑** partnerships: general hero, removed chips + "Contracts this suits", relabelled diagram, Validate/Design/Build cards, Methodology fold-in, HLS accent→teal. **Deferred:** dedicated "Partnership with HLS" section (18), Braingraph (23, blocked), full cadence reorder, diagram→photo (15, blocked).
+- **Stage 6 ✅** footer caps propagated to all pages; two new capability pages created (product-and-system-development, partnership-building); legacy secretariat/translation kept but unlinked.
+- **Stage 7 ⏳** open items applied with documented defaults (orange CTAs, `hannah@vdb-uk.com`, text monogram, keep legacy slugs). Still blocked on Hannah: brand-kit SVGs, team photos (13/14), Braingraph details (23), NPK app image (27), final mailbox cutover.
+
+All rebrand verification gates pass: 0 `#c8283f`, 0 Crimson Pro, 0 dashes (literal+entity), 0 non-legal "VDB UK", 0 `@vandenberghuk` email, no broken capability links. Committed on `rebrand-2026-06`; **not pushed, not deployed** (awaiting review).
+
 ## Staging strategy & sequencing
 
 Stages are ordered by dependency. **Stage 1 must land before everything else** because
