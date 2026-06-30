@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="LGA Funding Transition Analysis — Case Study — VDB UK" data-title-cy="Dadansoddiad Trosglwyddo Cyllid LGA — Astudiaeth Achos — VDB UK">LGA Funding Transition Analysis — Case Study — VDB UK</title>
-  <meta name="description" content="How VDB UK helped the Local Government Association turn complex ESIF investment data into evidence for UK Shared Prosperity Fund advocacy and local decision-making." data-content-en="How VDB UK helped the Local Government Association turn complex ESIF investment data into evidence for UK Shared Prosperity Fund advocacy and local decision-making." data-content-cy="Sut y helpodd VDB UK Gymdeithas Llywodraeth Leol i droi data buddsoddi ESIF cymhleth yn dystiolaeth ar gyfer eiriolaeth Cronfa Ffyniant Gyffredin y DU a gwneud penderfyniadau lleol.">
+  <title data-title-en="LGA Funding Transition Analysis | Case Study | VDB" data-title-cy="Dadansoddiad Trosglwyddo Cyllid LGA | Astudiaeth Achos | VDB">LGA Funding Transition Analysis | Case Study | VDB</title>
+  <meta name="description" content="How VDB helped the Local Government Association turn complex ESIF investment data into evidence for UK Shared Prosperity Fund advocacy and local decision-making." data-content-en="How VDB helped the Local Government Association turn complex ESIF investment data into evidence for UK Shared Prosperity Fund advocacy and local decision-making." data-content-cy="Sut y helpodd VDB Gymdeithas Llywodraeth Leol i droi data buddsoddi ESIF cymhleth yn dystiolaeth ar gyfer eiriolaeth Cronfa Ffyniant Gyffredin y DU a gwneud penderfyniadau lleol.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
@@ -29,11 +29,14 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       --gold-600: #b8860b;
       --gold-500: #d4a017;
@@ -46,8 +49,8 @@
       --stone-300: #e2dac8;
       --stone-50: #fcfbf8;
 
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       --space-xs: 0.25rem;
       --space-sm: 0.5rem;
@@ -286,7 +289,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -294,7 +297,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     .theme-toggle {
       display: flex;
@@ -340,14 +343,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn--ghost {
@@ -407,7 +410,7 @@
       background: linear-gradient(to top, var(--slate-950) 0%, rgba(15,17,24,0.5) 50%, rgba(15,17,24,0.2) 100%);
     }
 
-    /* Gold diagonal accent — distinguishes case studies from projects */
+    /* Gold diagonal accent, distinguishes case studies from projects */
     .cs-hero__accent {
       position: absolute;
       top: 0;
@@ -666,7 +669,7 @@
     }
 
     /* ═══════════════════════════════════════
-       WHY IT MATTERED — PULL QUOTE SECTION
+       WHY IT MATTERED, PULL QUOTE SECTION
        ═══════════════════════════════════════ */
     .cs-why {
       padding: var(--space-5xl) 0;
@@ -959,6 +962,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -967,6 +972,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -1298,13 +1304,11 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1412,11 +1416,11 @@
       </h2>
 
       <div class="cs-context__text">
-        <p data-en-block>For years, European Structural and Investment Funds (ESIF) channelled significant investment into local government areas across England via Local Enterprise Partnerships. As the UK prepared to leave the EU, those funding streams were set to be replaced by the UK Shared Prosperity Fund &mdash; a transition that carried real consequences for councils, communities, and local economies.</p>
-        <p data-cy-block>Am flynyddoedd, sianelwyd buddsoddiad sylweddol gan Gronfeydd Strwythurol a Buddsoddi Ewropeaidd (ESIF) i ardaloedd llywodraeth leol ledled Lloegr drwy Bartneriaethau Menter Leol. Wrth i'r DU baratoi i adael yr UE, roedd y ffrydiau cyllido hynny i gael eu disodli gan Gronfa Ffyniant Gyffredin y DU &mdash; trawsnewidiad a oedd yn cario canlyniadau go iawn i gynghorau, cymunedau, ac economiau lleol.</p>
+        <p data-en-block>For years, European Structural and Investment Funds (ESIF) channelled significant investment into local government areas across England via Local Enterprise Partnerships. As the UK prepared to leave the EU, those funding streams were set to be replaced by the UK Shared Prosperity Fund, a transition that carried real consequences for councils, communities, and local economies.</p>
+        <p data-cy-block>Am flynyddoedd, sianelwyd buddsoddiad sylweddol gan Gronfeydd Strwythurol a Buddsoddi Ewropeaidd (ESIF) i ardaloedd llywodraeth leol ledled Lloegr drwy Bartneriaethau Menter Leol. Wrth i'r DU baratoi i adael yr UE, roedd y ffrydiau cyllido hynny i gael eu disodli gan Gronfa Ffyniant Gyffredin y DU, trawsnewidiad a oedd yn cario canlyniadau go iawn i gynghorau, cymunedau, ac economiau lleol.</p>
 
-        <p data-en-block>The Local Government Association needed a clear, evidence-based picture of what had been invested, where, and through which structures &mdash; so that councils could engage with the transition from a position of knowledge rather than uncertainty.</p>
-        <p data-cy-block>Roedd angen darlun clir, seiliedig ar dystiolaeth ar Gymdeithas Llywodraeth Leol o'r hyn a fuddsoddwyd, ble, a thrwy ba strwythurau &mdash; fel y gallai cynghorau ymgysylltu &acirc;'r trawsnewid o safbwynt gwybodaeth yn hytrach nag ansicrwydd.</p>
+        <p data-en-block>The Local Government Association needed a clear, evidence-based picture of what had been invested, where, and through which structures, so that councils could engage with the transition from a position of knowledge rather than uncertainty.</p>
+        <p data-cy-block>Roedd angen darlun clir, seiliedig ar dystiolaeth ar Gymdeithas Llywodraeth Leol o'r hyn a fuddsoddwyd, ble, a thrwy ba strwythurau, fel y gallai cynghorau ymgysylltu &acirc;'r trawsnewid o safbwynt gwybodaeth yn hytrach nag ansicrwydd.</p>
       </div>
     </div>
   </section>
@@ -1437,11 +1441,11 @@
           <span data-cy>Tystiolaeth ar gyfer trawsnewid cyllido mawr</span>
         </h2>
 
-        <p data-en-block>The LGA appointed VDB UK to analyse how ESIF-related investment had reached local government areas via Local Enterprise Partnerships, and to help councils understand the likely implications of the move to the UK Shared Prosperity Fund.</p>
-        <p data-cy-block>Penododd y LGA VDB UK i ddadansoddi sut yr oedd buddsoddiad cysylltiedig ag ESIF wedi cyrraedd ardaloedd llywodraeth leol drwy Bartneriaethau Menter Leol, ac i helpu cynghorau i ddeall goblygiadau tebygol y symud i Gronfa Ffyniant Gyffredin y DU.</p>
+        <p data-en-block>The LGA appointed VDB to analyse how ESIF-related investment had reached local government areas via Local Enterprise Partnerships, and to help councils understand the likely implications of the move to the UK Shared Prosperity Fund.</p>
+        <p data-cy-block>Penododd y LGA VDB i ddadansoddi sut yr oedd buddsoddiad cysylltiedig ag ESIF wedi cyrraedd ardaloedd llywodraeth leol drwy Bartneriaethau Menter Leol, ac i helpu cynghorau i ddeall goblygiadau tebygol y symud i Gronfa Ffyniant Gyffredin y DU.</p>
 
-        <p data-en-block>Our task was to make complex public investment data usable &mdash; not just analytically, but politically and operationally &mdash; so the LGA could advocate effectively and individual councils could prepare for what came next.</p>
-        <p data-cy-block>Ein tasg oedd gwneud data buddsoddi cyhoeddus cymhleth yn ddefnyddiadwy &mdash; nid yn unig yn ddadansoddol, ond yn wleidyddol ac yn weithredol &mdash; fel y gallai'r LGA eirioli'n effeithiol a gallai cynghorau unigol baratoi ar gyfer yr hyn a ddaeth nesaf.</p>
+        <p data-en-block>Our task was to make complex public investment data usable, not just analytically, but politically and operationally, so the LGA could advocate effectively and individual councils could prepare for what came next.</p>
+        <p data-cy-block>Ein tasg oedd gwneud data buddsoddi cyhoeddus cymhleth yn ddefnyddiadwy, nid yn unig yn ddadansoddol, ond yn wleidyddol ac yn weithredol, fel y gallai'r LGA eirioli'n effeithiol a gallai cynghorau unigol baratoi ar gyfer yr hyn a ddaeth nesaf.</p>
       </div>
 
       <div class="cs-objective__highlight">
@@ -1513,8 +1517,8 @@
             <span data-cy>Dangosfwrdd Rhyngweithiol ar Sail Map</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Built an interactive, map-based dashboard so the LGA and individual councils could compare historic investment patterns with the emerging UK Shared Prosperity Fund landscape &mdash; a practical tool for local and national decision-makers.</span>
-            <span data-cy>Adeiladwyd dangosfwrdd rhyngweithiol ar sail map fel y gallai'r LGA a chynghorau unigol gymharu patrymau buddsoddi hanesyddol &acirc; thirwedd newydd Cronfa Ffyniant Gyffredin y DU &mdash; offeryn ymarferol i benderfynwyr lleol a chenedlaethol.</span>
+            <span data-en>Built an interactive, map-based dashboard so the LGA and individual councils could compare historic investment patterns with the emerging UK Shared Prosperity Fund landscape, a practical tool for local and national decision-makers.</span>
+            <span data-cy>Adeiladwyd dangosfwrdd rhyngweithiol ar sail map fel y gallai'r LGA a chynghorau unigol gymharu patrymau buddsoddi hanesyddol &acirc; thirwedd newydd Cronfa Ffyniant Gyffredin y DU, offeryn ymarferol i benderfynwyr lleol a chenedlaethol.</span>
           </p>
         </div>
       </div>
@@ -1573,8 +1577,8 @@
       </h2>
 
       <div class="cs-outcome__text">
-        <p data-en-block>The LGA used the analysis and dashboard as an advocacy tool in its engagement with central government on the UK Shared Prosperity Fund. Individual councils were able to use the interactive dashboard to compare their historic ESIF investment with the emerging replacement landscape &mdash; giving them the evidence they needed to engage in consultations with confidence.</p>
-        <p data-cy-block>Defnyddiodd yr LGA'r dadansoddiad a'r dangosfwrdd fel offeryn eiriolaeth yn ei ymgysylltiad &acirc;'r llywodraeth ganolog ar Gronfa Ffyniant Gyffredin y DU. Roedd cynghorau unigol yn gallu defnyddio'r dangosfwrdd rhyngweithiol i gymharu eu buddsoddiad ESIF hanesyddol &acirc;'r dirwedd newydd &mdash; gan roi'r dystiolaeth yr oedd ei hangen arnynt i ymgysylltu ag ymgynghoriadau'n hyderus.</p>
+        <p data-en-block>The LGA used the analysis and dashboard as an advocacy tool in its engagement with central government on the UK Shared Prosperity Fund. Individual councils were able to use the interactive dashboard to compare their historic ESIF investment with the emerging replacement landscape, giving them the evidence they needed to engage in consultations with confidence.</p>
+        <p data-cy-block>Defnyddiodd yr LGA'r dadansoddiad a'r dangosfwrdd fel offeryn eiriolaeth yn ei ymgysylltiad &acirc;'r llywodraeth ganolog ar Gronfa Ffyniant Gyffredin y DU. Roedd cynghorau unigol yn gallu defnyddio'r dangosfwrdd rhyngweithiol i gymharu eu buddsoddiad ESIF hanesyddol &acirc;'r dirwedd newydd, gan roi'r dystiolaeth yr oedd ei hangen arnynt i ymgysylltu ag ymgynghoriadau'n hyderus.</p>
 
         <p data-en-block>The work demonstrated that complex public investment data, when properly analysed and made accessible, can become a powerful tool for accountability, planning, and informed debate at every level of government.</p>
         <p data-cy-block>Dangosodd y gwaith, pan gaiff data buddsoddi cyhoeddus cymhleth ei ddadansoddi'n briodol a'i wneud yn hygyrch, y gall ddod yn offeryn pwerus ar gyfer atebolrwydd, cynllunio, a thrafodaeth wybodus ar bob lefel o lywodraeth.</p>
@@ -1699,11 +1703,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -1713,11 +1716,12 @@
         <div class="footer__col">
           <h4><span data-en>Capabilities</span><span data-cy>Galluoedd</span></h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">

@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="Funding &amp; Grant Strategy — VDB UK" data-title-cy="Strategaeth Cyllido a Grantiau — VDB UK">Funding &amp; Grant Strategy — VDB UK</title>
-  <meta name="description" content="VDB UK has helped unlock over £255m for UK R&amp;D projects. We build funding strategies, assemble consortia, and position applications to win." data-content-en="VDB UK has helped unlock over £255m for UK R&amp;D projects. We build funding strategies, assemble consortia, and position applications to win." data-content-cy="Mae VDB UK wedi helpu i ddatgloi dros &pound;255m ar gyfer prosiectau ymchwil a datblygu'r DU. Rydym yn adeiladu strategaethau cyllido, yn cydosod consortiwmau, ac yn lleoli ceisiadau i ennill.">
+  <title data-title-en="Funding &amp; Grant Strategy | VDB" data-title-cy="Strategaeth Cyllido a Grantiau | VDB">Funding &amp; Grant Strategy | VDB</title>
+  <meta name="description" content="VDB has helped unlock over £255m for UK R&amp;D projects. We build funding strategies, assemble consortia, and position applications to win." data-content-en="VDB has helped unlock over £255m for UK R&amp;D projects. We build funding strategies, assemble consortia, and position applications to win." data-content-cy="Mae VDB wedi helpu i ddatgloi dros &pound;255m ar gyfer prosiectau ymchwil a datblygu'r DU. Rydym yn adeiladu strategaethau cyllido, yn cydosod consortiwmau, ac yn lleoli ceisiadau i ennill.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
-       Welsh Slate palette — institutional
+       Welsh Slate palette, institutional
        warmth meets modern consultancy
        ═══════════════════════════════════════ */
     :root {
@@ -30,12 +30,15 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      /* Welsh red — deeper, more sophisticated than flag red */
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      /* Welsh red, deeper, more sophisticated than flag red */
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       /* Warm gold accent */
       --gold-600: #b8860b;
@@ -51,8 +54,8 @@
       --stone-50: #fcfbf8;
 
       /* Typography */
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       /* Spacing scale */
       --space-xs: 0.25rem;
@@ -311,7 +314,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -319,7 +322,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     /* ═══════════════════════════════════════
        THEME TOGGLE
@@ -368,14 +371,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn--ghost {
@@ -571,7 +574,7 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(200,40,63,0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(94, 26, 142,0.06) 0%, transparent 70%);
     }
 
     .approach__header {
@@ -933,6 +936,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -941,6 +946,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -1095,7 +1101,7 @@
 
     /* ═══════════════════════════════════════
        BILINGUAL SUPPORT
-       — content toggled via data-lang on <html>
+     , content toggled via data-lang on <html>
        ═══════════════════════════════════════ */
     [data-lang="en"] [data-cy],
     [data-lang="cy"] [data-en] {
@@ -1251,7 +1257,7 @@
     }
 
     [data-theme="light"] .approach__bg {
-      background: radial-gradient(circle, rgba(200,40,63,0.04) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(94, 26, 142,0.04) 0%, transparent 70%);
     }
 
     [data-theme="light"] .approach__header h2 {
@@ -1361,19 +1367,15 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <!-- VDB UK Logo — geometric monogram -->
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <!-- VDB Logo, geometric monogram -->
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <!-- V chevron mark -->
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <!-- D -->
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <!-- B -->
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <!-- Divider -->
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <!-- UK text -->
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1461,12 +1463,12 @@
         </h2>
 
         <div data-en-block>
-          <p>Securing public funding is a craft. VDB has helped unlock over &pound;255 million for UK R&amp;D projects since 2020, working across Innovate UK, Defra, UKRI, the Forestry Commission, and charitable foundations. We don't just write bids &mdash; we build the strategy, assemble the consortium, and position the application to win.</p>
+          <p>Securing public funding is a craft. VDB has helped unlock over &pound;255 million for UK R&amp;D projects since 2020, working across Innovate UK, Defra, UKRI, the Forestry Commission, and charitable foundations. We don't just write bids, we build the strategy, assemble the consortium, and position the application to win.</p>
           <p>Our team understands what funders are looking for because we've been on both sides of the process. We know the scoring criteria, the review panels, and the narrative structures that succeed.</p>
         </div>
 
         <div data-cy-block>
-          <p>Mae sicrhau cyllid cyhoeddus yn grefft. Mae VDB wedi helpu i ddatgloi dros &pound;255 miliwn ar gyfer prosiectau Ymchwil a Datblygu'r DU ers 2020, gan weithio ar draws Innovate UK, Defra, UKRI, y Comisiwn Coedwigaeth, a sefydliadau elusennol. Nid dim ond ysgrifennu ceisiadau rydym yn ei wneud &mdash; rydym yn adeiladu'r strategaeth, yn cydosod y consortiwm, ac yn lleoli'r cais i ennill.</p>
+          <p>Mae sicrhau cyllid cyhoeddus yn grefft. Mae VDB wedi helpu i ddatgloi dros &pound;255 miliwn ar gyfer prosiectau Ymchwil a Datblygu'r DU ers 2020, gan weithio ar draws Innovate UK, Defra, UKRI, y Comisiwn Coedwigaeth, a sefydliadau elusennol. Nid dim ond ysgrifennu ceisiadau rydym yn ei wneud, rydym yn adeiladu'r strategaeth, yn cydosod y consortiwm, ac yn lleoli'r cais i ennill.</p>
           <p>Mae ein t&icirc;m yn deall beth mae cyllidwyr yn chwilio amdano oherwydd rydym wedi bod ar ddwy ochr y broses. Rydym yn gwybod y meini prawf sgorio, y paneli adolygu, a'r strwythurau naratif sy'n llwyddo.</p>
         </div>
       </div>
@@ -1490,7 +1492,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       APPROACH — 4 STEPS
+       APPROACH, 4 STEPS
        ═══════════════════════════════════════ -->
   <section class="approach reveal" id="approach">
     <div class="approach__bg"></div>
@@ -1744,11 +1746,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -1761,11 +1762,12 @@
             <span data-cy>Galluoedd</span>
           </h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">

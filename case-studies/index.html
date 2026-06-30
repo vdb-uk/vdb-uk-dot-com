@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="Case Studies — VDB UK" data-title-cy="Astudiaethau Achos — VDB UK">Case Studies — VDB UK</title>
-  <meta name="description" content="Strategic advisory case studies from VDB UK. How we help organisations navigate complex funding, policy, and innovation landscapes." data-content-en="Strategic advisory case studies from VDB UK. How we help organisations navigate complex funding, policy, and innovation landscapes." data-content-cy="Astudiaethau achos cyngor strategol gan VDB UK. Sut rydym yn helpu sefydliadau i lywio tirweddau cymhleth ym maes cyllido, polisi ac arloesi.">
+  <title data-title-en="Case Studies | VDB" data-title-cy="Astudiaethau Achos | VDB">Case Studies | VDB</title>
+  <meta name="description" content="Strategic advisory case studies from VDB. How we help organisations navigate complex funding, policy, and innovation landscapes." data-content-en="Strategic advisory case studies from VDB. How we help organisations navigate complex funding, policy, and innovation landscapes." data-content-cy="Astudiaethau achos cyngor strategol gan VDB. Sut rydym yn helpu sefydliadau i lywio tirweddau cymhleth ym maes cyllido, polisi ac arloesi.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
@@ -27,11 +27,14 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       --gold-600: #b8860b;
       --gold-500: #d4a017;
@@ -44,8 +47,8 @@
       --stone-300: #e2dac8;
       --stone-50: #fcfbf8;
 
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       --space-xs: 0.25rem;
       --space-sm: 0.5rem;
@@ -281,7 +284,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -289,7 +292,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     .theme-toggle {
       display: flex;
@@ -335,14 +338,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn__arrow {
@@ -381,7 +384,7 @@
       background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
     }
 
-    /* Gold accent lines — case study signature */
+    /* Gold accent lines, case study signature */
     .index-hero__accent {
       position: absolute;
       top: 0;
@@ -441,7 +444,7 @@
       gap: var(--space-2xl);
     }
 
-    /* Featured (first) case study card — large horizontal layout */
+    /* Featured (first) case study card, large horizontal layout */
     .cs-card {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -704,6 +707,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -712,6 +717,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -967,13 +973,11 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1035,8 +1039,8 @@
       </h1>
 
       <p class="index-hero__desc animate-in animate-in--delay-2">
-        <span data-en>How we help organisations deliver innovation, navigate funding, and build programmes that matter &mdash; from MedTech to government advisory, circular economy to political campaigns.</span>
-        <span data-cy>Sut rydym yn helpu sefydliadau i gyflawni arloesedd, llywio cyllid, ac adeiladu rhaglenni sy'n bwysig &mdash; o TechFeddygol i gyngor llywodraethol, economi gylchol i ymgyrchoedd gwleidyddol.</span>
+        <span data-en>How we help organisations deliver innovation, navigate funding, and build programmes that matter, from MedTech to government advisory, circular economy to political campaigns.</span>
+        <span data-cy>Sut rydym yn helpu sefydliadau i gyflawni arloesedd, llywio cyllid, ac adeiladu rhaglenni sy'n bwysig, o TechFeddygol i gyngor llywodraethol, economi gylchol i ymgyrchoedd gwleidyddol.</span>
       </p>
     </div>
   </section>
@@ -1070,8 +1074,8 @@
             </h2>
 
             <p class="cs-card__excerpt">
-              <span data-en>Helping Wales navigate complex European funding landscapes across culture, education, and public policy &mdash; connecting policy with delivery and funding knowledge with cultural ambition.</span>
-              <span data-cy>Helpu Cymru i lywio tirweddau cyllido Ewropeaidd cymhleth ar draws diwylliant, addysg, a pholisi cyhoeddus &mdash; cysylltu polisi &acirc; chyflawni a gwybodaeth cyllido ag uchelgais ddiwylliannol.</span>
+              <span data-en>Helping Wales navigate complex European funding landscapes across culture, education, and public policy, connecting policy with delivery and funding knowledge with cultural ambition.</span>
+              <span data-cy>Helpu Cymru i lywio tirweddau cyllido Ewropeaidd cymhleth ar draws diwylliant, addysg, a pholisi cyhoeddus, cysylltu polisi &acirc; chyflawni a gwybodaeth cyllido ag uchelgais ddiwylliannol.</span>
             </p>
 
             <div class="cs-card__meta">
@@ -1112,8 +1116,8 @@
               <span data-cy>Bio-wrtaith o Wastraff: Ailgylchu Cemegol ac Adfer Dŵr</span>
             </h2>
             <p class="cs-card__excerpt">
-              <span data-en>End-to-end circular nutrient recovery — converting human urine into validated crop fertiliser at UK festivals, with &pound;2m+ in grant funding secured.</span>
-              <span data-cy>Adfer maetholion cylchol o'r dechrau i'r diwedd — trosi wrin dynol yn wrtaith cnydau dilysiedig mewn gwyliau'r DU, gyda dros &pound;2m o gyllid grant wedi'i sicrhau.</span>
+              <span data-en>End-to-end circular nutrient recovery, converting human urine into validated crop fertiliser at UK festivals, with &pound;2m+ in grant funding secured.</span>
+              <span data-cy>Adfer maetholion cylchol o'r dechrau i'r diwedd, trosi wrin dynol yn wrtaith cnydau dilysiedig mewn gwyliau'r DU, gyda dros &pound;2m o gyllid grant wedi'i sicrhau.</span>
             </p>
             <div class="cs-card__meta">
               <div class="cs-card__meta-item">
@@ -1232,8 +1236,8 @@
               <span data-cy>Synwyryddion Ffresni Digidol yn Lleihau Gwastraff Bwyd</span>
             </h2>
             <p class="cs-card__excerpt">
-              <span data-en>Supporting the world's first digital freshness sensor company. Deployed across 17 Cranswick production sites — a UK industry first.</span>
-              <span data-cy>Cefnogi cwmni synhwyrydd ffresni digidol cyntaf y byd. Wedi'i ddefnyddio ar draws 17 safle cynhyrchu Cranswick — y cyntaf yn y diwydiant yn y DU.</span>
+              <span data-en>Supporting the world's first digital freshness sensor company. Deployed across 17 Cranswick production sites, a UK industry first.</span>
+              <span data-cy>Cefnogi cwmni synhwyrydd ffresni digidol cyntaf y byd. Wedi'i ddefnyddio ar draws 17 safle cynhyrchu Cranswick, y cyntaf yn y diwydiant yn y DU.</span>
             </p>
             <div class="cs-card__meta">
               <div class="cs-card__meta-item">
@@ -1470,11 +1474,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -1484,11 +1487,12 @@
         <div class="footer__col">
           <h4><span data-en>Capabilities</span><span data-cy>Galluoedd</span></h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">

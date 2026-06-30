@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="VDB UK — Validate. Develop. Build." data-title-cy="VDB UK — Dilysu. Datblygu. Adeiladu.">VDB UK — Validate. Develop. Build.</title>
-  <meta name="description" content="VDB UK delivers complex programmes, unlocks funding, and drives innovation for UK public and private sector projects." data-content-en="VDB UK delivers complex programmes, unlocks funding, and drives innovation for UK public and private sector projects." data-content-cy="Mae VDB UK yn cyflawni rhaglenni cymhleth, yn datgloi cyllid ac yn sbarduno arloesedd ar gyfer prosiectau cyhoeddus a phreifat ledled y DU.">
+  <title data-title-en="VDB | Validate. Design. Build." data-title-cy="VDB | Dilysu. Dylunio. Adeiladu.">VDB | Validate. Design. Build.</title>
+  <meta name="description" content="VDB delivers complex programmes, unlocks funding, and drives innovation for UK public and private sector projects." data-content-en="VDB delivers complex programmes, unlocks funding, and drives innovation for UK public and private sector projects." data-content-cy="Mae VDB yn cyflawni rhaglenni cymhleth, yn datgloi cyllid ac yn sbarduno arloesedd ar gyfer prosiectau cyhoeddus a phreifat ledled y DU.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
-       Welsh Slate palette — institutional
+       Welsh Slate palette, institutional
        warmth meets modern consultancy
        ═══════════════════════════════════════ */
     :root {
@@ -30,12 +30,15 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      /* Welsh red — deeper, more sophisticated than flag red */
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      /* Welsh red, deeper, more sophisticated than flag red */
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       /* Warm gold accent */
       --gold-600: #b8860b;
@@ -51,8 +54,8 @@
       --stone-50: #fcfbf8;
 
       /* Typography */
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       /* Spacing scale */
       --space-xs: 0.25rem;
@@ -311,7 +314,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -319,7 +322,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     /* ═══════════════════════════════════════
        HERO
@@ -333,7 +336,7 @@
       padding-top: var(--header-height);
     }
 
-    /* Geometric pattern background — Welsh slate inspired */
+    /* Geometric pattern background, Welsh slate inspired */
     .hero__pattern {
       position: absolute;
       inset: 0;
@@ -432,14 +435,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn--ghost {
@@ -670,7 +673,7 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(200,40,63,0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(94, 26, 142,0.06) 0%, transparent 70%);
     }
 
     .approach__header {
@@ -895,7 +898,7 @@
     }
 
     /* ═══════════════════════════════════════
-       FEATURED — SECRETARIAT CTA
+       FEATURED, SECRETARIAT CTA
        ═══════════════════════════════════════ */
     .featured {
       padding: var(--space-5xl) 0;
@@ -1281,6 +1284,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -1289,6 +1294,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -1323,7 +1329,7 @@
     .animate-in--delay-4 { animation-delay: 0.4s; }
     .animate-in--delay-5 { animation-delay: 0.5s; }
 
-    /* Scroll-triggered reveal — JS adds .reveal--hidden, then removes it */
+    /* Scroll-triggered reveal, JS adds .reveal--hidden, then removes it */
     .reveal--hidden {
       opacity: 0;
       transform: translateY(20px);
@@ -1448,7 +1454,7 @@
 
     /* ═══════════════════════════════════════
        BILINGUAL SUPPORT
-       — content toggled via data-lang on <html>
+     , content toggled via data-lang on <html>
        ═══════════════════════════════════════ */
     [data-lang="en"] [data-cy],
     [data-lang="cy"] [data-en] {
@@ -1670,7 +1676,7 @@
     }
 
     [data-theme="light"] .approach__bg {
-      background: radial-gradient(circle, rgba(200,40,63,0.04) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(94, 26, 142,0.04) 0%, transparent 70%);
     }
 
     [data-theme="light"] .approach__header h2 {
@@ -1761,7 +1767,7 @@
 
     /* ═══════════════════════════════════════
        PARTNERSHIP BAND (secondary)
-       — links to the HLS technical-delivery
+     , links to the HLS technical-delivery
        partnership. One restrained HLS-purple
        accent only.
        ═══════════════════════════════════════ */
@@ -1807,19 +1813,15 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <!-- VDB UK Logo — geometric monogram -->
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <!-- VDB Logo, geometric monogram -->
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <!-- V chevron mark -->
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <!-- D -->
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <!-- B -->
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <!-- Divider -->
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <!-- UK text -->
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1908,21 +1910,21 @@
           </div>
         </div>
         <div class="stat-card">
-          <div class="stat-card__number stat-card__number--red">8+</div>
+          <div class="stat-card__number stat-card__number--red">25</div>
           <div class="stat-card__label">
-            <span data-en>Major funded projects delivered</span>
-            <span data-cy>Prosiectau ariannu mawr wedi'u cyflawni</span>
+            <span data-en>Successful projects delivered</span>
+            <span data-cy>Prosiectau llwyddiannus wedi'u cyflawni</span>
           </div>
         </div>
         <div class="stat-card">
-          <div class="stat-card__number stat-card__number--white">350+</div>
+          <div class="stat-card__number stat-card__number--white">3</div>
           <div class="stat-card__label">
-            <span data-en>Healthcare locations using our innovations</span>
-            <span data-cy>Lleoliadau gofal iechyd yn defnyddio ein harloesiadau</span>
+            <span data-en>Multi-year programmes</span>
+            <span data-cy>Rhaglenni aml-flwyddyn</span>
           </div>
         </div>
         <div class="stat-card">
-          <div class="stat-card__number stat-card__number--gold">5+</div>
+          <div class="stat-card__number stat-card__number--gold">10</div>
           <div class="stat-card__label">
             <span data-en>Years building innovation partnerships</span>
             <span data-cy>Blynyddoedd yn adeiladu partneriaethau arloesi</span>
@@ -1946,9 +1948,9 @@
         <span>Innovate UK</span>
         <span>Imperial College</span>
         <span>Cambridge</span>
-        <span>NHS</span>
+        <span>Plus X Innovation</span>
         <span>Forestry Commission</span>
-        <span>Cranswick</span>
+        <span>Welsh Government</span>
       </div>
     </div>
   </div>
@@ -1967,42 +1969,42 @@
         <span data-cy>Galluoedd wedi'u hadeiladu ar gyfer cyflawni cymhleth</span>
       </h2>
       <p class="capabilities__subtitle">
-        <span data-en>We bring together programme delivery expertise, funding strategy, and research capability to help organisations achieve their most ambitious goals.</span>
-        <span data-cy>Rydym yn dod ag arbenigedd cyflawni rhaglenni, strategaeth cyllido, a gallu ymchwil ynghyd i helpu sefydliadau i gyflawni eu nodau mwyaf uchelgeisiol.</span>
+        <span data-en>We have an appetite for the ambitious. We combine expertise in project delivery, engineering, science and finance to deliver the most complex, multi-stakeholder programmes.</span>
+        <span data-cy>Mae gennym awydd am yr uchelgeisiol. Rydym yn cyfuno arbenigedd mewn cyflawni prosiectau, peirianneg, gwyddoniaeth a chyllid i gyflawni'r rhaglenni mwyaf cymhleth ac aml-randdeiliad.</span>
       </p>
     </div>
 
     <div class="capabilities__grid">
       <div class="cap-card">
         <div class="cap-card__icon cap-card__icon--red">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
         </div>
         <h3>
-          <span data-en>Secretariat &amp; Programme Management</span>
-          <span data-cy>Ysgrifenyddiaeth a Rheoli Rhaglenni</span>
+          <span data-en>Research and innovation</span>
+          <span data-cy>Ymchwil ac Arloesi</span>
         </h3>
         <p class="cap-card__desc">
-          <span data-en>End-to-end governance and programme delivery for government bodies. Stakeholder coordination, reporting, minutes, and institutional continuity across multi-year funded periods.</span>
-          <span data-cy>Llywodraethu a chyflawni rhaglenni o'r dechrau i'r diwedd ar gyfer cyrff llywodraethol. Cydlynu rhanddeiliaid, adrodd, cofnodion, a pharhad sefydliadol ar draws cyfnodau ariannu aml-flwyddyn.</span>
+          <span data-en>We run primary and secondary research that validates new ideas before they scale, combining human-centred design, user workshops and peer-reviewed evidence. From early discovery to investment-ready insight, we connect rigorous research to real-world impact for government, universities and enterprise.</span>
+          <span data-cy>Rydym yn cynnal ymchwil gynradd ac eilaidd sy'n dilysu syniadau newydd cyn iddynt raddio, gan gyfuno dylunio sy'n canolbwyntio ar bobl, gweithdai defnyddwyr a thystiolaeth a adolygwyd gan gymheiriaid. O ddarganfod cynnar i fewnwelediad sy'n barod i fuddsoddi, rydym yn cysylltu ymchwil drylwyr ag effaith yn y byd go iawn ar gyfer y llywodraeth, prifysgolion a busnesau.</span>
         </p>
-        <a href="/capabilities/secretariat.html" class="cap-card__link">
+        <a href="/capabilities/research.html" class="cap-card__link">
           <span data-en>Learn more</span><span data-cy>Dysgu mwy</span> <span class="btn__arrow">&rarr;</span>
         </a>
       </div>
 
       <div class="cap-card">
         <div class="cap-card__icon cap-card__icon--gold">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m9 8-2 2 2 2"/><path d="m15 8 2 2-2 2"/></svg>
         </div>
         <h3>
-          <span data-en>Research &amp; Innovation</span>
-          <span data-cy>Ymchwil ac Arloesi</span>
+          <span data-en>Product and system development</span>
+          <span data-cy>Datblygu Cynnyrch a Systemau</span>
         </h3>
         <p class="cap-card__desc">
-          <span data-en>Primary and secondary research to validate new ideas. Human-centred design, user workshops, and corporate insights enriched with peer-reviewed evidence.</span>
-          <span data-cy>Ymchwil gynradd ac eilaidd i ddilysu syniadau newydd. Dylunio sy'n canolbwyntio ar bobl, gweithdai defnyddwyr, a mewnwelediadau corfforaethol wedi'u cyfoethogi gyda thystiolaeth a adolygwyd gan gymheiriaid.</span>
+          <span data-en>We design and build the products and digital systems that turn ideas into deployable solutions, with particular strength in app development, from web and mobile applications to secure client portals, dashboards and integrated data pipelines. Working with our technical delivery partner Higher Level Software, we ship dependable, auditable software and connected hardware, from the GripAble/SqueezAble rehabilitation platform to BlakBear's digital freshness sensors.</span>
+          <span data-cy>Rydym yn dylunio ac yn adeiladu'r cynhyrchion a'r systemau digidol sy'n troi syniadau yn atebion y gellir eu defnyddio, gyda chryfder arbennig mewn datblygu apiau, o gymwysiadau gwe a symudol i byrth cleientiaid diogel, dangosfyrddau a llwybrau data integredig. Gan weithio gyda'n partner cyflawni technegol Higher Level Software, rydym yn darparu meddalwedd ddibynadwy ac archwiliadwy a chaledwedd cysylltiedig, o blatfform adsefydlu GripAble/SqueezAble i synwyryddion ffresni digidol BlakBear.</span>
         </p>
-        <a href="/capabilities/research.html" class="cap-card__link">
+        <a href="/capabilities/product-and-system-development.html" class="cap-card__link">
           <span data-en>Learn more</span><span data-cy>Dysgu mwy</span> <span class="btn__arrow">&rarr;</span>
         </a>
       </div>
@@ -2012,12 +2014,12 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
         <h3>
-          <span data-en>Funding &amp; Grant Strategy</span>
-          <span data-cy>Strategaeth Cyllido a Grantiau</span>
+          <span data-en>Fundraising and scale-up</span>
+          <span data-cy>Codi Arian a Graddio</span>
         </h3>
         <p class="cap-card__desc">
-          <span data-en>We develop winning bids and unlock substantial public and institutional funding. Our team has secured over &pound;255m for UK R&amp;D projects across government, UKRI, and charitable foundations.</span>
-          <span data-cy>Rydym yn datblygu ceisiadau llwyddiannus ac yn datgloi cyllid cyhoeddus a sefydliadol sylweddol. Mae ein t&icirc;m wedi sicrhau dros &pound;255m ar gyfer prosiectau ymchwil a datblygu'r DU ar draws y llywodraeth, UKRI a sefydliadau elusennol.</span>
+          <span data-en>We have unlocked over &pound;255m for UK R&amp;D since 2020, building the strategy, assembling the consortium and positioning each bid to win across Innovate UK, UKRI, Defra and charitable funders. Beyond the grant we help ventures scale, structuring post-award delivery and investment readiness, as when we helped Plus X Innovation's accelerator support 69 companies that went on to raise &pound;180m.</span>
+          <span data-cy>Rydym wedi datgloi dros &pound;255m ar gyfer ymchwil a datblygu'r DU ers 2020, gan adeiladu'r strategaeth, ffurfio'r consortiwm a lleoli pob cais i ennill ar draws Innovate UK, UKRI, Defra a chyllidwyr elusennol. Y tu hwnt i'r grant rydym yn helpu mentrau i raddio, gan strwythuro cyflawni ar &ocirc;l dyfarniad a pharodrwydd i fuddsoddi, fel pan wnaethom helpu cyflymydd Plus X Innovation i gefnogi 69 cwmni a aeth ymlaen i godi &pound;180m.</span>
         </p>
         <a href="/capabilities/funding.html" class="cap-card__link">
           <span data-en>Learn more</span><span data-cy>Dysgu mwy</span> <span class="btn__arrow">&rarr;</span>
@@ -2026,15 +2028,15 @@
 
       <div class="cap-card">
         <div class="cap-card__icon cap-card__icon--red">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 3h6"/><path d="M10 3v6.5L5 18a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-8.5V3"/><path d="M7.5 14h9"/></svg>
         </div>
         <h3>
-          <span data-en>Science &amp; Engineering</span>
+          <span data-en>Science and engineering</span>
           <span data-cy>Gwyddoniaeth a Pheirianneg</span>
         </h3>
         <p class="cap-card__desc">
-          <span data-en>Lab-to-market delivery. We build demonstrators, run field trials, and develop scalable solutions — from bio-fertiliser production to medical sensor technology.</span>
-          <span data-cy>Cyflawni o'r labordy i'r farchnad. Rydym yn adeiladu arddangoswyr, yn rhedeg treialon maes, ac yn datblygu atebion graddadwy, o gynhyrchu bio-wrtaith i dechnoleg synwyryddion meddygol.</span>
+          <span data-en>We take science from lab to market, building demonstrators, running field trials and developing scalable solutions across deep tech, from bio-fertiliser production to medical sensor technology. Our scientists and engineers turn promising research into robust, manufacturable products, as with NPK Recovery's process for converting waste into crop nutrients.</span>
+          <span data-cy>Rydym yn mynd &acirc; gwyddoniaeth o'r labordy i'r farchnad, gan adeiladu arddangoswyr, rhedeg treialon maes a datblygu atebion graddadwy ar draws tech ddofn, o gynhyrchu bio-wrtaith i dechnoleg synwyryddion meddygol. Mae ein gwyddonwyr a'n peirianwyr yn troi ymchwil addawol yn gynhyrchion cadarn y gellir eu gweithgynhyrchu, fel gyda phroses Adfer NPK ar gyfer trosi gwastraff yn faetholion cnydau.</span>
         </p>
         <a href="/capabilities/science.html" class="cap-card__link">
           <span data-en>Learn more</span><span data-cy>Dysgu mwy</span> <span class="btn__arrow">&rarr;</span>
@@ -2043,15 +2045,15 @@
 
       <div class="cap-card">
         <div class="cap-card__icon cap-card__icon--gold">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3Z"/><path d="M17 4a2 2 0 0 0 2 2 2 2 0 0 0-2 2 2 2 0 0 0-2-2 2 2 0 0 0 2-2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
         </div>
         <h3>
-          <span data-en>ESG &amp; Sustainability</span>
-          <span data-cy>ESG a Chynaliadwyedd</span>
+          <span data-en>Sustainability</span>
+          <span data-cy>Cynaliadwyedd</span>
         </h3>
         <p class="cap-card__desc">
-          <span data-en>Climate research, ESG risk frameworks, and circular economy innovation. Our clients include Earthshot Prize shortlistees and Terra Carta Labs winners.</span>
-          <span data-cy>Ymchwil hinsawdd, fframweithiau risg ESG, ac arloesedd economi gylchol. Mae ein cleientiaid yn cynnwys rhai ar restr fer Gwobr Earthshot ac enillwyr Terra Carta Labs.</span>
+          <span data-en>We help organisations turn sustainability ambition into measurable outcomes through climate research, ESG risk frameworks and circular-economy innovation. Our work spans Earthshot Prize shortlistees and Terra Carta Labs winners, from recovering nutrients out of waste streams to digital sensors that cut food waste across production facilities.</span>
+          <span data-cy>Rydym yn helpu sefydliadau i droi uchelgais cynaliadwyedd yn ganlyniadau mesuradwy trwy ymchwil hinsawdd, fframweithiau risg ESG ac arloesedd economi gylchol. Mae ein gwaith yn rhychwantu rhai ar restr fer Gwobr Earthshot ac enillwyr Terra Carta Labs, o adfer maetholion o ffrydiau gwastraff i synwyryddion digidol sy'n torri gwastraff bwyd ar draws cyfleusterau cynhyrchu.</span>
         </p>
         <a href="/capabilities/esg.html" class="cap-card__link">
           <span data-en>Learn more</span><span data-cy>Dysgu mwy</span> <span class="btn__arrow">&rarr;</span>
@@ -2060,17 +2062,17 @@
 
       <div class="cap-card">
         <div class="cap-card__icon cap-card__icon--slate">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
         </div>
         <h3>
-          <span data-en>Translation &amp; Language Services</span>
-          <span data-cy>Gwasanaethau Cyfieithu ac Iaith</span>
+          <span data-en>Partnership building</span>
+          <span data-cy>Adeiladu Partneriaethau</span>
         </h3>
         <p class="cap-card__desc">
-          <span data-en>Professional bilingual content for government and public sector. Human linguistic expertise enhanced by AI-powered automation for Welsh-English and multilingual projects.</span>
-          <span data-cy>Cynnwys dwyieithog proffesiynol ar gyfer y llywodraeth a'r sector cyhoeddus. Arbenigedd ieithyddol dynol wedi'i gyfuno ag awtomeiddio deallus ar gyfer prosiectau Cymraeg-Saesneg ac amlieithog.</span>
+          <span data-en>Complex programmes succeed on the right partners, so we assemble and lead multi-stakeholder consortia spanning universities, public bodies, enterprises and spin-outs, from Imperial College to the Arts Council of Wales. We bring the operational leadership and, with our technical partner Higher Level Software, the dependable delivery that keep every stakeholder aligned and accountable.</span>
+          <span data-cy>Mae rhaglenni cymhleth yn llwyddo ar y partneriaid cywir, felly rydym yn ffurfio ac yn arwain consortia aml-randdeiliad sy'n rhychwantu prifysgolion, cyrff cyhoeddus, busnesau a mentrau deilliol, o Goleg Imperial i Gyngor Celfyddydau Cymru. Rydym yn dod &acirc;'r arweinyddiaeth weithredol ac, gyda'n partner technegol Higher Level Software, y cyflawni dibynadwy sy'n cadw pob rhanddeiliad yn gyson ac yn atebol.</span>
         </p>
-        <a href="/capabilities/translation.html" class="cap-card__link">
+        <a href="/capabilities/partnership-building.html" class="cap-card__link">
           <span data-en>Learn more</span><span data-cy>Dysgu mwy</span> <span class="btn__arrow">&rarr;</span>
         </a>
       </div>
@@ -2078,7 +2080,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       OUR APPROACH — V D B PILLARS
+       OUR APPROACH, V D B PILLARS
        ═══════════════════════════════════════ -->
   <section class="approach" id="approach">
     <div class="approach__bg"></div>
@@ -2088,8 +2090,8 @@
         <span data-cy>Ein dull</span>
       </span>
       <h2>
-        <span data-en>Validate. Develop. Build.</span>
-        <span data-cy>Dilysu. Datblygu. Adeiladu.</span>
+        <span data-en>Validate. Design. Build.</span>
+        <span data-cy>Dilysu. Dylunio. Adeiladu.</span>
       </h2>
     </div>
 
@@ -2121,18 +2123,22 @@
             <span data-en>Peer-reviewed evidence</span>
             <span data-cy>Tystiolaeth a adolygwyd gan gymheiriaid</span>
           </li>
+          <li>
+            <span data-en>Market development</span>
+            <span data-cy>Datblygu marchnad</span>
+          </li>
         </ul>
       </div>
 
       <div class="pillar">
         <div class="pillar__number">D</div>
         <h3>
-          <span data-en>Develop</span>
-          <span data-cy>Datblygu</span>
+          <span data-en>Design</span>
+          <span data-cy>Dylunio</span>
         </h3>
         <p class="pillar__desc">
-          <span data-en>We assemble the right teams, secure funding, and build the partnerships needed to move from concept to delivery.</span>
-          <span data-cy>Rydym yn cydosod y timau cywir, yn sicrhau cyllid, ac yn adeiladu'r partneriaethau sydd eu hangen i symud o gysyniad i gyflawni.</span>
+          <span data-en>With the concept proven, we design how it gets delivered, shaping the solution, the funding strategy and the consortium needed to make it real. This is where a validated idea becomes a fundable, buildable plan, with the right partners and resources behind it.</span>
+          <span data-cy>Gyda'r cysyniad wedi'i brofi, rydym yn dylunio sut y caiff ei gyflawni, gan siapio'r ateb, y strategaeth gyllido a'r consortiwm sydd eu hangen i'w wireddu. Dyma lle mae syniad dilys yn dod yn gynllun y gellir ei ariannu a'i adeiladu, gyda'r partneriaid a'r adnoddau cywir y tu &ocirc;l iddo.</span>
         </p>
         <ul class="pillar__list">
           <li>
@@ -2142,14 +2148,6 @@
           <li>
             <span data-en>Consortium building</span>
             <span data-cy>Adeiladu consortiwmau</span>
-          </li>
-          <li>
-            <span data-en>Market development</span>
-            <span data-cy>Datblygu marchnad</span>
-          </li>
-          <li>
-            <span data-en>Business development</span>
-            <span data-cy>Datblygu busnes</span>
           </li>
         </ul>
       </div>
@@ -2161,8 +2159,8 @@
           <span data-cy>Adeiladu</span>
         </h3>
         <p class="pillar__desc">
-          <span data-en>Our science and engineering teams deliver real outcomes — from lab demonstrators to new enterprises ready for market.</span>
-          <span data-cy>Mae ein timau gwyddoniaeth a pheirianneg yn cyflawni canlyniadau go iawn — o arddangoswyr labordy i fentrau newydd yn barod ar gyfer y farchnad.</span>
+          <span data-en>Our science and engineering teams deliver real outcomes, from lab demonstrators to new enterprises ready for market.</span>
+          <span data-cy>Mae ein timau gwyddoniaeth a pheirianneg yn cyflawni canlyniadau go iawn, o arddangoswyr labordy i fentrau newydd yn barod ar gyfer y farchnad.</span>
         </p>
         <ul class="pillar__list">
           <li>
@@ -2181,6 +2179,10 @@
             <span data-en>Scaling partnerships</span>
             <span data-cy>Partneriaethau ar gyfer graddio</span>
           </li>
+          <li>
+            <span data-en>Business development</span>
+            <span data-cy>Datblygu busnes</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -2198,8 +2200,8 @@
             <span data-cy>Technical delivery partner</span>
           </span>
           <p class="partner-band__text">
-            <span data-en>For programmes that need specialist software, hosting and agentic knowledge-work systems, VDB UK works with <strong>Higher Level Software</strong> as its technical delivery partner.</span>
-            <span data-cy>For programmes that need specialist software, hosting and agentic knowledge-work systems, VDB UK works with <strong>Higher Level Software</strong> as its technical delivery partner.</span>
+            <span data-en>For programmes that need specialist software, hosting and agentic knowledge-work systems, VDB works with <strong>Higher Level Software</strong> as its technical delivery partner.</span>
+            <span data-cy>For programmes that need specialist software, hosting and agentic knowledge-work systems, VDB works with <strong>Higher Level Software</strong> as its technical delivery partner.</span>
           </p>
         </div>
         <a class="partner-band__link" href="/partnerships.html">
@@ -2235,7 +2237,7 @@
     <div class="projects__grid">
       <a href="/case-studies/npk-recovery.html" class="project-card">
         <div class="project-card__image">
-          <img src="images/vdb-photo-2.jpg" alt="Laboratory glassware with green solutions — chemical recycling research" data-alt-en="Laboratory glassware with green solutions — chemical recycling research" data-alt-cy="Gwydrau labordy gyda hydoddiannau gwyrdd — ymchwil ailgylchu cemegol">
+          <img src="images/vdb-photo-2.jpg" alt="Laboratory glassware with green solutions, chemical recycling research" data-alt-en="Laboratory glassware with green solutions, chemical recycling research" data-alt-cy="Gwydrau labordy gyda hydoddiannau gwyrdd, ymchwil ailgylchu cemegol">
         </div>
         <div class="project-card__body">
           <div class="project-card__partner">NPK Recovery</div>
@@ -2244,8 +2246,8 @@
             <span data-cy>Bio-wrtaith o wastraff: ailgylchu cemegol ac adfer dŵr</span>
           </div>
           <p class="project-card__desc">
-            <span data-en>End-to-end circular nutrient recovery — converting human urine into validated crop fertiliser, deployed at UK festivals and now growing native trees in the Brecon Beacons.</span>
-            <span data-cy>Adfer maetholion cylchol o'r dechrau i'r diwedd — trosi wrin dynol yn wrtaith cnydau dilysiedig, wedi'i ddefnyddio mewn gwyliau ledled y DU ac yn awr yn tyfu coed brodorol ym Mannau Brycheiniog.</span>
+            <span data-en>End-to-end circular nutrient recovery, converting human urine into validated crop fertiliser, deployed at UK festivals and now growing native trees in the Brecon Beacons.</span>
+            <span data-cy>Adfer maetholion cylchol o'r dechrau i'r diwedd, trosi wrin dynol yn wrtaith cnydau dilysiedig, wedi'i ddefnyddio mewn gwyliau ledled y DU ac yn awr yn tyfu coed brodorol ym Mannau Brycheiniog.</span>
           </p>
           <div class="project-card__stat">
             <span data-en>&pound;2m+ grant funding secured</span>
@@ -2296,76 +2298,33 @@
         </div>
       </a>
 
-      <a href="/case-studies/blakbear.html" class="project-card">
+      <!-- TODO(edit 27): a dedicated NPK app case-study page could replace the npk-recovery.html link below -->
+      <a href="/case-studies/npk-recovery.html" class="project-card">
         <div class="project-card__image">
-          <img src="images/project-blakbear-sensor.jpg" alt="BlakBear digital freshness sensor" data-alt-en="BlakBear digital freshness sensor" data-alt-cy="Synhwyrydd ffresni digidol BlakBear">
+          <!-- TODO(edit 27): swap for the NPK Recovery app screenshot Hannah is supplying -->
+          <img src="images/vdb-photo-2.jpg" alt="The NPK Recovery app for booking green tankering at events" data-alt-en="The NPK Recovery app for booking green tankering at events" data-alt-cy="Ap Adfer NPK ar gyfer archebu tancio gwyrdd mewn digwyddiadau">
         </div>
         <div class="project-card__body">
-          <div class="project-card__partner">BlakBear / Cranswick</div>
+          <div class="project-card__partner">NPK Recovery / HLS</div>
           <div class="project-card__title">
-            <span data-en>Digital freshness sensors reducing food waste</span>
-            <span data-cy>Synwyryddion ffresni digidol yn lleihau gwastraff bwyd</span>
+            <span data-en>A mobile app that makes event waste greener</span>
+            <span data-cy>Ap symudol sy'n gwneud gwastraff digwyddiadau'n wyrddach</span>
           </div>
           <p class="project-card__desc">
-            <span data-en>Supporting the world's first digital freshness sensor company. Now deployed across 17 Cranswick production sites — a first for the UK meat industry.</span>
-            <span data-cy>Cefnogi cwmni synhwyrydd ffresni digidol cyntaf y byd. Bellach wedi'i ddefnyddio ar draws 17 safle cynhyrchu Cranswick, y cyntaf o'i fath yn niwydiant cig y DU.</span>
+            <span data-en>VDB and Higher Level Software built the NPK Recovery app for event organisers, turning green tankering, the sustainable disposal of event waste, into a few taps. Organisers compare NPK against competitors on cost and environmental impact, then book a collection slot in the app. It puts a transparent, lower-impact option in the hands of the people planning the event.</span>
+            <span data-cy>Adeiladodd VDB a Higher Level Software ap Adfer NPK ar gyfer trefnwyr digwyddiadau, gan droi tancio gwyrdd, sef gwaredu gwastraff digwyddiadau'n gynaliadwy, yn ychydig o dapiau. Mae trefnwyr yn cymharu NPK &acirc; chystadleuwyr ar gost ac effaith amgylcheddol, yna'n archebu slot casglu yn yr ap. Mae'n rhoi opsiwn tryloyw, is ei effaith, yn nwylo'r bobl sy'n cynllunio'r digwyddiad.</span>
           </p>
           <div class="project-card__stat">
-            <span data-en>17 production sites deployed</span>
-            <span data-cy>17 safle cynhyrchu wedi'u defnyddio</span>
+            <span data-en>Tonnes diverted from wastewater treatment</span>
+            <span data-cy>Tunelli wedi'u dargyfeirio o drin d&#x175;r gwastraff</span>
           </div>
         </div>
       </a>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       FEATURED — SECRETARIAT
-       ═══════════════════════════════════════ -->
-  <section class="featured" id="about">
-    <div class="featured__inner">
-      <div class="featured__image">
-        <img src="images/vdb-photo-4.jpg" alt="Overhead view of collaborative planning session with documents, charts, and blueprints" data-alt-en="Overhead view of collaborative planning session with documents, charts, and blueprints" data-alt-cy="Golygfa uwchben sesiwn gynllunio gydweithredol gyda dogfennau, siartiau a glasbrintiau">
-      </div>
-      <div class="featured__text">
-        <span class="label label--red">
-          <span data-en>Featured capability</span>
-          <span data-cy>Gallu dan sylw</span>
-        </span>
-        <h2>
-          <span data-en>Government Secretariat &amp; Programme Delivery</span>
-          <span data-cy>Ysgrifenyddiaeth y Llywodraeth a Chyflawni Rhaglenni</span>
-        </h2>
-        <p class="featured__desc">
-          <span data-en>We run the governance process so public bodies can focus on their mission. From stakeholder coordination to compliance reporting, we provide the institutional backbone for multi-year funded programmes.</span>
-          <span data-cy>Rydym yn rhedeg y broses lywodraethu fel y gall cyrff cyhoeddus ganolbwyntio ar eu cenhadaeth. O gydlynu rhanddeiliaid i adrodd ar gydymffurfiaeth, rydym yn darparu'r asgwrn cefn sefydliadol ar gyfer rhaglenni ariannu aml-flwyddyn.</span>
-        </p>
-        <ul class="featured__checklist">
-          <li>
-            <span data-en>Stakeholder mapping &amp; onboarding</span>
-            <span data-cy>Mapio a chyflwyno rhanddeiliaid</span>
-          </li>
-          <li>
-            <span data-en>Meeting management &amp; minute production</span>
-            <span data-cy>Rheoli cyfarfodydd a chynhyrchu cofnodion</span>
-          </li>
-          <li>
-            <span data-en>Governance frameworks &amp; reporting</span>
-            <span data-cy>Fframweithiau llywodraethu ac adrodd</span>
-          </li>
-          <li>
-            <span data-en>Continuity planning &amp; knowledge transfer</span>
-            <span data-cy>Cynllunio parhad a throsglwyddo gwybodaeth</span>
-          </li>
-        </ul>
-        <a href="/capabilities/secretariat.html" class="btn btn--primary">
-          <span data-en>Explore this capability</span>
-          <span data-cy>Archwiliwch y gallu hwn</span>
-          <span class="btn__arrow">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- Featured "Government Secretariat & Programme Delivery" section removed in the 2026-06 rebrand (edit 07): Secretariat dropped from the capability set. -->
+
 
   <!-- ═══════════════════════════════════════
        CTA BANNER
@@ -2378,8 +2337,8 @@
         <span data-cy>Gadewch i ni adeiladu rhywbeth sy'n bwysig</span>
       </h2>
       <p class="cta-banner__desc">
-        <span data-en>Whether you're exploring a new idea, applying for funding, or need a delivery partner — we'd love to hear from you.</span>
-        <span data-cy>P'un a ydych chi'n archwilio syniad newydd, yn gwneud cais am gyllid, neu angen partner cyflawni — byddem wrth ein bodd yn clywed gennych.</span>
+        <span data-en>Whether you're exploring a new idea, applying for funding, or need a delivery partner, we'd love to hear from you.</span>
+        <span data-cy>P'un a ydych chi'n archwilio syniad newydd, yn gwneud cais am gyllid, neu angen partner cyflawni, byddem wrth ein bodd yn clywed gennych.</span>
       </p>
       <a href="mailto:hannah@vandenberghuk.com" class="btn btn--white">
         <span data-en>Get in touch</span>
@@ -2396,11 +2355,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -2413,12 +2371,12 @@
             <span data-cy>Galluoedd</span>
           </h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
-            <li><a href="/capabilities/translation.html"><span data-en>Translation</span><span data-cy>Cyfieithu</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="Bilingual Organisations in Wales — Case Study — VDB UK" data-title-cy="Sefydliadau Dwyieithog yng Nghymru — Astudiaeth Achos — VDB UK">Bilingual Organisations in Wales — Case Study — VDB UK</title>
-  <meta name="description" content="How VDB UK helped Welsh public, cultural, and political organisations embed high-quality bilingual delivery as core practice, not a last-minute translation task." data-content-en="How VDB UK helped Welsh public, cultural, and political organisations embed high-quality bilingual delivery as core practice, not a last-minute translation task." data-content-cy="Sut y helpodd VDB UK sefydliadau cyhoeddus, diwylliannol, a gwleidyddol Cymru i ymgorffori cyflawni dwyieithog o ansawdd uchel fel arfer craidd, nid fel tasg gyfieithu funud olaf.">
+  <title data-title-en="Bilingual Organisations in Wales | Case Study | VDB" data-title-cy="Sefydliadau Dwyieithog yng Nghymru | Astudiaeth Achos | VDB">Bilingual Organisations in Wales | Case Study | VDB</title>
+  <meta name="description" content="How VDB helped Welsh public, cultural, and political organisations embed high-quality bilingual delivery as core practice, not a last-minute translation task." data-content-en="How VDB helped Welsh public, cultural, and political organisations embed high-quality bilingual delivery as core practice, not a last-minute translation task." data-content-cy="Sut y helpodd VDB sefydliadau cyhoeddus, diwylliannol, a gwleidyddol Cymru i ymgorffori cyflawni dwyieithog o ansawdd uchel fel arfer craidd, nid fel tasg gyfieithu funud olaf.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
@@ -29,11 +29,14 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       --gold-600: #b8860b;
       --gold-500: #d4a017;
@@ -46,8 +49,8 @@
       --stone-300: #e2dac8;
       --stone-50: #fcfbf8;
 
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       --space-xs: 0.25rem;
       --space-sm: 0.5rem;
@@ -286,7 +289,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -294,7 +297,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     .theme-toggle {
       display: flex;
@@ -340,14 +343,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn--ghost {
@@ -407,7 +410,7 @@
       background: linear-gradient(to top, var(--slate-950) 0%, rgba(15,17,24,0.5) 50%, rgba(15,17,24,0.2) 100%);
     }
 
-    /* Gold diagonal accent — distinguishes case studies from projects */
+    /* Gold diagonal accent, distinguishes case studies from projects */
     .cs-hero__accent {
       position: absolute;
       top: 0;
@@ -666,7 +669,7 @@
     }
 
     /* ═══════════════════════════════════════
-       WHY IT MATTERED — PULL QUOTE SECTION
+       WHY IT MATTERED, PULL QUOTE SECTION
        ═══════════════════════════════════════ */
     .cs-why {
       padding: var(--space-5xl) 0;
@@ -959,6 +962,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -967,6 +972,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -1298,13 +1304,11 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1375,8 +1379,8 @@
       </h1>
 
       <p class="cs-hero__subtitle animate-in animate-in--delay-3">
-        <span data-en>Helping organisations treat bilingual delivery as core practice &mdash; not a last-minute translation task.</span>
-        <span data-cy>Helpu sefydliadau i drin cyflawni dwyieithog fel arfer craidd &mdash; nid fel tasg gyfieithu funud olaf.</span>
+        <span data-en>Helping organisations treat bilingual delivery as core practice, not a last-minute translation task.</span>
+        <span data-cy>Helpu sefydliadau i drin cyflawni dwyieithog fel arfer craidd, nid fel tasg gyfieithu funud olaf.</span>
       </p>
 
       <div class="cs-hero__meta animate-in animate-in--delay-4">
@@ -1412,11 +1416,11 @@
       </h2>
 
       <div class="cs-context__text">
-        <p data-en-block>In Wales, the Welsh language is not optional for public-facing organisations. It is a legal requirement under the Welsh Language (Wales) Measure 2011, and a core marker of institutional credibility. Yet too many organisations treated bilingual delivery as an afterthought &mdash; commissioning translations at the last minute, bolting Welsh onto English-first processes, and struggling to maintain quality and consistency across communications, events, and engagement work.</p>
-        <p data-cy-block>Yng Nghymru, nid yw'r Gymraeg yn ddewisol i sefydliadau sy'n wynebu'r cyhoedd. Mae'n ofyniad cyfreithiol o dan Fesur y Gymraeg (Cymru) 2011, ac yn farcwr craidd o hygrededd sefydliadol. Eto roedd gormod o sefydliadau'n trin cyflawni dwyieithog fel ail-feddyliad &mdash; comisiynu cyfieithiadau ar y funud olaf, bolltio Cymraeg ar brosesau Saesneg-yn-gyntaf, a chael trafferth cynnal ansawdd a chysondeb ar draws cyfathrebu, digwyddiadau, a gwaith ymgysylltu.</p>
+        <p data-en-block>In Wales, the Welsh language is not optional for public-facing organisations. It is a legal requirement under the Welsh Language (Wales) Measure 2011, and a core marker of institutional credibility. Yet too many organisations treated bilingual delivery as an afterthought, commissioning translations at the last minute, bolting Welsh onto English-first processes, and struggling to maintain quality and consistency across communications, events, and engagement work.</p>
+        <p data-cy-block>Yng Nghymru, nid yw'r Gymraeg yn ddewisol i sefydliadau sy'n wynebu'r cyhoedd. Mae'n ofyniad cyfreithiol o dan Fesur y Gymraeg (Cymru) 2011, ac yn farcwr craidd o hygrededd sefydliadol. Eto roedd gormod o sefydliadau'n trin cyflawni dwyieithog fel ail-feddyliad, comisiynu cyfieithiadau ar y funud olaf, bolltio Cymraeg ar brosesau Saesneg-yn-gyntaf, a chael trafferth cynnal ansawdd a chysondeb ar draws cyfathrebu, digwyddiadau, a gwaith ymgysylltu.</p>
 
-        <p data-en-block>VDB UK was engaged across multiple organisations &mdash; including the Welsh Government, the National Assembly for Wales, Arts Council of Wales, Cardiff Council, Chapter Arts Centre, and political campaigns &mdash; to address this challenge at a systemic level.</p>
-        <p data-cy-block>Ymgysylltwyd VDB UK ar draws nifer o sefydliadau &mdash; gan gynnwys Llywodraeth Cymru, Cynulliad Cenedlaethol Cymru, Cyngor Celfyddydau Cymru, Cyngor Caerdydd, Canolfan Gelfyddydau Chapter, ac ymgyrchoedd gwleidyddol &mdash; i fynd i'r afael &acirc;'r her hon ar lefel systemig.</p>
+        <p data-en-block>VDB was engaged across multiple organisations, including the Welsh Government, the National Assembly for Wales, Arts Council of Wales, Cardiff Council, Chapter Arts Centre, and political campaigns, to address this challenge at a systemic level.</p>
+        <p data-cy-block>Ymgysylltwyd VDB ar draws nifer o sefydliadau, gan gynnwys Llywodraeth Cymru, Cynulliad Cenedlaethol Cymru, Cyngor Celfyddydau Cymru, Cyngor Caerdydd, Canolfan Gelfyddydau Chapter, ac ymgyrchoedd gwleidyddol, i fynd i'r afael &acirc;'r her hon ar lefel systemig.</p>
       </div>
     </div>
   </section>
@@ -1437,11 +1441,11 @@
           <span data-cy>Gwneud cyflawni dwyieithog yn fan cychwyn, nid yn ychwanegiad</span>
         </h2>
 
-        <p data-en-block>The challenge was not simply about translating more content into Welsh. It was about changing how organisations thought about language in the first place &mdash; planning Welsh-language provision into workflows, communications, and public engagement from the outset.</p>
-        <p data-cy-block>Nid yn unig am gyfieithu mwy o gynnwys i'r Gymraeg yr oedd yr her. Roedd yn ymwneud &acirc; newid sut roedd sefydliadau'n meddwl am iaith yn y lle cyntaf &mdash; cynllunio darpariaeth Gymraeg i mewn i lifoedd gwaith, cyfathrebu, ac ymgysylltu cyhoeddus o'r dechrau.</p>
+        <p data-en-block>The challenge was not simply about translating more content into Welsh. It was about changing how organisations thought about language in the first place, planning Welsh-language provision into workflows, communications, and public engagement from the outset.</p>
+        <p data-cy-block>Nid yn unig am gyfieithu mwy o gynnwys i'r Gymraeg yr oedd yr her. Roedd yn ymwneud &acirc; newid sut roedd sefydliadau'n meddwl am iaith yn y lle cyntaf, cynllunio darpariaeth Gymraeg i mewn i lifoedd gwaith, cyfathrebu, ac ymgysylltu cyhoeddus o'r dechrau.</p>
 
-        <p data-en-block>Our objective was to develop practical, repeatable systems for high-quality bilingual delivery that could work across different types of organisations and contexts &mdash; from government departments to arts venues to election campaigns.</p>
-        <p data-cy-block>Ein hamcan oedd datblygu systemau ymarferol, ailadroddadwy ar gyfer cyflawni dwyieithog o ansawdd uchel a allai weithio ar draws gwahanol fathau o sefydliadau a chyd-destunau &mdash; o adrannau'r llywodraeth i leoliadau celfyddydau i ymgyrchoedd etholiadol.</p>
+        <p data-en-block>Our objective was to develop practical, repeatable systems for high-quality bilingual delivery that could work across different types of organisations and contexts, from government departments to arts venues to election campaigns.</p>
+        <p data-cy-block>Ein hamcan oedd datblygu systemau ymarferol, ailadroddadwy ar gyfer cyflawni dwyieithog o ansawdd uchel a allai weithio ar draws gwahanol fathau o sefydliadau a chyd-destunau, o adrannau'r llywodraeth i leoliadau celfyddydau i ymgyrchoedd etholiadol.</p>
       </div>
 
       <div class="cs-objective__highlight">
@@ -1477,8 +1481,8 @@
             <span data-cy>Cyflawni Rhaglenni'n Ddwyieithog</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Supported bilingual delivery across public, cultural, and political organisations in Wales, ensuring Welsh language provision was planned into communications, engagement, and event activity from the start &mdash; not treated as a separate workstream.</span>
-            <span data-cy>Cefnogi cyflawni dwyieithog ar draws sefydliadau cyhoeddus, diwylliannol, a gwleidyddol yng Nghymru, gan sicrhau bod darpariaeth Gymraeg yn cael ei chynllunio i mewn i gyfathrebu, ymgysylltu, a gweithgarwch digwyddiadau o'r dechrau &mdash; nid yn cael ei drin fel ffrwd waith ar wah&acirc;n.</span>
+            <span data-en>Supported bilingual delivery across public, cultural, and political organisations in Wales, ensuring Welsh language provision was planned into communications, engagement, and event activity from the start, not treated as a separate workstream.</span>
+            <span data-cy>Cefnogi cyflawni dwyieithog ar draws sefydliadau cyhoeddus, diwylliannol, a gwleidyddol yng Nghymru, gan sicrhau bod darpariaeth Gymraeg yn cael ei chynllunio i mewn i gyfathrebu, ymgysylltu, a gweithgarwch digwyddiadau o'r dechrau, nid yn cael ei drin fel ffrwd waith ar wah&acirc;n.</span>
           </p>
         </div>
 
@@ -1513,8 +1517,8 @@
             <span data-cy>Arfer Sefydliadol wedi'i Ymgorffori</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Worked with teams inside each organisation to embed bilingual delivery as standard practice rather than a compliance exercise &mdash; building internal confidence, setting up workflows, and creating the conditions for sustainable bilingual capability beyond our engagement.</span>
-            <span data-cy>Gweithio gyda thimau y tu mewn i bob sefydliad i ymgorffori cyflawni dwyieithog fel arfer safonol yn hytrach nag ymarfer cydymffurfiaeth &mdash; adeiladu hyder mewnol, sefydlu llifoedd gwaith, a chreu'r amodau ar gyfer gallu dwyieithog cynaliadwy y tu hwnt i'n hymgysylltiad.</span>
+            <span data-en>Worked with teams inside each organisation to embed bilingual delivery as standard practice rather than a compliance exercise, building internal confidence, setting up workflows, and creating the conditions for sustainable bilingual capability beyond our engagement.</span>
+            <span data-cy>Gweithio gyda thimau y tu mewn i bob sefydliad i ymgorffori cyflawni dwyieithog fel arfer safonol yn hytrach nag ymarfer cydymffurfiaeth, adeiladu hyder mewnol, sefydlu llifoedd gwaith, a chreu'r amodau ar gyfer gallu dwyieithog cynaliadwy y tu hwnt i'n hymgysylltiad.</span>
           </p>
         </div>
       </div>
@@ -1539,20 +1543,20 @@
       </h2>
 
       <div class="cs-why__text">
-        <p data-en-block>For any organisation operating in Welsh public life, the quality of bilingual delivery sends a signal. Poor Welsh-language provision &mdash; late translations, inconsistent terminology, Welsh content visibly treated as secondary &mdash; undermines trust. It tells Welsh-speaking audiences that their language is an obligation, not a value.</p>
-        <p data-cy-block>I unrhyw sefydliad sy'n gweithredu ym mywyd cyhoeddus Cymru, mae ansawdd cyflawni dwyieithog yn anfon signal. Mae darpariaeth Gymraeg wael &mdash; cyfieithiadau hwyr, terminoleg anghyson, cynnwys Cymraeg yn cael ei drin yn amlwg fel eilbeth &mdash; yn tanseilio ymddiriedaeth. Mae'n dweud wrth gynulleidfaoedd Cymraeg mai rhwymedigaeth yw eu hiaith, nid gwerth.</p>
+        <p data-en-block>For any organisation operating in Welsh public life, the quality of bilingual delivery sends a signal. Poor Welsh-language provision, late translations, inconsistent terminology, Welsh content visibly treated as secondary, undermines trust. It tells Welsh-speaking audiences that their language is an obligation, not a value.</p>
+        <p data-cy-block>I unrhyw sefydliad sy'n gweithredu ym mywyd cyhoeddus Cymru, mae ansawdd cyflawni dwyieithog yn anfon signal. Mae darpariaeth Gymraeg wael, cyfieithiadau hwyr, terminoleg anghyson, cynnwys Cymraeg yn cael ei drin yn amlwg fel eilbeth, yn tanseilio ymddiriedaeth. Mae'n dweud wrth gynulleidfaoedd Cymraeg mai rhwymedigaeth yw eu hiaith, nid gwerth.</p>
       </div>
 
       <div class="cs-pullquote">
         <p>
-          <span data-en>When bilingual delivery is done well, it becomes invisible &mdash; a natural part of how an organisation communicates, rather than a process bolted onto the side.</span>
-          <span data-cy>Pan fydd cyflawni dwyieithog yn cael ei wneud yn dda, mae'n dod yn anweledig &mdash; rhan naturiol o sut mae sefydliad yn cyfathrebu, yn hytrach na phroses wedi'i bolltio ar yr ochr.</span>
+          <span data-en>When bilingual delivery is done well, it becomes invisible, a natural part of how an organisation communicates, rather than a process bolted onto the side.</span>
+          <span data-cy>Pan fydd cyflawni dwyieithog yn cael ei wneud yn dda, mae'n dod yn anweledig, rhan naturiol o sut mae sefydliad yn cyfathrebu, yn hytrach na phroses wedi'i bolltio ar yr ochr.</span>
         </p>
       </div>
 
       <div class="cs-why__text">
-        <p data-en-block>Our work made bilingual delivery practical and sustainable. We helped organisations move from reactive compliance &mdash; scrambling for translations at the last minute &mdash; to proactive practice, where Welsh-language provision was planned, budgeted, and quality-assured alongside everything else.</p>
-        <p data-cy-block>Gwnaeth ein gwaith gyflawni dwyieithog yn ymarferol ac yn gynaliadwy. Helpasom sefydliadau i symud o gydymffurfiaeth adweithiol &mdash; rhuthro am gyfieithiadau ar y funud olaf &mdash; i arfer rhagweithiol, lle'r oedd darpariaeth Gymraeg yn cael ei chynllunio, ei chyllidebu, a'i sicrhau o ran ansawdd ochr yn ochr &acirc; phopeth arall.</p>
+        <p data-en-block>Our work made bilingual delivery practical and sustainable. We helped organisations move from reactive compliance, scrambling for translations at the last minute, to proactive practice, where Welsh-language provision was planned, budgeted, and quality-assured alongside everything else.</p>
+        <p data-cy-block>Gwnaeth ein gwaith gyflawni dwyieithog yn ymarferol ac yn gynaliadwy. Helpasom sefydliadau i symud o gydymffurfiaeth adweithiol, rhuthro am gyfieithiadau ar y funud olaf, i arfer rhagweithiol, lle'r oedd darpariaeth Gymraeg yn cael ei chynllunio, ei chyllidebu, a'i sicrhau o ran ansawdd ochr yn ochr &acirc; phopeth arall.</p>
       </div>
     </div>
   </section>
@@ -1576,8 +1580,8 @@
         <p data-en-block>Across every organisation we worked with, bilingual delivery shifted from a last-minute task to a planned, quality-assured part of normal operations. Welsh-language provision was prioritised earlier in project timelines, translation partnerships were strengthened, and teams developed the confidence to deliver bilingually without external hand-holding.</p>
         <p data-cy-block>Ar draws pob sefydliad y gweithiom gyda nhw, symudodd cyflawni dwyieithog o dasg funud olaf i ran wedi'i chynllunio, wedi'i sicrhau o ran ansawdd o weithrediadau arferol. Cafodd darpariaeth Gymraeg ei blaenoriaethu'n gynharach mewn amserlenni prosiect, cryfhawyd partneriaethau cyfieithu, a datblygodd timau'r hyder i gyflawni'n ddwyieithog heb gefnogaeth allanol.</p>
 
-        <p data-en-block>The lasting value was not just in the outputs &mdash; better bilingual communications, events, and engagement materials &mdash; but in the organisational capability we helped build. These organisations now have the systems, relationships, and internal confidence to sustain high-quality bilingual delivery long after our direct involvement ended.</p>
-        <p data-cy-block>Nid yn yr allbynnau yn unig yr oedd y gwerth parhaol &mdash; cyfathrebu dwyieithog gwell, digwyddiadau, a deunyddiau ymgysylltu &mdash; ond yn y gallu sefydliadol y helpasom ei adeiladu. Mae gan y sefydliadau hyn bellach y systemau, y perthnasoedd, a'r hyder mewnol i gynnal cyflawni dwyieithog o ansawdd uchel ymhell ar &ocirc;l i'n hymwneud uniongyrchol ddod i ben.</p>
+        <p data-en-block>The lasting value was not just in the outputs, better bilingual communications, events, and engagement materials, but in the organisational capability we helped build. These organisations now have the systems, relationships, and internal confidence to sustain high-quality bilingual delivery long after our direct involvement ended.</p>
+        <p data-cy-block>Nid yn yr allbynnau yn unig yr oedd y gwerth parhaol, cyfathrebu dwyieithog gwell, digwyddiadau, a deunyddiau ymgysylltu, ond yn y gallu sefydliadol y helpasom ei adeiladu. Mae gan y sefydliadau hyn bellach y systemau, y perthnasoedd, a'r hyder mewnol i gynnal cyflawni dwyieithog o ansawdd uchel ymhell ar &ocirc;l i'n hymwneud uniongyrchol ddod i ben.</p>
       </div>
 
       <div class="cs-outcome__takeaway">
@@ -1681,8 +1685,8 @@
         <span data-cy>Yn cynllunio cyflawni dwyieithog yng Nghymru?</span>
       </h2>
       <p class="cta-banner__desc">
-        <span data-en>We help organisations build credible, sustainable bilingual working practices &mdash; from strategy to delivery.</span>
-        <span data-cy>Rydym yn helpu sefydliadau i adeiladu arferion gwaith dwyieithog credadwy a chynaliadwy &mdash; o strategaeth i gyflawni.</span>
+        <span data-en>We help organisations build credible, sustainable bilingual working practices, from strategy to delivery.</span>
+        <span data-cy>Rydym yn helpu sefydliadau i adeiladu arferion gwaith dwyieithog credadwy a chynaliadwy, o strategaeth i gyflawni.</span>
       </p>
       <a href="/contact.html" class="btn btn--white">
         <span data-en>Get in touch</span>
@@ -1699,11 +1703,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -1713,11 +1716,12 @@
         <div class="footer__col">
           <h4><span data-en>Capabilities</span><span data-cy>Galluoedd</span></h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">

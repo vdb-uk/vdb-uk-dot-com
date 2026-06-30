@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="BlakBear: Scaling Digital Freshness Sensors — Case Study — VDB UK" data-title-cy="BlakBear: Graddio Synwyryddion Ffresni Digidol — Astudiaeth Achos — VDB UK">BlakBear: Scaling Digital Freshness Sensors — Case Study — VDB UK</title>
-  <meta name="description" content="How VDB UK supported BlakBear, an Imperial College spinout, to scale the world's first digital freshness sensor from lab prototype to industrial deployment across 17 Cranswick sites." data-content-en="How VDB UK supported BlakBear, an Imperial College spinout, to scale the world's first digital freshness sensor from lab prototype to industrial deployment across 17 Cranswick sites." data-content-cy="Sut y cefnogodd VDB UK BlakBear, cwmni deillio o Goleg Imperial, i raddio synhwyrydd ffresni digidol cyntaf y byd o brototeip labordy i ddefnydd diwydiannol ar draws 17 safle Cranswick.">
+  <title data-title-en="BlakBear: Scaling Digital Freshness Sensors | Case Study | VDB" data-title-cy="BlakBear: Graddio Synwyryddion Ffresni Digidol | Astudiaeth Achos | VDB">BlakBear: Scaling Digital Freshness Sensors | Case Study | VDB</title>
+  <meta name="description" content="How VDB supported BlakBear, an Imperial College spinout, to scale the world's first digital freshness sensor from lab prototype to industrial deployment across 17 Cranswick sites." data-content-en="How VDB supported BlakBear, an Imperial College spinout, to scale the world's first digital freshness sensor from lab prototype to industrial deployment across 17 Cranswick sites." data-content-cy="Sut y cefnogodd VDB BlakBear, cwmni deillio o Goleg Imperial, i raddio synhwyrydd ffresni digidol cyntaf y byd o brototeip labordy i ddefnydd diwydiannol ar draws 17 safle Cranswick.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
@@ -28,11 +28,14 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       --gold-600: #b8860b;
       --gold-500: #d4a017;
@@ -45,8 +48,8 @@
       --stone-300: #e2dac8;
       --stone-50: #fcfbf8;
 
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       --space-xs: 0.25rem;
       --space-sm: 0.5rem;
@@ -285,7 +288,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -293,7 +296,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     .theme-toggle {
       display: flex;
@@ -339,14 +342,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn--ghost {
@@ -395,7 +398,7 @@
       background: linear-gradient(to top, var(--slate-950) 0%, rgba(15,17,24,0.5) 50%, rgba(15,17,24,0.2) 100%);
     }
 
-    /* Gold diagonal accent — distinguishes case studies from projects */
+    /* Gold diagonal accent, distinguishes case studies from projects */
     .cs-hero__accent {
       position: absolute;
       top: 0;
@@ -654,7 +657,7 @@
     }
 
     /* ═══════════════════════════════════════
-       WHY IT MATTERED — PULL QUOTE SECTION
+       WHY IT MATTERED, PULL QUOTE SECTION
        ═══════════════════════════════════════ */
     .cs-why {
       padding: var(--space-5xl) 0;
@@ -958,6 +961,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -966,6 +971,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -1297,13 +1303,11 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1411,11 +1415,11 @@
       </h2>
 
       <div class="cs-context__text">
-        <p data-en-block>BlakBear, an Imperial College spinout, invented the industry's first digital freshness sensor &mdash; a paper-based gas sensor placed inside food packaging that measures spoilage in real time, replacing static printed expiry dates with live freshness data. The technology had clear potential to transform food waste reduction across the supply chain, but moving from a university research project to a commercial operation deployed at industrial scale is a fundamentally different challenge.</p>
-        <p data-cy-block>Dyfeisiodd BlakBear, cwmni deillio Coleg Imperial, synhwyrydd ffresni digidol cyntaf y diwydiant &mdash; synhwyrydd nwy ar bapur a osodir y tu mewn i becynnau bwyd sy'n mesur difetha mewn amser real, gan ddisodli dyddiadau terfyn wedi'u hargraffu'n statig gyda data ffresni byw. Roedd gan y dechnoleg botensial clir i drawsnewid lleihau gwastraff bwyd ar draws y gadwyn gyflenwi, ond mae symud o brosiect ymchwil prifysgol i weithrediad masnachol ar raddfa ddiwydiannol yn her sylfaenol wahanol.</p>
+        <p data-en-block>BlakBear, an Imperial College spinout, invented the industry's first digital freshness sensor, a paper-based gas sensor placed inside food packaging that measures spoilage in real time, replacing static printed expiry dates with live freshness data. The technology had clear potential to transform food waste reduction across the supply chain, but moving from a university research project to a commercial operation deployed at industrial scale is a fundamentally different challenge.</p>
+        <p data-cy-block>Dyfeisiodd BlakBear, cwmni deillio Coleg Imperial, synhwyrydd ffresni digidol cyntaf y diwydiant, synhwyrydd nwy ar bapur a osodir y tu mewn i becynnau bwyd sy'n mesur difetha mewn amser real, gan ddisodli dyddiadau terfyn wedi'u hargraffu'n statig gyda data ffresni byw. Roedd gan y dechnoleg botensial clir i drawsnewid lleihau gwastraff bwyd ar draws y gadwyn gyflenwi, ond mae symud o brosiect ymchwil prifysgol i weithrediad masnachol ar raddfa ddiwydiannol yn her sylfaenol wahanol.</p>
 
-        <p data-en-block>BlakBear needed a partner who understood both the science and the commercial landscape &mdash; someone who could help navigate the gap between a working prototype and a product deployed across real factory floors, with the funding, partnerships, and strategic positioning to sustain growth.</p>
-        <p data-cy-block>Roedd angen partner ar BlakBear a oedd yn deall y wyddoniaeth a'r dirwedd fasnachol &mdash; rhywun a allai helpu i lywio'r bwlch rhwng prototeip gweithredol a chynnyrch wedi'i ddefnyddio ar draws lloriau ffatri go iawn, gyda'r cyllid, partneriaethau, a'r lleoliad strategol i gynnal twf.</p>
+        <p data-en-block>BlakBear needed a partner who understood both the science and the commercial landscape, someone who could help navigate the gap between a working prototype and a product deployed across real factory floors, with the funding, partnerships, and strategic positioning to sustain growth.</p>
+        <p data-cy-block>Roedd angen partner ar BlakBear a oedd yn deall y wyddoniaeth a'r dirwedd fasnachol, rhywun a allai helpu i lywio'r bwlch rhwng prototeip gweithredol a chynnyrch wedi'i ddefnyddio ar draws lloriau ffatri go iawn, gyda'r cyllid, partneriaethau, a'r lleoliad strategol i gynnal twf.</p>
       </div>
     </div>
   </section>
@@ -1436,8 +1440,8 @@
           <span data-cy>O ddilysu labordy i ddefnydd masnachol</span>
         </h2>
 
-        <p data-en-block>To support BlakBear's transition from a university research project into a commercially viable, industrially deployed food-tech company &mdash; with the funding secured, partnerships established, and narrative sharpened for both investors and the food industry.</p>
-        <p data-cy-block>Cefnogi trawsnewidiad BlakBear o brosiect ymchwil prifysgol i gwmni technoleg bwyd masnachol hyfyw, wedi'i ddefnyddio'n ddiwydiannol &mdash; gyda'r cyllid wedi'i sicrhau, partneriaethau wedi'u sefydlu, a'r naratif wedi'i hogi ar gyfer buddsoddwyr a'r diwydiant bwyd.</p>
+        <p data-en-block>To support BlakBear's transition from a university research project into a commercially viable, industrially deployed food-tech company, with the funding secured, partnerships established, and narrative sharpened for both investors and the food industry.</p>
+        <p data-cy-block>Cefnogi trawsnewidiad BlakBear o brosiect ymchwil prifysgol i gwmni technoleg bwyd masnachol hyfyw, wedi'i ddefnyddio'n ddiwydiannol, gyda'r cyllid wedi'i sicrhau, partneriaethau wedi'u sefydlu, a'r naratif wedi'i hogi ar gyfer buddsoddwyr a'r diwydiant bwyd.</p>
 
         <p data-en-block>This meant building the bridge between deep science and real-world adoption: positioning the technology for food industry uptake, connecting BlakBear with the right funding mechanisms, and contributing to the broader farm-to-fork digitisation strategy that would make the business case compelling.</p>
         <p data-cy-block>Roedd hyn yn golygu adeiladu'r bont rhwng gwyddoniaeth ddwfn a mabwysiadu yn y byd go iawn: lleoli'r dechnoleg ar gyfer ei fabwysiadu gan y diwydiant bwyd, cysylltu BlakBear &acirc;'r mecanweithiau cyllido cywir, a chyfrannu at y strategaeth digideiddio ehangach o'r fferm i'r fforc a fyddai'n gwneud yr achos busnes yn argyhoeddiadol.</p>
@@ -1445,8 +1449,8 @@
 
       <div class="cs-objective__highlight">
         <p>
-          <span data-en>Building the bridge between deep science and real-world adoption &mdash; from working prototype to factory-floor deployment.</span>
-          <span data-cy>Adeiladu'r bont rhwng gwyddoniaeth ddwfn a mabwysiadu yn y byd go iawn &mdash; o brototeip gweithredol i ddefnydd ar lawr y ffatri.</span>
+          <span data-en>Building the bridge between deep science and real-world adoption, from working prototype to factory-floor deployment.</span>
+          <span data-cy>Adeiladu'r bont rhwng gwyddoniaeth ddwfn a mabwysiadu yn y byd go iawn, o brototeip gweithredol i ddefnydd ar lawr y ffatri.</span>
         </p>
       </div>
     </div>
@@ -1500,8 +1504,8 @@
             <span data-cy>Cefnogaeth Cyllido a Buddsoddi</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Supported the narrative for Innovate UK co-funded projects and contributed to the positioning that helped BlakBear secure a $2.65M seed round from major investors including Cisco, Imperial College, and Mitsubishi &mdash; with further backing from Ada Ventures and Greentown Labs.</span>
-            <span data-cy>Cefnogi'r naratif ar gyfer prosiectau a gyd-ariennir gan Innovate UK a chyfrannu at y lleoliad a helpodd BlakBear i sicrhau rownd hadau o $2.65M gan fuddsoddwyr mawr gan gynnwys Cisco, Coleg Imperial, a Mitsubishi &mdash; gyda chefnogaeth bellach gan Ada Ventures a Greentown Labs.</span>
+            <span data-en>Supported the narrative for Innovate UK co-funded projects and contributed to the positioning that helped BlakBear secure a $2.65M seed round from major investors including Cisco, Imperial College, and Mitsubishi, with further backing from Ada Ventures and Greentown Labs.</span>
+            <span data-cy>Cefnogi'r naratif ar gyfer prosiectau a gyd-ariennir gan Innovate UK a chyfrannu at y lleoliad a helpodd BlakBear i sicrhau rownd hadau o $2.65M gan fuddsoddwyr mawr gan gynnwys Cisco, Coleg Imperial, a Mitsubishi, gyda chefnogaeth bellach gan Ada Ventures a Greentown Labs.</span>
           </p>
         </div>
 
@@ -1512,8 +1516,8 @@
             <span data-cy>Strategaeth Digideiddio o'r Fferm i'r Fforc</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Contributed to BlakBear's broader farm-to-fork digitisation strategy, helping frame the technology not just as a sensor product but as an enabling platform for real-time supply chain intelligence &mdash; connecting food safety, waste reduction, and operational efficiency into a single, scalable proposition.</span>
-            <span data-cy>Cyfrannu at strategaeth digideiddio ehangach BlakBear o'r fferm i'r fforc, gan helpu i fframio'r dechnoleg nid yn unig fel cynnyrch synhwyrydd ond fel platfform galluogi ar gyfer deallusrwydd cadwyn gyflenwi amser real &mdash; cysylltu diogelwch bwyd, lleihau gwastraff, ac effeithlonrwydd gweithredol mewn un cynnig graddadwy.</span>
+            <span data-en>Contributed to BlakBear's broader farm-to-fork digitisation strategy, helping frame the technology not just as a sensor product but as an enabling platform for real-time supply chain intelligence, connecting food safety, waste reduction, and operational efficiency into a single, scalable proposition.</span>
+            <span data-cy>Cyfrannu at strategaeth digideiddio ehangach BlakBear o'r fferm i'r fforc, gan helpu i fframio'r dechnoleg nid yn unig fel cynnyrch synhwyrydd ond fel platfform galluogi ar gyfer deallusrwydd cadwyn gyflenwi amser real, cysylltu diogelwch bwyd, lleihau gwastraff, ac effeithlonrwydd gweithredol mewn un cynnig graddadwy.</span>
           </p>
         </div>
       </div>
@@ -1538,14 +1542,14 @@
       </h2>
 
       <div class="cs-why__text">
-        <p data-en-block>The food industry wastes an estimated 1.3 billion tonnes of food globally each year, much of it due to conservative expiry dates that bear no relationship to actual freshness. BlakBear's technology had the potential to fundamentally change this &mdash; but only if it could move beyond the lab and into the supply chains where the waste actually happens.</p>
-        <p data-cy-block>Mae'r diwydiant bwyd yn gwastraffu tua 1.3 biliwn tunnell o fwyd yn fyd-eang bob blwyddyn, llawer ohono oherwydd dyddiadau terfyn ceidwadol nad oes ganddynt unrhyw berthynas &acirc; ffresni gwirioneddol. Roedd gan dechnoleg BlakBear y potensial i newid hyn yn sylfaenol &mdash; ond dim ond os gallai symud y tu hwnt i'r labordy ac i mewn i'r cadwyni cyflenwi lle mae'r gwastraff yn digwydd mewn gwirionedd.</p>
+        <p data-en-block>The food industry wastes an estimated 1.3 billion tonnes of food globally each year, much of it due to conservative expiry dates that bear no relationship to actual freshness. BlakBear's technology had the potential to fundamentally change this, but only if it could move beyond the lab and into the supply chains where the waste actually happens.</p>
+        <p data-cy-block>Mae'r diwydiant bwyd yn gwastraffu tua 1.3 biliwn tunnell o fwyd yn fyd-eang bob blwyddyn, llawer ohono oherwydd dyddiadau terfyn ceidwadol nad oes ganddynt unrhyw berthynas &acirc; ffresni gwirioneddol. Roedd gan dechnoleg BlakBear y potensial i newid hyn yn sylfaenol, ond dim ond os gallai symud y tu hwnt i'r labordy ac i mewn i'r cadwyni cyflenwi lle mae'r gwastraff yn digwydd mewn gwirionedd.</p>
       </div>
 
       <div class="cs-pullquote">
         <p>
-          <span data-en>Translating deep science into deployable technology &mdash; connecting a university spinout with the partnerships, funding, and industry credibility needed to operate at scale.</span>
-          <span data-cy>Trosi gwyddoniaeth ddwfn yn dechnoleg y gellir ei defnyddio &mdash; cysylltu cwmni deillio prifysgol &acirc;'r partneriaethau, cyllid, a hygrededd diwydiant sydd eu hangen i weithredu ar raddfa.</span>
+          <span data-en>Translating deep science into deployable technology, connecting a university spinout with the partnerships, funding, and industry credibility needed to operate at scale.</span>
+          <span data-cy>Trosi gwyddoniaeth ddwfn yn dechnoleg y gellir ei defnyddio, cysylltu cwmni deillio prifysgol &acirc;'r partneriaethau, cyllid, a hygrededd diwydiant sydd eu hangen i weithredu ar raddfa.</span>
         </p>
       </div>
 
@@ -1595,8 +1599,8 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold-600)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
           <div class="cs-takeaway__text">
-            <span data-en>17 Cranswick production sites deployed &mdash; ~$750K annual revenue</span>
-            <span data-cy>17 safle cynhyrchu Cranswick wedi'u defnyddio &mdash; ~$750K refeniw blynyddol</span>
+            <span data-en>17 Cranswick production sites deployed, ~$750K annual revenue</span>
+            <span data-cy>17 safle cynhyrchu Cranswick wedi'u defnyddio, ~$750K refeniw blynyddol</span>
           </div>
         </div>
 
@@ -1605,8 +1609,8 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold-600)" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <div class="cs-takeaway__text">
-            <span data-en>12-person team &mdash; backed by 5 major investors</span>
-            <span data-cy>T&icirc;m o 12 o bobl &mdash; gyda chefnogaeth 5 buddsoddwr mawr</span>
+            <span data-en>12-person team, backed by 5 major investors</span>
+            <span data-cy>T&icirc;m o 12 o bobl, gyda chefnogaeth 5 buddsoddwr mawr</span>
           </div>
         </div>
       </div>
@@ -1698,11 +1702,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -1712,11 +1715,12 @@
         <div class="footer__col">
           <h4><span data-en>Capabilities</span><span data-cy>Galluoedd</span></h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">

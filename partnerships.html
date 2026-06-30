@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="Partnerships — VDB UK" data-title-cy="Partneriaethau — VDB UK">Partnerships — VDB UK</title>
-  <meta name="description" content="VDB UK leads complex operational and research programmes, with Higher Level Software as its technical delivery partner for software, hosting and human-supervised agentic systems." data-content-en="VDB UK leads complex operational and research programmes, with Higher Level Software as its technical delivery partner for software, hosting and human-supervised agentic systems." data-content-cy="VDB UK leads complex operational and research programmes, with Higher Level Software as its technical delivery partner for software, hosting and human-supervised agentic systems.">
+  <title data-title-en="Partnerships | VDB" data-title-cy="Partneriaethau | VDB">Partnerships | VDB</title>
+  <meta name="description" content="VDB leads complex operational and research programmes, with Higher Level Software as its technical delivery partner for software, hosting and human-supervised agentic systems." data-content-en="VDB leads complex operational and research programmes, with Higher Level Software as its technical delivery partner for software, hosting and human-supervised agentic systems." data-content-cy="VDB leads complex operational and research programmes, with Higher Level Software as its technical delivery partner for software, hosting and human-supervised agentic systems.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
-       Welsh Slate palette — institutional
+       Welsh Slate palette, institutional
        warmth meets modern consultancy
        ═══════════════════════════════════════ */
     :root {
@@ -31,12 +31,15 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      /* Welsh red — deeper, more sophisticated than flag red */
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      /* Welsh red, deeper, more sophisticated than flag red */
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       /* Warm gold accent */
       --gold-600: #b8860b;
@@ -52,8 +55,8 @@
       --stone-50: #fcfbf8;
 
       /* Typography */
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       /* Spacing scale */
       --space-xs: 0.25rem;
@@ -312,7 +315,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -320,7 +323,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     /* ═══════════════════════════════════════
        THEME TOGGLE
@@ -369,14 +372,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn--ghost {
@@ -409,7 +412,7 @@
     }
 
     /* ═══════════════════════════════════════
-       PAGE HERO — image background variant
+       PAGE HERO, image background variant
        ═══════════════════════════════════════ */
     .page-hero {
       position: relative;
@@ -490,7 +493,7 @@
     }
 
     /* ═══════════════════════════════════════
-       CONTACT SECTION — two-column layout
+       CONTACT SECTION, two-column layout
        ═══════════════════════════════════════ */
     .contact {
       padding: var(--space-5xl) 0;
@@ -616,7 +619,7 @@
     .form__input:focus,
     .form__textarea:focus {
       border-color: var(--red-500);
-      box-shadow: 0 0 0 3px rgba(200, 40, 63, 0.15);
+      box-shadow: 0 0 0 3px rgba(94, 26, 142, 0.15);
     }
 
     .form__textarea {
@@ -645,7 +648,7 @@
     .form__submit:hover {
       background: var(--red-500);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .form__submit .btn__arrow {
@@ -829,6 +832,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -837,6 +842,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -986,7 +992,7 @@
 
     /* ═══════════════════════════════════════
        BILINGUAL SUPPORT
-       — content toggled via data-lang on <html>
+     , content toggled via data-lang on <html>
        ═══════════════════════════════════════ */
     [data-lang="en"] [data-cy],
     [data-lang="cy"] [data-en] {
@@ -1229,14 +1235,15 @@
 
     /* ═══════════════════════════════════════
        PARTNERSHIPS PAGE
-       — HLS technical-delivery partnership.
+     , HLS technical-delivery partnership.
        One restrained HLS-purple accent is used
        only in the software / agentic components.
        ═══════════════════════════════════════ */
     :root {
-      --hls-purple: oklch(0.52 0.19 295);
-      --hls-purple-soft: oklch(0.52 0.19 295 / 0.10);
-      --hls-purple-line: oklch(0.52 0.19 295 / 0.35);
+      /* Reconciled in 2026-06 rebrand: VDB primary is now purple, so the HLS accent moves to brand teal to keep the two firms visually distinct. (Token name kept to avoid churn.) */
+      --hls-purple: oklch(0.62 0.09 184);
+      --hls-purple-soft: oklch(0.62 0.09 184 / 0.10);
+      --hls-purple-line: oklch(0.62 0.09 184 / 0.35);
     }
 
     /* --- Hero: two-column copy + diagram --- */
@@ -1440,19 +1447,15 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <!-- VDB UK Logo — geometric monogram -->
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <!-- VDB Logo, geometric monogram -->
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <!-- V chevron mark -->
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <!-- D -->
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <!-- B -->
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <!-- Divider -->
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <!-- UK text -->
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1508,13 +1511,13 @@
         </nav>
 
         <h1 class="animate-in animate-in--delay-1">
-          <span data-en>Programme leadership with software delivery built in</span>
-          <span data-cy>Programme leadership with software delivery built in</span>
+          <span data-en>We build the right team for your needs</span>
+          <span data-cy>We build the right team for your needs</span>
         </h1>
 
         <p class="page-hero__subtitle animate-in animate-in--delay-2">
-          <span data-en>VDB UK leads complex operational and research programmes &mdash; the science, stakeholder management, funding and governance. Where a contract needs serious software and agentic systems behind that work, we deliver it with Higher Level Software as our technical delivery partner.</span>
-          <span data-cy>VDB UK leads complex operational and research programmes &mdash; the science, stakeholder management, funding and governance. Where a contract needs serious software and agentic systems behind that work, we deliver it with Higher Level Software as our technical delivery partner.</span>
+          <span data-en>VDB leads complex operational and research programmes. Through reliable partnerships we bring in the right specialists for each piece of work, so every programme gets the team it actually needs. Scroll on to meet the partners we work with and see what each one brings.</span>
+          <span data-cy>VDB leads complex operational and research programmes. Through reliable partnerships we bring in the right specialists for each piece of work, so every programme gets the team it actually needs. Scroll on to meet the partners we work with and see what each one brings.</span>
         </p>
       </div>
 
@@ -1543,17 +1546,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       ASSURANCE STRIP
-       ═══════════════════════════════════════ -->
-  <section class="pt-assure">
-    <div class="pt-assure__inner">
-      <span class="pt-assure__item"><span class="pt-assure__dot"></span><span data-en>Human-led</span><span data-cy>Human-led</span></span>
-      <span class="pt-assure__item pt-assure__item--ai"><span class="pt-assure__dot"></span><span data-en>AI-assisted</span><span data-cy>AI-assisted</span></span>
-      <span class="pt-assure__item"><span class="pt-assure__dot"></span><span data-en>Audit-ready</span><span data-cy>Audit-ready</span></span>
-      <span class="pt-assure__item"><span class="pt-assure__dot"></span><span data-en>Clear escalation</span><span data-cy>Clear escalation</span></span>
-    </div>
-  </section>
+  <!-- Assurance chip strip (Human-led / AI-assisted / Audit-ready / Clear escalation) removed in the 2026-06 rebrand (edit 17). -->
 
   <!-- ═══════════════════════════════════════
        HOW THE PARTNERSHIP WORKS
@@ -1562,20 +1555,20 @@
     <div class="pt-roles__inner">
       <div class="pt-roles__copy">
         <span class="label label--red">
-          <span data-en>How the partnership works</span>
-          <span data-cy>How the partnership works</span>
+          <span data-en>Our methodology</span>
+          <span data-cy>Our methodology</span>
         </span>
         <h2>
           <span data-en>One delivery model, two clear roles</span>
           <span data-cy>One delivery model, two clear roles</span>
         </h2>
         <p>
-          <span data-en>VDB UK leads the client relationship and the operational programme: research, science, stakeholder management, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
-          <span data-cy>VDB UK leads the client relationship and the operational programme: research, science, stakeholder management, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
+          <span data-en>VDB leads the client relationship and the operational programme: project management, stakeholder engagement, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
+          <span data-cy>VDB leads the client relationship and the operational programme: project management, stakeholder engagement, funding and governance. Higher Level Software sits behind it as technical delivery partner, owning the software, hosting, integrations, reporting tooling and agentic systems.</span>
         </p>
         <p>
-          <span data-en>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both.</span>
-          <span data-cy>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both.</span>
+          <span data-en>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both. We run every programme through the same path: validate, design, build.</span>
+          <span data-cy>The result is one delivery model for programmes that need both operational leadership and serious software, with human oversight, acceptance criteria and audit trails across both. We run every programme through the same path: validate, design, build.</span>
         </p>
         <a class="pt-link pt-link--hls" href="https://higherlevelsoftware.com/partnerships.html">
           <span data-en>About Higher Level Software</span><span data-cy>About Higher Level Software</span>
@@ -1584,7 +1577,7 @@
       </div>
 
       <div class="pt-respmap" aria-hidden="false">
-        <svg viewBox="0 0 360 282" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Responsibility map: the client outcome is led by VDB UK as programme lead, delivered technically by Higher Level Software, with human oversight and reporting across the whole partnership.">
+        <svg viewBox="0 0 360 282" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Responsibility map: the client outcome is led by VDB as programme lead, delivered technically by Higher Level Software, with human oversight and reporting across the whole partnership.">
           <!-- connectors -->
           <line class="pt-rm-conn" x1="180" y1="58" x2="180" y2="74"/>
           <path class="pt-rm-conn" d="M176 66 l4 7 l4 -7"/>
@@ -1594,11 +1587,11 @@
           <path class="pt-rm-conn" d="M176 206 l4 7 l4 -7"/>
           <!-- client outcome -->
           <rect class="pt-rm-box" x="60" y="10" width="240" height="46" rx="9"/>
-          <text class="pt-rm-t" x="180" y="38" text-anchor="middle">Client outcome</text>
+          <text class="pt-rm-t" x="180" y="38" text-anchor="middle">Client needs</text>
           <!-- VDB programme lead -->
           <rect class="pt-rm-box pt-rm-box--vdb" x="60" y="78" width="240" height="48" rx="9"/>
           <text class="pt-rm-t" x="180" y="100" text-anchor="middle">VDB &#183; programme lead</text>
-          <text class="pt-rm-s" x="180" y="115" text-anchor="middle">research &#183; science &#183; governance</text>
+          <text class="pt-rm-s" x="180" y="115" text-anchor="middle" textLength="232" lengthAdjust="spacingAndGlyphs">project management &#183; stakeholder engagement &#183; governance</text>
           <!-- HLS technical delivery -->
           <rect class="pt-rm-box pt-rm-box--hls" x="60" y="148" width="240" height="48" rx="9"/>
           <text class="pt-rm-t pt-rm-t--hls" x="180" y="170" text-anchor="middle">HLS &#183; technical delivery</text>
@@ -1623,33 +1616,33 @@
           <span data-cy>How it fits together</span>
         </span>
         <h2>
-          <span data-en>Lead, build, operate</span>
-          <span data-cy>Lead, build, operate</span>
+          <span data-en>Validate, design, build</span>
+          <span data-cy>Validate, design, build</span>
         </h2>
       </div>
       <div class="pt-flow__grid">
         <div class="pt-step pt-step--vdb">
-          <div class="pt-step__tag">VDB UK</div>
-          <div class="pt-step__verb"><span data-en>Lead</span><span data-cy>Lead</span></div>
+          <div class="pt-step__tag">VDB</div>
+          <div class="pt-step__verb"><span data-en>Validate</span><span data-cy>Validate</span></div>
           <p class="pt-step__desc">
-            <span data-en>VDB UK leads the programme &mdash; research, science, stakeholder management, funding and governance &mdash; and stays accountable to the client.</span>
-            <span data-cy>VDB UK leads the programme &mdash; research, science, stakeholder management, funding and governance &mdash; and stays accountable to the client.</span>
+            <span data-en>VDB leads the programme. We validate the need and shape the approach through project management, stakeholder engagement, funding and governance, and stay accountable to the client.</span>
+            <span data-cy>VDB leads the programme. We validate the need and shape the approach through project management, stakeholder engagement, funding and governance, and stay accountable to the client.</span>
+          </p>
+        </div>
+        <div class="pt-step pt-step--ops">
+          <div class="pt-step__tag"><span data-en>VDB and HLS</span><span data-cy>VDB and HLS</span></div>
+          <div class="pt-step__verb"><span data-en>Design</span><span data-cy>Design</span></div>
+          <p class="pt-step__desc">
+            <span data-en>Together we design the delivery model: the right team, the architecture and the cadence, agreed before build begins.</span>
+            <span data-cy>Together we design the delivery model: the right team, the architecture and the cadence, agreed before build begins.</span>
           </p>
         </div>
         <div class="pt-step pt-step--hls">
           <div class="pt-step__tag">Higher Level Software</div>
           <div class="pt-step__verb"><span data-en>Build</span><span data-cy>Build</span></div>
           <p class="pt-step__desc">
-            <span data-en>Higher Level Software builds the software, hosting, integrations and agentic systems the programme runs on.</span>
-            <span data-cy>Higher Level Software builds the software, hosting, integrations and agentic systems the programme runs on.</span>
-          </p>
-        </div>
-        <div class="pt-step pt-step--ops">
-          <div class="pt-step__tag"><span data-en>Together</span><span data-cy>Together</span></div>
-          <div class="pt-step__verb"><span data-en>Operate</span><span data-cy>Operate</span></div>
-          <p class="pt-step__desc">
-            <span data-en>We run it under one cadence: reporting, support and oversight, with a named human accountable on each side.</span>
-            <span data-cy>We run it under one cadence: reporting, support and oversight, with a named human accountable on each side.</span>
+            <span data-en>HLS builds the software, hosting, integrations and agentic systems the programme runs on, then we operate it with reporting, support and oversight, and a named human accountable on each side.</span>
+            <span data-cy>HLS builds the software, hosting, integrations and agentic systems the programme runs on, then we operate it with reporting, support and oversight, and a named human accountable on each side.</span>
           </p>
         </div>
       </div>
@@ -1682,53 +1675,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       WHERE THIS MATTERS
-       ═══════════════════════════════════════ -->
-  <section class="pt-where reveal">
-    <div class="pt-where__inner">
-      <div class="pt-where__header">
-        <span class="label label--red">
-          <span data-en>Where this matters</span>
-          <span data-cy>Where this matters</span>
-        </span>
-        <h2>
-          <span data-en>Contracts this suits</span>
-          <span data-cy>Contracts this suits</span>
-        </h2>
-        <p>
-          <span data-en>The partnership fits programmes where operational leadership and dependable software have to hold together, with evidence the client can audit.</span>
-          <span data-cy>The partnership fits programmes where operational leadership and dependable software have to hold together, with evidence the client can audit.</span>
-        </p>
-      </div>
-      <div class="pt-where__grid">
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Secretariat and programme-management contracts</span><span data-cy>Secretariat and programme-management contracts</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Research-heavy and knowledge-work operations</span><span data-cy>Research-heavy and knowledge-work operations</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Reporting and evidence pipelines</span><span data-cy>Reporting and evidence pipelines</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Secure client portals and dashboards</span><span data-cy>Secure client portals and dashboards</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Help-desk and support workflows</span><span data-cy>Help-desk and support workflows</span></span>
-        </div>
-        <div class="pt-where__item">
-          <span class="pt-where__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span><span data-en>Funding-backed programmes with reporting obligations</span><span data-cy>Funding-backed programmes with reporting obligations</span></span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- "Contracts this suits" section removed in the 2026-06 rebrand (edit 24): VDB decides who the partnership suits. -->
 
   <!-- ═══════════════════════════════════════
        CTA / CROSS-LINK
@@ -1747,7 +1694,7 @@
       </div>
       <div class="pt-cta__actions">
         <a href="/contact.html" class="btn btn--white">
-          <span data-en>Talk to VDB UK</span><span data-cy>Talk to VDB UK</span>
+          <span data-en>Talk to VDB</span><span data-cy>Talk to VDB</span>
           <span class="btn__arrow" aria-hidden="true">&rarr;</span>
         </a>
         <a href="https://higherlevelsoftware.com/partnerships.html" class="btn btn--on-red-ghost">
@@ -1765,11 +1712,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -1782,11 +1728,12 @@
             <span data-cy>Galluoedd</span>
           </h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">

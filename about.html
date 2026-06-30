@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="About VDB — Multidisciplinary Consultancy" data-title-cy="Yngl&#375;n &acirc; VDB — Ymgynghoriaeth Amlddisgyblaeth">About VDB — Multidisciplinary Consultancy</title>
+  <title data-title-en="About VDB | Multidisciplinary Consultancy" data-title-cy="Yngl&#375;n &acirc; VDB | Ymgynghoriaeth Amlddisgyblaeth">About VDB | Multidisciplinary Consultancy</title>
   <meta name="description" content="VDB is a multidisciplinary consultancy delivering complex programmes across the UK. Over &pound;255 million unlocked for UK R&amp;D projects across research, funding, science, engineering, and ESG." data-content-en="VDB is a multidisciplinary consultancy delivering complex programmes across the UK. Over &pound;255 million unlocked for UK R&amp;D projects across research, funding, science, engineering, and ESG." data-content-cy="Mae VDB yn ymgynghoriaeth amlddisgyblaeth sy'n cyflawni rhaglenni cymhleth ledled y DU. Dros &pound;255 miliwn wedi'i ddatgloi ar gyfer prosiectau ymchwil a datblygu'r DU ar draws ymchwil, cyllido, gwyddoniaeth, peirianneg, ac ESG.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
-       Welsh Slate palette — institutional
+       Welsh Slate palette, institutional
        warmth meets modern consultancy
        ═══════════════════════════════════════ */
     :root {
@@ -31,12 +31,15 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      /* Welsh red — deeper, more sophisticated than flag red */
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      /* Welsh red, deeper, more sophisticated than flag red */
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       /* Warm gold accent */
       --gold-600: #b8860b;
@@ -52,8 +55,8 @@
       --stone-50: #fcfbf8;
 
       /* Typography */
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       /* Spacing scale */
       --space-xs: 0.25rem;
@@ -312,7 +315,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -320,7 +323,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     /* ═══════════════════════════════════════
        THEME TOGGLE
@@ -369,14 +372,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn--ghost {
@@ -543,7 +546,7 @@
     }
 
     /* ═══════════════════════════════════════
-       TRACK RECORD — Awards Strip
+       TRACK RECORD, Awards Strip
        ═══════════════════════════════════════ */
     .track-record {
       padding: var(--space-5xl) 0;
@@ -559,7 +562,7 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(200,40,63,0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(94, 26, 142,0.06) 0%, transparent 70%);
     }
 
     .track-record__inner {
@@ -643,11 +646,11 @@
     }
 
     .founder__inner {
-      max-width: var(--max-width);
+      max-width: 820px;
       margin: 0 auto;
       padding: 0 var(--space-xl);
       display: grid;
-      grid-template-columns: 1fr 1.4fr;
+      grid-template-columns: 1fr;
       gap: var(--space-4xl);
       align-items: start;
     }
@@ -700,7 +703,7 @@
       margin-top: var(--space-xs);
     }
 
-    /* OUR TEAM — see Team Carousel section below */
+    /* OUR TEAM, see Team Carousel section below */
 
     /* ═══════════════════════════════════════
        WORKING ACROSS THE UK + COMPANY DETAILS
@@ -882,6 +885,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -890,6 +895,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -1198,7 +1204,7 @@
     }
 
     [data-theme="light"] .track-record__bg {
-      background: radial-gradient(circle, rgba(200,40,63,0.04) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(94, 26, 142,0.04) 0%, transparent 70%);
     }
 
     [data-theme="light"] .track-record__header h2 {
@@ -1484,7 +1490,7 @@
     }
 
     [data-theme="light"] .team-carousel::before {
-      background: radial-gradient(ellipse, rgba(200, 40, 63, 0.03) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(94, 26, 142, 0.03) 0%, transparent 70%);
     }
 
     [data-theme="light"] .team-carousel__header h2 {
@@ -1567,19 +1573,15 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <!-- VDB UK Logo — geometric monogram -->
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <!-- VDB Logo, geometric monogram -->
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <!-- V chevron mark -->
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <!-- D -->
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <!-- B -->
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <!-- Divider -->
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <!-- UK text -->
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1661,8 +1663,8 @@
           <span data-cy>Beth bynnag yw'r her, rydym yn ei chyflawni</span>
         </h2>
 
-        <p data-en-block>VDB is a multidisciplinary consultancy that spans research, funding strategy, science and engineering, ESG, and programme delivery. We don't specialise in one discipline &mdash; we assemble the right team for each brief and deliver the outcome.</p>
-        <p data-cy-block>Mae VDB yn ymgynghoriaeth amlddisgyblaeth sy'n cwmpasu ymchwil, strategaeth gyllido, gwyddoniaeth a pheirianneg, ESG, a chyflawni rhaglenni. Nid un ddisgyblaeth yw ein harbenigedd &mdash; rydym yn cydosod y t&icirc;m cywir ar gyfer pob briff ac yn cyflawni'r canlyniad.</p>
+        <p data-en-block>VDB is a multidisciplinary consultancy that spans research, funding strategy, science and engineering, ESG, and programme delivery. We don't specialise in one discipline, we assemble the right team for each brief and deliver the outcome.</p>
+        <p data-cy-block>Mae VDB yn ymgynghoriaeth amlddisgyblaeth sy'n cwmpasu ymchwil, strategaeth gyllido, gwyddoniaeth a pheirianneg, ESG, a chyflawni rhaglenni. Nid un ddisgyblaeth yw ein harbenigedd, rydym yn cydosod y t&icirc;m cywir ar gyfer pob briff ac yn cyflawni'r canlyniad.</p>
 
         <p data-en-block>Our work crosses cleantech, healthtech, fintech, government, and the cultural sector. We've unlocked over &pound;255 million for UK R&amp;D projects, partnering with organisations from Imperial College London and the University of Cambridge to Defra and Innovate UK.</p>
         <p data-cy-block>Mae ein gwaith yn croesi technoleg l&acirc;n, technoleg iechyd, technoleg ariannol, llywodraeth, a'r sector diwylliannol. Rydym wedi datgloi dros &pound;255 miliwn ar gyfer prosiectau ymchwil a datblygu'r DU, gan weithio gyda sefydliadau o Goleg Imperial Llundain a Phrifysgol Caergrawnt i Defra ac Innovate UK.</p>
@@ -1675,7 +1677,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       TRACK RECORD — Awards
+       TRACK RECORD, Awards
        ═══════════════════════════════════════ -->
   <section class="track-record reveal">
     <div class="track-record__bg"></div>
@@ -1686,10 +1688,25 @@
           <span data-cy>Hanes llwyddiant</span>
         </span>
         <h2>
-          <span data-en>Recognised at the highest level</span>
-          <span data-cy>Wedi'i gydnabod ar y lefel uchaf</span>
+          <span data-en>We back businesses recognised at the highest level</span>
+          <span data-cy>Rydym yn cefnogi busnesau a gydnabyddir ar y lefel uchaf</span>
         </h2>
+        <p style="max-width:62ch;margin:1rem auto 0;line-height:1.65;opacity:0.85;">
+          <span data-en>We have championed and supported businesses from early stage through to scale-up. The ventures we have backed have gone on to be Earthshot Prize shortlisted, Terra Carta Labs winners, Dyson Award winners and Forbes 30 Under 30 listees.</span>
+          <span data-cy>Rydym wedi hyrwyddo a chefnogi busnesau o'r cam cynnar hyd at raddio. Mae'r mentrau rydym wedi'u cefnogi wedi mynd ymlaen i fod ar restr fer Gwobr Earthshot, yn enillwyr Terra Carta Labs, yn enillwyr Gwobr Dyson ac ar restr Forbes 30 Under 30.</span>
+        </p>
+        <div style="display:flex;gap:0.85rem;align-items:center;justify-content:center;margin:1.75rem 0 0;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;font-size:0.8rem;color:var(--orange-500);">
+          <span data-en>Early stage</span><span data-cy>Cam cynnar</span>
+          <span aria-hidden="true">&rarr;</span>
+          <span data-en>Growth</span><span data-cy>Twf</span>
+          <span aria-hidden="true">&rarr;</span>
+          <span data-en>Scale-up</span><span data-cy>Graddio</span>
+        </div>
       </div>
+
+      <p style="text-align:center;margin:1.75rem 0 0.5rem;font-size:0.85rem;letter-spacing:0.04em;opacity:0.7;">
+        <span data-en>Ventures we have supported have been:</span><span data-cy>Mae'r mentrau rydym wedi'u cefnogi wedi bod yn:</span>
+      </p>
 
       <div class="awards-grid">
         <div class="award-card">
@@ -1744,8 +1761,8 @@
       </div>
 
       <div class="track-record__partners">
-        <p data-en-block>We've partnered with <strong>Imperial College London</strong>, the <strong>University of Cambridge</strong>, <strong>Defra</strong>, <strong>Innovate UK</strong>, the <strong>Forestry Commission</strong>, and leading UK enterprises like <strong>Cranswick</strong>.</p>
-        <p data-cy-block>Rydym wedi gweithio gyda <strong>Choleg Imperial Llundain</strong>, <strong>Prifysgol Caergrawnt</strong>, <strong>Defra</strong>, <strong>Innovate UK</strong>, y <strong>Comisiwn Coedwigaeth</strong>, a mentrau blaenllaw'r DU fel <strong>Cranswick</strong>.</p>
+        <p data-en-block>We've partnered with <strong>Imperial College London</strong>, the <strong>University of Cambridge</strong>, <strong>Defra</strong>, <strong>Innovate UK</strong>, the <strong>Forestry Commission</strong>, <strong>Plus X Innovation</strong> and the <strong>Welsh Government</strong>.</p>
+        <p data-cy-block>Rydym wedi gweithio gyda <strong>Choleg Imperial Llundain</strong>, <strong>Prifysgol Caergrawnt</strong>, <strong>Defra</strong>, <strong>Innovate UK</strong>, y <strong>Comisiwn Coedwigaeth</strong>, <strong>Plus X Innovation</strong> a <strong>Llywodraeth Cymru</strong>.</p>
       </div>
     </div>
   </section>
@@ -1755,9 +1772,7 @@
        ═══════════════════════════════════════ -->
   <section class="founder reveal">
     <div class="founder__inner">
-      <div class="founder__image-col">
-        <img src="/images/hannah-blouse.jpg" alt="Hannah Van Den Bergh — Founder and Director of VDB" data-alt-en="Hannah Van Den Bergh — Founder and Director of VDB" data-alt-cy="Hannah Van Den Bergh — Sylfaenydd a Chyfarwyddwr VDB" width="896" height="1195" loading="lazy" decoding="async">
-      </div>
+      <!-- Large founder portrait (hannah-blouse.jpg) removed in the 2026-06 rebrand (edit 10). TODO: optional straight-on replacement in the team-photo style. -->
       <div class="founder__text">
         <span class="label label--red">
           <span data-en>Founder &amp; Director</span>
@@ -1766,7 +1781,7 @@
         <h2>Hannah Van Den Bergh</h2>
 
         <p data-en-block>Hannah Van Den Bergh is the Founder and Director of VDB, leading the consultancy across research strategy, funding architecture, science and engineering programmes, and ESG advisory. Her background spans sustainability research with institutions including Cambridge and Imperial, climate-policy work linked to the UNFCCC, and advisory roles across finance, industry, and government. That breadth gives VDB a distinctive ability to connect technical ambition with commercial reality.</p>
-        <p data-cy-block>Mae Hannah yn arwain VDB ar draws ei holl ehangder cyflawni &mdash; o strategaeth ymchwil a phensaern&iuml;aeth gyllido i raglenni gwyddoniaeth a chynghori ESG. Mae ei gwaith yn eistedd ar y croestoriad rhwng polisi, academia, a diwydiant, gan dynnu ar brofiad sy'n rhychwantu ymchwil cynaliadwyedd ym Mhrifysgol Caergrawnt, gwaith polisi hinsawdd gyda'r UNFCCC, a ymgynghori gwasanaethau ariannol.</p>
+        <p data-cy-block>Mae Hannah yn arwain VDB ar draws ei holl ehangder cyflawni, o strategaeth ymchwil a phensaern&iuml;aeth gyllido i raglenni gwyddoniaeth a chynghori ESG. Mae ei gwaith yn eistedd ar y croestoriad rhwng polisi, academia, a diwydiant, gan dynnu ar brofiad sy'n rhychwantu ymchwil cynaliadwyedd ym Mhrifysgol Caergrawnt, gwaith polisi hinsawdd gyda'r UNFCCC, a ymgynghori gwasanaethau ariannol.</p>
 
         <p data-en-block>She founded VDB to help organisations turn bold ideas into funded, credible, and scalable programmes. Under her leadership, VDB has unlocked more than &pound;255 million for UK R&amp;D projects, supporting start-ups, universities, corporates, and public bodies to shape stronger business models, build the right partnerships, and bring innovation to market. Hannah is known for combining strategic insight with practical delivery, helping VDB bring clarity, momentum, and trusted leadership to complex environmental and innovation challenges.</p>
         <p data-cy-block>Mae hi wedi dylunio rhaglenni ar gyfer sefydliadau gan gynnwys Cyngor Celfyddydau Cymru, Julie's Bicycle, a C40, ac wedi adeiladu partneriaethau traws-sector sydd wedi ennill cydnabyddiaeth gan Wobr Earthshot, Terra Carta, Dyson, a Forbes. Heddiw mae'n cyfarwyddo ymgynghoriaeth sydd wedi datgloi dros &pound;255 miliwn ar gyfer prosiectau ymchwil a datblygu'r DU.</p>
@@ -1799,7 +1814,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       OUR TEAM — Carousel
+       OUR TEAM, Carousel
        ═══════════════════════════════════════ -->
   <section class="team-carousel reveal" aria-label="Our team">
     <div class="team-carousel__header container">
@@ -2126,71 +2141,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       WORKING ACROSS THE UK + COMPANY DETAILS
-       ═══════════════════════════════════════ -->
-  <section class="uk-presence reveal">
-    <div class="uk-presence__inner">
-      <div class="uk-presence__text">
-        <span class="label label--red">
-          <span data-en>Where we work</span>
-          <span data-cy>Ble rydym yn gweithio</span>
-        </span>
-        <h2>
-          <span data-en>Working across the UK</span>
-          <span data-cy>Yn gweithio ledled y DU</span>
-        </h2>
-
-        <p data-en-block>We work with partners across the UK &mdash; from universities and research institutes to government bodies and industry innovators &mdash; connecting world-class research with the funding and delivery expertise to turn ideas into impact.</p>
-        <p data-cy-block>Rydym yn gweithio gyda phartneriaid ledled y DU &mdash; o brifysgolion a sefydliadau ymchwil i gyrff llywodraethol ac arloeswyr diwydiant &mdash; gan gysylltu ymchwil o'r radd flaenaf &acirc;'r arbenigedd cyllido a chyflawni i droi syniadau'n effaith.</p>
-      </div>
-
-      <aside class="company-card">
-        <h3>
-          <span data-en>Company Details</span>
-          <span data-cy>Manylion y Cwmni</span>
-        </h3>
-        <div class="company-card__row">
-          <span class="company-card__label">
-            <span data-en>Legal name</span>
-            <span data-cy>Enw cyfreithiol</span>
-          </span>
-          <span class="company-card__value">VandenberghUK Ltd</span>
-        </div>
-        <div class="company-card__row">
-          <span class="company-card__label">
-            <span data-en>Director</span>
-            <span data-cy>Cyfarwyddwr</span>
-          </span>
-          <span class="company-card__value">Hannah Van Den Bergh</span>
-        </div>
-        <div class="company-card__row">
-          <span class="company-card__label">Companies House</span>
-          <span class="company-card__value">#12296613</span>
-        </div>
-        <div class="company-card__row">
-          <span class="company-card__label">
-            <span data-en>Location</span>
-            <span data-cy>Lleoliad</span>
-          </span>
-          <span class="company-card__value">
-            <span data-en>United Kingdom</span>
-            <span data-cy>Y Deyrnas Unedig</span>
-          </span>
-        </div>
-        <div class="company-card__row">
-          <span class="company-card__label">
-            <span data-en>Incorporated</span>
-            <span data-cy>Ymgorfforwyd</span>
-          </span>
-          <span class="company-card__value">
-            <span data-en>November 2019</span>
-            <span data-cy>Tachwedd 2019</span>
-          </span>
-        </div>
-      </aside>
-    </div>
-  </section>
+  <!-- "Working across the UK" + Company Details section removed in the 2026-06 rebrand (edit 11). Legal entity remains in the footer copyright; Director/Location dropped (Stage 7 decision: confirmed delete). -->
 
   <!-- ═══════════════════════════════════════
        CTA BANNER
@@ -2203,8 +2154,8 @@
         <span data-cy>Gweithiwch gyda ni</span>
       </h2>
       <p class="cta-banner__desc">
-        <span data-en>Whether you're exploring a new idea, applying for funding, or need a delivery partner &mdash; we'd love to hear from you.</span>
-        <span data-cy>P'un a ydych chi'n archwilio syniad newydd, yn gwneud cais am gyllid, neu angen partner cyflawni &mdash; byddem wrth ein bodd yn clywed gennych.</span>
+        <span data-en>Whether you're exploring a new idea, applying for funding, or need a delivery partner, we'd love to hear from you.</span>
+        <span data-cy>P'un a ydych chi'n archwilio syniad newydd, yn gwneud cais am gyllid, neu angen partner cyflawni, byddem wrth ein bodd yn clywed gennych.</span>
       </p>
       <a href="/contact.html" class="btn btn--white">
         <span data-en>Get in touch</span>
@@ -2221,11 +2172,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -2238,11 +2188,12 @@
             <span data-cy>Galluoedd</span>
           </h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">

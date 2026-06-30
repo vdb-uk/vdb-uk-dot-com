@@ -6,6 +6,9 @@ secrets.env
 test-results/
 /team-carousel-*.png
 /founder-to-carousel.png
+/resp-*.png
+/stage*.png
+/verify-*.png
 
 # Local working material — kept on disk, out of the public repo
 /docs/input/

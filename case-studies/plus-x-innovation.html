@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="Plus X Innovation — Case Study — VDB UK" data-title-cy="Plus X Innovation — Astudiaeth Achos — VDB UK">Plus X Innovation — Case Study — VDB UK</title>
-  <meta name="description" content="How VDB UK designed an accelerator programme at the heart of Plus X Innovation's national hardware hub network, supporting 69 companies and creating over 1,100 jobs." data-content-en="How VDB UK designed an accelerator programme at the heart of Plus X Innovation's national hardware hub network, supporting 69 companies and creating over 1,100 jobs." data-content-cy="Sut y dyluniodd VDB UK raglen gyflymydd wrth galon rhwydwaith canolfannau caledwedd cenedlaethol Plus X Innovation, gan gefnogi 69 o gwmn&iuml;au a chreu dros 1,100 o swyddi.">
+  <title data-title-en="Plus X Innovation | Case Study | VDB" data-title-cy="Plus X Innovation | Astudiaeth Achos | VDB">Plus X Innovation | Case Study | VDB</title>
+  <meta name="description" content="How VDB designed an accelerator programme at the heart of Plus X Innovation's national hardware hub network, supporting 69 companies and creating over 1,100 jobs." data-content-en="How VDB designed an accelerator programme at the heart of Plus X Innovation's national hardware hub network, supporting 69 companies and creating over 1,100 jobs." data-content-cy="Sut y dyluniodd VDB raglen gyflymydd wrth galon rhwydwaith canolfannau caledwedd cenedlaethol Plus X Innovation, gan gefnogi 69 o gwmn&iuml;au a chreu dros 1,100 o swyddi.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
@@ -28,11 +28,14 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       --gold-600: #b8860b;
       --gold-500: #d4a017;
@@ -45,8 +48,8 @@
       --stone-300: #e2dac8;
       --stone-50: #fcfbf8;
 
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       --space-xs: 0.25rem;
       --space-sm: 0.5rem;
@@ -285,7 +288,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -293,7 +296,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     .theme-toggle {
       display: flex;
@@ -339,14 +342,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn--ghost {
@@ -395,7 +398,7 @@
       background: linear-gradient(to top, var(--slate-950) 0%, rgba(15,17,24,0.5) 50%, rgba(15,17,24,0.2) 100%);
     }
 
-    /* Gold diagonal accent — distinguishes case studies from projects */
+    /* Gold diagonal accent, distinguishes case studies from projects */
     .cs-hero__accent {
       position: absolute;
       top: 0;
@@ -654,7 +657,7 @@
     }
 
     /* ═══════════════════════════════════════
-       WHY IT MATTERED — PULL QUOTE SECTION
+       WHY IT MATTERED, PULL QUOTE SECTION
        ═══════════════════════════════════════ */
     .cs-why {
       padding: var(--space-5xl) 0;
@@ -958,6 +961,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -966,6 +971,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -1297,13 +1303,11 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1374,8 +1378,8 @@
       </h1>
 
       <p class="cs-hero__subtitle animate-in animate-in--delay-3">
-        <span data-en>How VDB UK shaped the accelerator at the heart of Plus X Innovation's national hub network &mdash; launching 69 companies, creating 1,100+ jobs, and unlocking &pound;180m in investment.</span>
-        <span data-cy>Sut y lluniodd VDB UK y cyflymydd wrth galon rhwydwaith canolfannau cenedlaethol Plus X Innovation &mdash; gan lansio 69 o gwmn&iuml;au, creu dros 1,100 o swyddi, a datgloi &pound;180m mewn buddsoddiad.</span>
+        <span data-en>How VDB shaped the accelerator at the heart of Plus X Innovation's national hub network, launching 69 companies, creating 1,100+ jobs, and unlocking &pound;180m in investment.</span>
+        <span data-cy>Sut y lluniodd VDB y cyflymydd wrth galon rhwydwaith canolfannau cenedlaethol Plus X Innovation, gan lansio 69 o gwmn&iuml;au, creu dros 1,100 o swyddi, a datgloi &pound;180m mewn buddsoddiad.</span>
       </p>
 
       <div class="cs-hero__meta animate-in animate-in--delay-4">
@@ -1411,11 +1415,11 @@
       </h2>
 
       <div class="cs-context__text">
-        <p data-en-block>Hardware and product startups face a fundamentally different challenge from their software counterparts. They need physical prototyping facilities, access to engineering mentors, supply chain guidance, and patient capital &mdash; not just desk space and Wi-Fi. In the UK, this segment was significantly underserved, with few purpose-built accelerator programmes designed around the specific needs of hardware founders.</p>
-        <p data-cy-block>Mae cwmn&iuml;au newydd caledwedd a chynnyrch yn wynebu her sylfaenol wahanol i'w cymheiriaid meddalwedd. Mae angen cyfleusterau prototeipio ffisegol, mynediad at fentoriaid peirianneg, arweiniad cadwyn gyflenwi, a chyfalaf amyneddgar arnynt &mdash; nid dim ond gofod desg a Wi-Fi. Yn y DU, roedd y segment hwn heb ddigon o wasanaeth, gydag ychydig o raglenni cyflymydd pwrpasol wedi'u dylunio o amgylch anghenion penodol sylfaenwyr caledwedd.</p>
+        <p data-en-block>Hardware and product startups face a fundamentally different challenge from their software counterparts. They need physical prototyping facilities, access to engineering mentors, supply chain guidance, and patient capital, not just desk space and Wi-Fi. In the UK, this segment was significantly underserved, with few purpose-built accelerator programmes designed around the specific needs of hardware founders.</p>
+        <p data-cy-block>Mae cwmn&iuml;au newydd caledwedd a chynnyrch yn wynebu her sylfaenol wahanol i'w cymheiriaid meddalwedd. Mae angen cyfleusterau prototeipio ffisegol, mynediad at fentoriaid peirianneg, arweiniad cadwyn gyflenwi, a chyfalaf amyneddgar arnynt, nid dim ond gofod desg a Wi-Fi. Yn y DU, roedd y segment hwn heb ddigon o wasanaeth, gydag ychydig o raglenni cyflymydd pwrpasol wedi'u dylunio o amgylch anghenion penodol sylfaenwyr caledwedd.</p>
 
-        <p data-en-block>Plus X Innovation was building a national network of innovation hubs to address this gap, starting with the Central Research Laboratory (CRL) on the former EMI R&amp;D campus in Hayes, West London. They needed a partner to design the accelerator programme that would sit at the heart of this network &mdash; one that could launch companies, attract investment, and scale nationally.</p>
-        <p data-cy-block>Roedd Plus X Innovation yn adeiladu rhwydwaith cenedlaethol o ganolfannau arloesi i fynd i'r afael &acirc;'r bwlch hwn, gan ddechrau gyda'r Central Research Laboratory (CRL) ar gampws Ymchwil a Datblygu EMI gynt yn Hayes, Gorllewin Llundain. Roedd angen partner arnynt i ddylunio'r rhaglen gyflymydd a fyddai wrth galon y rhwydwaith hwn &mdash; un a allai lansio cwmn&iuml;au, denu buddsoddiad, a graddio'n genedlaethol.</p>
+        <p data-en-block>Plus X Innovation was building a national network of innovation hubs to address this gap, starting with the Central Research Laboratory (CRL) on the former EMI R&amp;D campus in Hayes, West London. They needed a partner to design the accelerator programme that would sit at the heart of this network, one that could launch companies, attract investment, and scale nationally.</p>
+        <p data-cy-block>Roedd Plus X Innovation yn adeiladu rhwydwaith cenedlaethol o ganolfannau arloesi i fynd i'r afael &acirc;'r bwlch hwn, gan ddechrau gyda'r Central Research Laboratory (CRL) ar gampws Ymchwil a Datblygu EMI gynt yn Hayes, Gorllewin Llundain. Roedd angen partner arnynt i ddylunio'r rhaglen gyflymydd a fyddai wrth galon y rhwydwaith hwn, un a allai lansio cwmn&iuml;au, denu buddsoddiad, a graddio'n genedlaethol.</p>
       </div>
     </div>
   </section>
@@ -1436,8 +1440,8 @@
           <span data-cy>Adeiladu'r rhaglen, mapio'r ecosystem, cynllunio ar gyfer graddio</span>
         </h2>
 
-        <p data-en-block>VDB UK was engaged to design a hardware accelerator programme that could operate at the centre of a national innovation hub network. The brief was threefold: create an accelerator structure and curriculum that worked for hardware founders, map the innovation ecosystem to identify the right partners and mentors, and inform the scaling strategy as the network expanded beyond London.</p>
-        <p data-cy-block>Cafodd VDB UK ei gomisiynu i ddylunio rhaglen gyflymydd caledwedd a allai weithredu yng nghanol rhwydwaith canolfannau arloesi cenedlaethol. Roedd y briff yn driphlyg: creu strwythur a chwricwlwm cyflymydd a oedd yn gweithio i sylfaenwyr caledwedd, mapio'r ecosystem arloesi i nodi'r partneriaid a mentoriaid cywir, a llywio'r strategaeth graddio wrth i'r rhwydwaith ehangu y tu hwnt i Lundain.</p>
+        <p data-en-block>VDB was engaged to design a hardware accelerator programme that could operate at the centre of a national innovation hub network. The brief was threefold: create an accelerator structure and curriculum that worked for hardware founders, map the innovation ecosystem to identify the right partners and mentors, and inform the scaling strategy as the network expanded beyond London.</p>
+        <p data-cy-block>Cafodd VDB ei gomisiynu i ddylunio rhaglen gyflymydd caledwedd a allai weithredu yng nghanol rhwydwaith canolfannau arloesi cenedlaethol. Roedd y briff yn driphlyg: creu strwythur a chwricwlwm cyflymydd a oedd yn gweithio i sylfaenwyr caledwedd, mapio'r ecosystem arloesi i nodi'r partneriaid a mentoriaid cywir, a llywio'r strategaeth graddio wrth i'r rhwydwaith ehangu y tu hwnt i Lundain.</p>
 
         <p data-en-block>This was not a consulting exercise at arm's length. We embedded within the team, working alongside Plus X, Brunel University London, and developer U+I to shape a programme that would be credible to investors, valuable to founders, and replicable across multiple sites.</p>
         <p data-cy-block>Nid ymarfer ymgynghori o bell oedd hwn. Fe wnaethom ymgorffori o fewn y t&icirc;m, gan weithio ochr yn ochr &acirc; Plus X, Prifysgol Brunel Llundain, a'r datblygwr U+I i lunio rhaglen a fyddai'n gredadwy i fuddsoddwyr, yn werthfawr i sylfaenwyr, ac yn ailadroddadwy ar draws sawl safle.</p>
@@ -1500,8 +1504,8 @@
             <span data-cy>Strategaeth Graddio ac Ehangu</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Informed the expansion strategy as Plus X grew from Hayes to Brighton and Slough. Designed programme variants tailored to different stages &mdash; including BOOST for early-stage ventures and the Stage One Pre-Accelerator &mdash; ensuring the model could flex across locations and founder maturity levels.</span>
-            <span data-cy>Llywio'r strategaeth ehangu wrth i Plus X dyfu o Hayes i Brighton a Slough. Dylunio amrywiadau rhaglenni wedi'u teilwra i wahanol gyfnodau &mdash; gan gynnwys BOOST ar gyfer mentrau cam cynnar a'r Cyn-Gyflymydd Cam Un &mdash; gan sicrhau y gallai'r model addasu ar draws lleoliadau a lefelau aeddfedrwydd sylfaenwyr.</span>
+            <span data-en>Informed the expansion strategy as Plus X grew from Hayes to Brighton and Slough. Designed programme variants tailored to different stages, including BOOST for early-stage ventures and the Stage One Pre-Accelerator, ensuring the model could flex across locations and founder maturity levels.</span>
+            <span data-cy>Llywio'r strategaeth ehangu wrth i Plus X dyfu o Hayes i Brighton a Slough. Dylunio amrywiadau rhaglenni wedi'u teilwra i wahanol gyfnodau, gan gynnwys BOOST ar gyfer mentrau cam cynnar a'r Cyn-Gyflymydd Cam Un, gan sicrhau y gallai'r model addasu ar draws lleoliadau a lefelau aeddfedrwydd sylfaenwyr.</span>
           </p>
         </div>
 
@@ -1512,8 +1516,8 @@
             <span data-cy>Datblygu Llwybrau Cyllido a Grantiau</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Developed the funding guidance framework that helped cohort companies access &pound;25m in grants. Created pathways connecting founders with public funding bodies, angel networks, and institutional investors &mdash; contributing to the portfolio companies collectively raising &pound;180m.</span>
-            <span data-cy>Datblygu'r fframwaith arweiniad cyllido a helpodd gwmn&iuml;au'r carfanau gael mynediad at &pound;25m mewn grantiau. Creu llwybrau'n cysylltu sylfaenwyr &acirc; chyrff cyllido cyhoeddus, rhwydweithiau angel, a buddsoddwyr sefydliadol &mdash; gan gyfrannu at gwmn&iuml;au'r portffolio yn codi &pound;180m gyda'i gilydd.</span>
+            <span data-en>Developed the funding guidance framework that helped cohort companies access &pound;25m in grants. Created pathways connecting founders with public funding bodies, angel networks, and institutional investors, contributing to the portfolio companies collectively raising &pound;180m.</span>
+            <span data-cy>Datblygu'r fframwaith arweiniad cyllido a helpodd gwmn&iuml;au'r carfanau gael mynediad at &pound;25m mewn grantiau. Creu llwybrau'n cysylltu sylfaenwyr &acirc; chyrff cyllido cyhoeddus, rhwydweithiau angel, a buddsoddwyr sefydliadol, gan gyfrannu at gwmn&iuml;au'r portffolio yn codi &pound;180m gyda'i gilydd.</span>
           </p>
         </div>
 
@@ -1524,8 +1528,8 @@
             <span data-cy>Asesiad Effaith Rhaglen Genedlaethol</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Contributed to the evidence base demonstrating the programme's national impact: 69 companies supported across 10+ accelerator cohorts (2017&ndash;2023), 1,100+ jobs created, and recognition through the Property Week Awards. This impact data supported the case for continued expansion and institutional backing.</span>
-            <span data-cy>Cyfrannu at y sylfaen dystiolaeth sy'n dangos effaith genedlaethol y rhaglen: 69 o gwmn&iuml;au wedi'u cefnogi ar draws 10+ carfan cyflymydd (2017&ndash;2023), dros 1,100 o swyddi wedi'u creu, a chydnabyddiaeth trwy Wobrau Property Week. Cefnogodd y data effaith hwn yr achos dros barhau i ehangu a chefnogaeth sefydliadol.</span>
+            <span data-en>Contributed to the evidence base demonstrating the programme's national impact: 69 companies supported across 10+ accelerator cohorts (2017 to 2023), 1,100+ jobs created, and recognition through the Property Week Awards. This impact data supported the case for continued expansion and institutional backing.</span>
+            <span data-cy>Cyfrannu at y sylfaen dystiolaeth sy'n dangos effaith genedlaethol y rhaglen: 69 o gwmn&iuml;au wedi'u cefnogi ar draws 10+ carfan cyflymydd (2017 to 2023), dros 1,100 o swyddi wedi'u creu, a chydnabyddiaeth trwy Wobrau Property Week. Cefnogodd y data effaith hwn yr achos dros barhau i ehangu a chefnogaeth sefydliadol.</span>
           </p>
         </div>
       </div>
@@ -1550,8 +1554,8 @@
       </h2>
 
       <div class="cs-why__text">
-        <p data-en-block>The UK's innovation infrastructure was built primarily for software and digital businesses. Hardware startups &mdash; building physical products that require prototyping, testing, manufacturing partnerships, and longer development cycles &mdash; were largely left without the dedicated support they needed. Generic accelerator programmes often failed these founders because they didn't account for the realities of hardware development.</p>
-        <p data-cy-block>Adeiladwyd seilwaith arloesi'r DU yn bennaf ar gyfer busnesau meddalwedd a digidol. Gadawyd cwmn&iuml;au newydd caledwedd &mdash; sy'n adeiladu cynhyrchion ffisegol sy'n gofyn am brototeipiau, profi, partneriaethau gweithgynhyrchu, a chylchoedd datblygu hirach &mdash; heb y gefnogaeth bwrpasol yr oedd ei hangen arnynt i raddau helaeth. Roedd rhaglenni cyflymydd generig yn aml yn methu'r sylfaenwyr hyn oherwydd nad oeddent yn cyfrif am realiti datblygu caledwedd.</p>
+        <p data-en-block>The UK's innovation infrastructure was built primarily for software and digital businesses. Hardware startups, building physical products that require prototyping, testing, manufacturing partnerships, and longer development cycles, were largely left without the dedicated support they needed. Generic accelerator programmes often failed these founders because they didn't account for the realities of hardware development.</p>
+        <p data-cy-block>Adeiladwyd seilwaith arloesi'r DU yn bennaf ar gyfer busnesau meddalwedd a digidol. Gadawyd cwmn&iuml;au newydd caledwedd, sy'n adeiladu cynhyrchion ffisegol sy'n gofyn am brototeipiau, profi, partneriaethau gweithgynhyrchu, a chylchoedd datblygu hirach, heb y gefnogaeth bwrpasol yr oedd ei hangen arnynt i raddau helaeth. Roedd rhaglenni cyflymydd generig yn aml yn methu'r sylfaenwyr hyn oherwydd nad oeddent yn cyfrif am realiti datblygu caledwedd.</p>
       </div>
 
       <div class="cs-pullquote">
@@ -1587,8 +1591,8 @@
         <p data-en-block>The accelerator programme we designed became the centrepiece of Plus X Innovation's national network. From CRL's launch in Hayes in 2015, the model has scaled to Brighton (2020) and Slough (2023), with 10+ cohorts delivered and Cohort 12 now underway. The programme has directly supported 69 companies, helped founders access &pound;25m in grants, and contributed to portfolio companies collectively raising &pound;180m in investment.</p>
         <p data-cy-block>Daeth y rhaglen gyflymydd a ddyluniwyd gennym yn ganolbwynt i rwydwaith cenedlaethol Plus X Innovation. O lansiad CRL yn Hayes yn 2015, mae'r model wedi graddio i Brighton (2020) a Slough (2023), gyda 10+ carfan wedi'u cyflawni a Charfan 12 ar y gweill nawr. Mae'r rhaglen wedi cefnogi 69 o gwmn&iuml;au yn uniongyrchol, wedi helpu sylfaenwyr gael mynediad at &pound;25m mewn grantiau, ac wedi cyfrannu at gwmn&iuml;au'r portffolio yn codi &pound;180m mewn buddsoddiad gyda'i gilydd.</p>
 
-        <p data-en-block>With over 1,100 jobs created and recognition through the Property Week Awards, the programme stands as evidence that well-designed, sector-specific accelerator infrastructure can deliver outsized impact &mdash; when the programme design is right from the start.</p>
-        <p data-cy-block>Gyda dros 1,100 o swyddi wedi'u creu a chydnabyddiaeth trwy Wobrau Property Week, mae'r rhaglen yn dystiolaeth y gall seilwaith cyflymydd wedi'i ddylunio'n dda ac yn benodol i'r sector gyflawni effaith sylweddol &mdash; pan fydd dyluniad y rhaglen yn gywir o'r dechrau.</p>
+        <p data-en-block>With over 1,100 jobs created and recognition through the Property Week Awards, the programme stands as evidence that well-designed, sector-specific accelerator infrastructure can deliver outsized impact, when the programme design is right from the start.</p>
+        <p data-cy-block>Gyda dros 1,100 o swyddi wedi'u creu a chydnabyddiaeth trwy Wobrau Property Week, mae'r rhaglen yn dystiolaeth y gall seilwaith cyflymydd wedi'i ddylunio'n dda ac yn benodol i'r sector gyflawni effaith sylweddol, pan fydd dyluniad y rhaglen yn gywir o'r dechrau.</p>
       </div>
 
       <div class="cs-outcome__takeaway">
@@ -1607,8 +1611,8 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold-600)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
           <div class="cs-takeaway__text">
-            <span data-en>3 national hub locations &mdash; Hayes, Brighton, Slough</span>
-            <span data-cy>3 lleoliad canolfan genedlaethol &mdash; Hayes, Brighton, Slough</span>
+            <span data-en>3 national hub locations, Hayes, Brighton, Slough</span>
+            <span data-cy>3 lleoliad canolfan genedlaethol, Hayes, Brighton, Slough</span>
           </div>
         </div>
 
@@ -1692,8 +1696,8 @@
         <span data-cy>Adeiladu rhaglen arloesi neu gyflymydd?</span>
       </h2>
       <p class="cta-banner__desc">
-        <span data-en>Whether you're designing an accelerator, scaling a startup support network, or mapping an innovation ecosystem &mdash; we'd love to hear from you.</span>
-        <span data-cy>P'un a ydych chi'n dylunio cyflymydd, yn graddio rhwydwaith cymorth i gwmn&iuml;au newydd, neu'n mapio ecosystem arloesi &mdash; byddem wrth ein bodd yn clywed gennych.</span>
+        <span data-en>Whether you're designing an accelerator, scaling a startup support network, or mapping an innovation ecosystem, we'd love to hear from you.</span>
+        <span data-cy>P'un a ydych chi'n dylunio cyflymydd, yn graddio rhwydwaith cymorth i gwmn&iuml;au newydd, neu'n mapio ecosystem arloesi, byddem wrth ein bodd yn clywed gennych.</span>
       </p>
       <a href="/contact.html" class="btn btn--white">
         <span data-en>Get in touch</span>
@@ -1710,11 +1714,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -1724,11 +1727,12 @@
         <div class="footer__col">
           <h4><span data-en>Capabilities</span><span data-cy>Galluoedd</span></h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">

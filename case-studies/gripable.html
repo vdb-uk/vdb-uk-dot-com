@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-title-en="GripAble SqueezAble Programme Delivery — Case Study — VDB UK" data-title-cy="Cyflawni Rhaglen GripAble SqueezAble — Astudiaeth Achos — VDB UK">GripAble SqueezAble Programme Delivery — Case Study — VDB UK</title>
-  <meta name="description" content="How VDB UK delivered programme management for the SqueezAble paediatric rehab device — an £800k Innovate UK-funded collaboration between GripAble, Imperial College London, and NHS partners." data-content-en="How VDB UK delivered programme management for the SqueezAble paediatric rehab device — an £800k Innovate UK-funded collaboration between GripAble, Imperial College London, and NHS partners." data-content-cy="Sut y cyflawnodd VDB UK reoli rhaglenni ar gyfer dyfais adsefydlu pediatrig SqueezAble — cydweithrediad gwerth £800k a ariennir gan Innovate UK rhwng GripAble, Coleg Imperial Llundain, a phartneriaid y GIG.">
+  <title data-title-en="GripAble SqueezAble Programme Delivery | Case Study | VDB" data-title-cy="Cyflawni Rhaglen GripAble SqueezAble | Astudiaeth Achos | VDB">GripAble SqueezAble Programme Delivery | Case Study | VDB</title>
+  <meta name="description" content="How VDB delivered programme management for the SqueezAble paediatric rehab device, an £800k Innovate UK-funded collaboration between GripAble, Imperial College London, and NHS partners." data-content-en="How VDB delivered programme management for the SqueezAble paediatric rehab device, an £800k Innovate UK-funded collaboration between GripAble, Imperial College London, and NHS partners." data-content-cy="Sut y cyflawnodd VDB reoli rhaglenni ar gyfer dyfais adsefydlu pediatrig SqueezAble, cydweithrediad gwerth £800k a ariennir gan Innovate UK rhwng GripAble, Coleg Imperial Llundain, a phartneriaid y GIG.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
@@ -28,11 +28,14 @@
       --slate-100: #ecedf3;
       --slate-50: #f6f7fa;
 
-      --red-700: #8b1a2b;
-      --red-600: #a82135;
-      --red-500: #c8283f;
-      --red-400: #d94a5e;
-      --red-100: #fce8eb;
+      --red-700: #3a0f5e;
+      --red-600: #4a1370;
+      --red-500: #5E1A8E;
+      --red-400: #8b4fbf;
+      --red-100: #f1e9f7;
+      --orange-500: #E89A3C;
+      --orange-600: #D4862A;
+      --teal-500: #1C9C8E;
 
       --gold-600: #b8860b;
       --gold-500: #d4a017;
@@ -45,8 +48,8 @@
       --stone-300: #e2dac8;
       --stone-50: #fcfbf8;
 
-      --font-display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       --space-xs: 0.25rem;
       --space-sm: 0.5rem;
@@ -285,7 +288,7 @@
 
     .header__cta {
       padding: 8px 20px;
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
       font-size: 0.85rem;
       font-weight: 600;
@@ -293,7 +296,7 @@
       transition: background 0.2s;
     }
 
-    .header__cta:hover { background: var(--red-500); }
+    .header__cta:hover { background: var(--orange-600); }
 
     .theme-toggle {
       display: flex;
@@ -339,14 +342,14 @@
     }
 
     .btn--primary {
-      background: var(--red-600);
+      background: var(--orange-500);
       color: white;
     }
 
     .btn--primary:hover {
-      background: var(--red-500);
+      background: var(--orange-600);
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(200, 40, 63, 0.3);
+      box-shadow: 0 4px 20px rgba(94, 26, 142, 0.3);
     }
 
     .btn--ghost {
@@ -406,7 +409,7 @@
       background: linear-gradient(to top, var(--slate-950) 0%, rgba(15,17,24,0.5) 50%, rgba(15,17,24,0.2) 100%);
     }
 
-    /* Gold diagonal accent — distinguishes case studies from projects */
+    /* Gold diagonal accent, distinguishes case studies from projects */
     .cs-hero__accent {
       position: absolute;
       top: 0;
@@ -665,7 +668,7 @@
     }
 
     /* ═══════════════════════════════════════
-       WHY IT MATTERED — PULL QUOTE SECTION
+       WHY IT MATTERED, PULL QUOTE SECTION
        ═══════════════════════════════════════ */
     .cs-why {
       padding: var(--space-5xl) 0;
@@ -998,6 +1001,8 @@
     .footer__bottom {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
       align-items: center;
       padding-top: var(--space-xl);
       font-size: 0.8rem;
@@ -1006,6 +1011,7 @@
 
     .footer__bottom-links {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--space-lg);
     }
 
@@ -1342,13 +1348,11 @@
        ═══════════════════════════════════════ -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo" aria-label="VDB UK Home" data-aria-label-en="VDB UK Home" data-aria-label-cy="Hafan VDB UK">
-        <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <a href="/" class="header__logo" aria-label="VDB Home" data-aria-label-en="VDB Home" data-aria-label-cy="Hafan VDB">
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
           <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
-          <line x1="98" y1="10" x2="98" y2="30" stroke="#363a4d" stroke-width="1.5"/>
-          <text x="108" y="26" font-family="Outfit, sans-serif" font-size="14" font-weight="600" fill="#8b91a8" letter-spacing="2">UK</text>
         </svg>
       </a>
 
@@ -1463,8 +1467,8 @@
         <p data-en-block>GripAble, a spinout from Imperial College London, had developed a smart handheld rehabilitation device already deployed in over 350 healthcare locations across the UK. The device was transforming how clinicians delivered upper-limb rehabilitation, combining soft-sensor technology with gamified therapy to improve patient engagement and outcomes.</p>
         <p data-cy-block>Roedd GripAble, cwmni deillio o Goleg Imperial Llundain, wedi datblygu dyfais adsefydlu llaw glyfar a oedd eisoes wedi'i defnyddio mewn dros 350 o leoliadau gofal iechyd ledled y DU. Roedd y ddyfais yn trawsnewid sut roedd clinigwyr yn cyflawni adsefydlu aelodau uchaf, gan gyfuno technoleg synhwyrydd meddal &acirc; therapi wedi'i gamio i wella ymgysylltiad a chanlyniadau cleifion.</p>
 
-        <p data-en-block>Winning an &pound;800k Innovate UK Biomedical Catalyst grant opened the door to developing SqueezAble &mdash; a next-generation soft-sensor device designed specifically for children with cerebral palsy. But delivering a grant-funded, multi-partner R&amp;D programme involving a startup, a world-class university lab, and NHS clinical teams required a different kind of expertise: structured programme management that could hold the complexity together.</p>
-        <p data-cy-block>Roedd ennill grant Catalydd Biofeddygol Innovate UK gwerth &pound;800k yn agor y drws i ddatblygu SqueezAble &mdash; dyfais synhwyrydd meddal y genhedlaeth nesaf wedi'i chynllunio'n benodol ar gyfer plant &acirc; pharlys yr ymennydd. Ond roedd cyflawni rhaglen ymchwil a datblygu aml-bartner a ariennir gan grant yn cynnwys cwmni cychwyn, labordy prifysgol o'r radd flaenaf, a thimau clinigol y GIG yn gofyn am fath gwahanol o arbenigedd: rheoli rhaglenni strwythuredig a allai ddal y cymhlethdod at ei gilydd.</p>
+        <p data-en-block>Winning an &pound;800k Innovate UK Biomedical Catalyst grant opened the door to developing SqueezAble, a next-generation soft-sensor device designed specifically for children with cerebral palsy. But delivering a grant-funded, multi-partner R&amp;D programme involving a startup, a world-class university lab, and NHS clinical teams required a different kind of expertise: structured programme management that could hold the complexity together.</p>
+        <p data-cy-block>Roedd ennill grant Catalydd Biofeddygol Innovate UK gwerth &pound;800k yn agor y drws i ddatblygu SqueezAble, dyfais synhwyrydd meddal y genhedlaeth nesaf wedi'i chynllunio'n benodol ar gyfer plant &acirc; pharlys yr ymennydd. Ond roedd cyflawni rhaglen ymchwil a datblygu aml-bartner a ariennir gan grant yn cynnwys cwmni cychwyn, labordy prifysgol o'r radd flaenaf, a thimau clinigol y GIG yn gofyn am fath gwahanol o arbenigedd: rheoli rhaglenni strwythuredig a allai ddal y cymhlethdod at ei gilydd.</p>
       </div>
     </div>
   </section>
@@ -1485,11 +1489,11 @@
           <span data-cy>Cyflawni rhaglen medtech a ariennir gan grant ar amser ac ar y trywydd iawn</span>
         </h2>
 
-        <p data-en-block>VDB UK was brought in to provide programme management for the SqueezAble project &mdash; coordinating delivery across GripAble's product team, Imperial College's Department of Bioengineering, and NHS clinical partners.</p>
-        <p data-cy-block>Daeth VDB UK i mewn i ddarparu rheoli rhaglenni ar gyfer prosiect SqueezAble &mdash; cydlynu cyflawni ar draws t&icirc;m cynnyrch GripAble, Adran Biobeirianeg Coleg Imperial, a phartneriaid clinigol y GIG.</p>
+        <p data-en-block>VDB was brought in to provide programme management for the SqueezAble project, coordinating delivery across GripAble's product team, Imperial College's Department of Bioengineering, and NHS clinical partners.</p>
+        <p data-cy-block>Daeth VDB i mewn i ddarparu rheoli rhaglenni ar gyfer prosiect SqueezAble, cydlynu cyflawni ar draws t&icirc;m cynnyrch GripAble, Adran Biobeirianeg Coleg Imperial, a phartneriaid clinigol y GIG.</p>
 
-        <p data-en-block>The challenge was not just technical. It was about aligning different institutional cultures, managing funder expectations, and ensuring that an ambitious research programme maintained the pace and rigour needed to meet Innovate UK milestones &mdash; while keeping the end user, children with cerebral palsy, at the centre of every decision.</p>
-        <p data-cy-block>Nid her dechnegol yn unig oedd hon. Roedd yn ymwneud ag alinio diwylliannau sefydliadol gwahanol, rheoli disgwyliadau cyllidwyr, a sicrhau bod rhaglen ymchwil uchelgeisiol yn cynnal y cyflymder a'r trylwyredd sydd eu hangen i gwrdd &acirc; cherrig milltir Innovate UK &mdash; tra'n cadw'r defnyddiwr terfynol, plant &acirc; pharlys yr ymennydd, yng nghanol pob penderfyniad.</p>
+        <p data-en-block>The challenge was not just technical. It was about aligning different institutional cultures, managing funder expectations, and ensuring that an ambitious research programme maintained the pace and rigour needed to meet Innovate UK milestones, while keeping the end user, children with cerebral palsy, at the centre of every decision.</p>
+        <p data-cy-block>Nid her dechnegol yn unig oedd hon. Roedd yn ymwneud ag alinio diwylliannau sefydliadol gwahanol, rheoli disgwyliadau cyllidwyr, a sicrhau bod rhaglen ymchwil uchelgeisiol yn cynnal y cyflymder a'r trylwyredd sydd eu hangen i gwrdd &acirc; cherrig milltir Innovate UK, tra'n cadw'r defnyddiwr terfynol, plant &acirc; pharlys yr ymennydd, yng nghanol pob penderfyniad.</p>
       </div>
 
       <div class="cs-objective__highlight">
@@ -1525,8 +1529,8 @@
             <span data-cy>Rheoli Rhaglenni a Cherrig Milltir</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Managed the full SqueezAble programme across GripAble, Imperial College's Department of Bioengineering, and NHS clinical partners. Tracked technical milestones, coordinated workstreams, and compiled progress reports for Innovate UK &mdash; ensuring compliance and deliverable tracking throughout the &pound;800k grant lifecycle.</span>
-            <span data-cy>Rheoli rhaglen SqueezAble lawn ar draws GripAble, Adran Biobeirianeg Coleg Imperial, a phartneriaid clinigol y GIG. Tracio cerrig milltir technegol, cydlynu ffrydiau gwaith, a llunio adroddiadau cynnydd ar gyfer Innovate UK &mdash; sicrhau cydymffurfiaeth ac olrhain cyflawniadau trwy gydol cylch oes y grant gwerth &pound;800k.</span>
+            <span data-en>Managed the full SqueezAble programme across GripAble, Imperial College's Department of Bioengineering, and NHS clinical partners. Tracked technical milestones, coordinated workstreams, and compiled progress reports for Innovate UK, ensuring compliance and deliverable tracking throughout the &pound;800k grant lifecycle.</span>
+            <span data-cy>Rheoli rhaglen SqueezAble lawn ar draws GripAble, Adran Biobeirianeg Coleg Imperial, a phartneriaid clinigol y GIG. Tracio cerrig milltir technegol, cydlynu ffrydiau gwaith, a llunio adroddiadau cynnydd ar gyfer Innovate UK, sicrhau cydymffurfiaeth ac olrhain cyflawniadau trwy gydol cylch oes y grant gwerth &pound;800k.</span>
           </p>
         </div>
 
@@ -1537,8 +1541,8 @@
             <span data-cy>Cydlynu Aml-Bartner</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Facilitated collaboration between Dr Firat Guder's research group (soft-sensor technology at Imperial) and GripAble's product team. Managed clinical input from Imperial College Healthcare NHS Trust and coordinated occupational therapy expertise &mdash; bridging the gap between academic research, commercial product development, and frontline clinical need.</span>
-            <span data-cy>Hwyluso cydweithrediad rhwng gr&#373;p ymchwil Dr Firat Guder (technoleg synhwyrydd meddal yn Imperial) a th&icirc;m cynnyrch GripAble. Rheoli mewnbwn clinigol o Ymddiriedolaeth GIG Gofal Iechyd Coleg Imperial a chydlynu arbenigedd therapi galwedigaethol &mdash; pontio'r bwlch rhwng ymchwil academaidd, datblygu cynnyrch masnachol, ac angen clinigol rheng flaen.</span>
+            <span data-en>Facilitated collaboration between Dr Firat Guder's research group (soft-sensor technology at Imperial) and GripAble's product team. Managed clinical input from Imperial College Healthcare NHS Trust and coordinated occupational therapy expertise, bridging the gap between academic research, commercial product development, and frontline clinical need.</span>
+            <span data-cy>Hwyluso cydweithrediad rhwng gr&#373;p ymchwil Dr Firat Guder (technoleg synhwyrydd meddal yn Imperial) a th&icirc;m cynnyrch GripAble. Rheoli mewnbwn clinigol o Ymddiriedolaeth GIG Gofal Iechyd Coleg Imperial a chydlynu arbenigedd therapi galwedigaethol, pontio'r bwlch rhwng ymchwil academaidd, datblygu cynnyrch masnachol, ac angen clinigol rheng flaen.</span>
           </p>
         </div>
 
@@ -1549,8 +1553,8 @@
             <span data-cy>Cyfathrebu ag Arianwyr ac Adrodd</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Maintained ongoing funder relationship with Innovate UK. Prepared and submitted milestone reports, managed budget spend tracking, and handled escalation processes &mdash; keeping the programme on solid footing with its primary funding body.</span>
-            <span data-cy>Cynnal perthynas barhaus &acirc;'r cyllidwr gydag Innovate UK. Paratoi a chyflwyno adroddiadau cerrig milltir, rheoli olrhain gwariant cyllideb, a thrin prosesau uwchgyfeirio &mdash; cadw'r rhaglen ar sylfaen gadarn gyda'i phrif gorff cyllido.</span>
+            <span data-en>Maintained ongoing funder relationship with Innovate UK. Prepared and submitted milestone reports, managed budget spend tracking, and handled escalation processes, keeping the programme on solid footing with its primary funding body.</span>
+            <span data-cy>Cynnal perthynas barhaus &acirc;'r cyllidwr gydag Innovate UK. Paratoi a chyflwyno adroddiadau cerrig milltir, rheoli olrhain gwariant cyllideb, a thrin prosesau uwchgyfeirio, cadw'r rhaglen ar sylfaen gadarn gyda'i phrif gorff cyllido.</span>
           </p>
         </div>
 
@@ -1573,8 +1577,8 @@
             <span data-cy>Integreiddio Clinigol a Ffocws ar y Defnyddiwr</span>
           </h3>
           <p class="cs-deliverable__text">
-            <span data-en>Ensured that clinical insight from NHS occupational therapists and rehabilitation specialists remained central to the development process. Coordinated user testing and clinical feedback loops so that SqueezAble was shaped by the people who would use it &mdash; therapists and children alike.</span>
-            <span data-cy>Sicrhau bod mewnwelediad clinigol gan therapyddion galwedigaethol ac arbenigwyr adsefydlu'r GIG yn parhau'n ganolog i'r broses ddatblygu. Cydlynu profion defnyddwyr a dolenni adborth clinigol fel bod SqueezAble yn cael ei lunio gan y bobl a fyddai'n ei ddefnyddio &mdash; therapyddion a phlant fel ei gilydd.</span>
+            <span data-en>Ensured that clinical insight from NHS occupational therapists and rehabilitation specialists remained central to the development process. Coordinated user testing and clinical feedback loops so that SqueezAble was shaped by the people who would use it, therapists and children alike.</span>
+            <span data-cy>Sicrhau bod mewnwelediad clinigol gan therapyddion galwedigaethol ac arbenigwyr adsefydlu'r GIG yn parhau'n ganolog i'r broses ddatblygu. Cydlynu profion defnyddwyr a dolenni adborth clinigol fel bod SqueezAble yn cael ei lunio gan y bobl a fyddai'n ei ddefnyddio, therapyddion a phlant fel ei gilydd.</span>
           </p>
         </div>
       </div>
@@ -1599,14 +1603,14 @@
       </h2>
 
       <div class="cs-why__text">
-        <p data-en-block>Multi-partner medtech programmes carry a particular kind of risk. The science may be excellent, the clinical need proven, the funding secured &mdash; but without structured programme delivery, even the most promising collaborations can lose momentum, miss milestones, or fail to translate research into real-world impact.</p>
-        <p data-cy-block>Mae rhaglenni medtech aml-bartner yn cario math penodol o risg. Gall y wyddoniaeth fod yn rhagorol, yr angen clinigol wedi'i brofi, y cyllid wedi'i sicrhau &mdash; ond heb gyflawni rhaglenni strwythuredig, gall hyd yn oed y cydweithrediadau mwyaf addawol golli momentwm, methu cerrig milltir, neu fethu &acirc; throsi ymchwil yn effaith byd go iawn.</p>
+        <p data-en-block>Multi-partner medtech programmes carry a particular kind of risk. The science may be excellent, the clinical need proven, the funding secured, but without structured programme delivery, even the most promising collaborations can lose momentum, miss milestones, or fail to translate research into real-world impact.</p>
+        <p data-cy-block>Mae rhaglenni medtech aml-bartner yn cario math penodol o risg. Gall y wyddoniaeth fod yn rhagorol, yr angen clinigol wedi'i brofi, y cyllid wedi'i sicrhau, ond heb gyflawni rhaglenni strwythuredig, gall hyd yn oed y cydweithrediadau mwyaf addawol golli momentwm, methu cerrig milltir, neu fethu &acirc; throsi ymchwil yn effaith byd go iawn.</p>
       </div>
 
       <div class="cs-pullquote">
         <p>
-          <span data-en>The difference between a funded project and a delivered one is programme management that holds the complexity together &mdash; across institutions, disciplines, and timelines.</span>
-          <span data-cy>Y gwahaniaeth rhwng prosiect a ariennir ac un a gyflawnir yw rheoli rhaglenni sy'n dal y cymhlethdod at ei gilydd &mdash; ar draws sefydliadau, disgyblaethau, ac amserlenni.</span>
+          <span data-en>The difference between a funded project and a delivered one is programme management that holds the complexity together, across institutions, disciplines, and timelines.</span>
+          <span data-cy>Y gwahaniaeth rhwng prosiect a ariennir ac un a gyflawnir yw rheoli rhaglenni sy'n dal y cymhlethdod at ei gilydd, ar draws sefydliadau, disgyblaethau, ac amserlenni.</span>
         </p>
       </div>
 
@@ -1636,8 +1640,8 @@
         <p data-en-block>The SqueezAble programme was delivered successfully, with all Innovate UK milestones met and the grant fully executed. But the impact went far beyond the funded project itself. GripAble went on to raise an $11M Series A round, expand into the US market through a partnership with Medline, and reach over 50% of UK stroke care pathways.</p>
         <p data-cy-block>Cyflawnwyd rhaglen SqueezAble yn llwyddiannus, gyda holl gerrig milltir Innovate UK wedi'u cwrdd a'r grant wedi'i weithredu'n llawn. Ond aeth yr effaith ymhell y tu hwnt i'r prosiect a ariennir ei hun. Aeth GripAble ymlaen i godi rownd Cyfres A o $11M, ehangu i farchnad yr Unol Daleithiau trwy bartneriaeth &acirc; Medline, a chyrraedd dros 50% o lwybrau gofal str&ocirc;c y DU.</p>
 
-        <p data-en-block>The structured programme management that VDB UK provided during the critical early phase helped establish the operational rigour and credibility that supported GripAble's subsequent growth &mdash; from a funded research collaboration to a globally recognised rehabilitation technology company.</p>
-        <p data-cy-block>Helpodd y rheoli rhaglenni strwythuredig a ddarparwyd gan VDB UK yn ystod y cyfnod cynnar hanfodol i sefydlu'r trylwyredd gweithredol a'r hygrededd a gefnogodd dwf dilynol GripAble &mdash; o gydweithrediad ymchwil a ariennir i gwmni technoleg adsefydlu a gydnabyddir yn fyd-eang.</p>
+        <p data-en-block>The structured programme management that VDB provided during the critical early phase helped establish the operational rigour and credibility that supported GripAble's subsequent growth, from a funded research collaboration to a globally recognised rehabilitation technology company.</p>
+        <p data-cy-block>Helpodd y rheoli rhaglenni strwythuredig a ddarparwyd gan VDB yn ystod y cyfnod cynnar hanfodol i sefydlu'r trylwyredd gweithredol a'r hygrededd a gefnogodd dwf dilynol GripAble, o gydweithrediad ymchwil a ariennir i gwmni technoleg adsefydlu a gydnabyddir yn fyd-eang.</p>
       </div>
 
       <div class="cs-outcome__metrics">
@@ -1797,11 +1801,10 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
-            <path d="M4 4L16 32L28 4" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" aria-hidden="true">
+            <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
             <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="#8b91a8" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <text x="98" y="26" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#4a4f66" letter-spacing="2">UK</text>
           </svg>
           <p>
             <span data-en>UK innovation and programme delivery consultancy. We manage complex programmes, unlock funding, and build innovations that matter.</span>
@@ -1811,11 +1814,12 @@
         <div class="footer__col">
           <h4><span data-en>Capabilities</span><span data-cy>Galluoedd</span></h4>
           <ul>
-            <li><a href="/capabilities/secretariat.html"><span data-en>Secretariat</span><span data-cy>Ysgrifenyddiaeth</span></a></li>
-            <li><a href="/capabilities/research.html"><span data-en>Research</span><span data-cy>Ymchwil</span></a></li>
-            <li><a href="/capabilities/funding.html"><span data-en>Funding</span><span data-cy>Cyllido</span></a></li>
-            <li><a href="/capabilities/science.html"><span data-en>Science</span><span data-cy>Gwyddoniaeth</span></a></li>
-            <li><a href="/capabilities/esg.html"><span data-en>ESG</span><span data-cy>ESG</span></a></li>
+            <li><a href="/capabilities/research.html"><span data-en>Research and innovation</span><span data-cy>Ymchwil ac Arloesi</span></a></li>
+            <li><a href="/capabilities/product-and-system-development.html"><span data-en>Product and system development</span><span data-cy>Datblygu Cynnyrch a Systemau</span></a></li>
+            <li><a href="/capabilities/funding.html"><span data-en>Fundraising and scale-up</span><span data-cy>Codi Arian a Graddio</span></a></li>
+            <li><a href="/capabilities/science.html"><span data-en>Science and engineering</span><span data-cy>Gwyddoniaeth a Pheirianneg</span></a></li>
+            <li><a href="/capabilities/esg.html"><span data-en>Sustainability</span><span data-cy>Cynaliadwyedd</span></a></li>
+            <li><a href="/capabilities/partnership-building.html"><span data-en>Partnership building</span><span data-cy>Adeiladu Partneriaethau</span></a></li>
           </ul>
         </div>
         <div class="footer__col">
