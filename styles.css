@@ -27984,3 +27984,7 @@
       color: var(--slate-900);
     }
   
+
+/* Header logo image — purple wordmark on light, reversed white on dark (brand rule) */
+.header__logo-img { height: 30px; width: auto; display: block; }
+[data-theme="dark"] .header__logo-img { content: url("/images/vdb-wordmark-white.png"); }
