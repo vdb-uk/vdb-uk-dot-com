@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#0f1118"/>
-  <path d="M6 7L16 26L26 7" stroke="#c8283f" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="vdb">
+  <style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&amp;display=swap');</style>
+  <rect x="0" y="0" width="128" height="128" rx="28" fill="#5E1A8E"/>
+  <text x="64" y="88" text-anchor="middle" font-family="'DM Sans', system-ui, -apple-system, sans-serif" font-weight="700" font-size="64" letter-spacing="1" fill="#FFFFFF">vdb</text>
 </svg>

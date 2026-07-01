@@ -16,3 +16,4 @@ test-results/
 # Local working material — kept on disk, out of the public repo
 /docs/input/
 /docs/proposal/
+.nimbalyst/
