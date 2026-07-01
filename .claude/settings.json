@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dev-browser)",
+      "Bash(dev-browser *)",
+      "Bash(npx dev-browser *)",
+      "Bash(.claude/skills/visual-verify/ensure-dev-browser.sh)",
+      "Bash(.claude/skills/visual-verify/ensure-dev-browser.sh *)",
+      "Bash(.claude/skills/visual-verify/shoot.sh *)",
+      "Bash(bash .claude/skills/visual-verify/ensure-dev-browser.sh*)",
+      "Bash(bash .claude/skills/visual-verify/shoot.sh *)",
+      "Bash(python3 build.py)",
+      "Bash(python3 -m http.server *)",
+      "Bash(pkill -f http.server*)",
+      "Skill(visual-verify)"
+    ]
+  }
+}

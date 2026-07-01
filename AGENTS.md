@@ -33,6 +33,14 @@ Then tell Hannah the change is on its way and will be **live at https://vdb-uk.c
 within up to a minute** (the VPS auto-deploys — see Deploy Workflow). If she
 doesn't see it, ask her to hard-refresh (Cloudflare/browser cache).
 
+**Verify it visually before you commit.** Hannah can't read a diff — she needs to
+know the change *looks* right. Run the `visual-verify` skill (it builds, serves
+`dist/`, and screenshots the page(s) you changed in dark + light theme at desktop
++ mobile), then actually **look at the images** and confirm the change landed and
+nothing else broke. It installs its headless browser (`dev-browser`) automatically
+if missing and is pre-authorized in `.claude/settings.json`, so it runs without
+permission prompts. Only commit and push once the screenshots look right.
+
 Keep the usual care while doing it: preserve legal-entity strings (footer
 copyright, privacy data-controller) and follow the `src/` + shared asset pattern.
 
@@ -168,6 +176,9 @@ version), capture it. Improving the skill later compounds for everyone.
 Current skills:
 - `generate-image` — generate + optimise images via the Gemini API into `images/`.
 - `preview` — build `dist/` and serve it locally for visual iteration.
+- `visual-verify` — build + serve + screenshot the changed page(s) in dark/light
+  and desktop/mobile via a headless browser (`dev-browser`), so you can *see* a
+  change is right before committing. Auto-installs its browser; pre-authorized.
 - `verify-deploy` — confirm a push went live on the VPS (HEAD, live HTTP, container).
 - `new-case-study` — scaffold a new case-study page from the shared template.
 

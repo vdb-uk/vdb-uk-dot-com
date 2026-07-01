@@ -16,6 +16,7 @@ instead of rediscovering it.
 
 - [0001 — Serve `dist/` via in-place publish (never rename the dir)](0001-serve-dist-via-in-place-publish.md) — why `build.py` must not swap the `dist/` inode.
 - [0002 — The VPS's installed scripts can drift from the repo copy](0002-vps-installed-scripts-can-drift.md) — re-install `vdb-autodeploy.sh` after editing it.
+- [0003 — Truthful full-page screenshots need theme seeding + force-reveal](0003-truthful-screenshots.md) — why `visual-verify` sets the theme and un-hides `.reveal` sections before shooting.
 
 ## Template
 
