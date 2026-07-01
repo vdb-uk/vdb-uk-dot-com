@@ -9,7 +9,7 @@ services:
       LETSENCRYPT_HOST: vdb-uk.com,www.vdb-uk.com
       LETSENCRYPT_EMAIL: hannah@vandenberghuk.com
     volumes:
-      - /root/arbtechuk/vdb-uk-dot-com:/usr/share/nginx/html:ro
+      - /root/arbtechuk/vdb-uk-dot-com/dist:/usr/share/nginx/html:ro
     networks:
       - proxy
 

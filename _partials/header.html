@@ -1,0 +1,46 @@
+<header class="header">
+    <div class="header__inner">
+      <a href="/" class="header__logo" aria-label="VDB Home">
+        <!-- VDB Logo, geometric monogram -->
+        <svg viewBox="0 0 92 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- V chevron mark -->
+          <path d="M4 4L16 32L28 4" stroke="#5E1A8E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- D -->
+          <path d="M38 6h8c8 0 14 6 14 14s-6 14-14 14h-8V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
+          <!-- B -->
+          <path d="M70 6h7c5 0 8 2.5 8 6.5 0 3-1.5 5-4.5 5.8 3.5 0.6 5.5 3 5.5 6.2 0 4.5-3.5 7.5-9 7.5H70V6z" stroke="white" stroke-width="3" fill="none" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <button class="header__menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span class="header__menu-btn-box" aria-hidden="true">
+          <span class="header__menu-btn-line"></span>
+          <span class="header__menu-btn-line"></span>
+          <span class="header__menu-btn-line"></span>
+        </span>
+      </button>
+
+      <nav class="header__nav" id="site-nav">
+        <ul class="header__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#capabilities">Capabilities</a></li>
+          <li><a href="/case-studies/">Case Studies</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/partnerships.html">Partnerships</a></li>
+        </ul>
+        <div class="theme-toggle" role="group" aria-label="Theme">
+          <button class="theme-toggle__btn" data-set-theme="light" aria-label="Light mode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button class="theme-toggle__btn theme-toggle__btn--active" data-set-theme="dark" aria-label="Dark mode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+
+        <a href="/contact.html" class="header__cta">
+          Contact Us
+        </a>
+      </nav>
+    </div>
+  </header>
