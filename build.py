@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import os
 import shutil
 import sys
 import time
@@ -57,6 +58,40 @@ def copy_static_file(src: Path, dst: Path) -> None:
     shutil.copy2(src, dst)
 
 
+def publish(src: Path, dst: Path) -> None:
+    """Merge the freshly built `src` tree into `dst` *in place*.
+
+    We deliberately do NOT rename `dist.tmp` -> `dist`: nginx serves `dist/`
+    through a Docker bind mount, and a bind mount is pinned to the directory's
+    inode at container start. Renaming the directory swaps the inode, so the
+    running container would keep serving the old (now-unlinked) directory and
+    never see new builds. Instead we keep `dst`'s inode stable, replace each
+    file atomically with os.replace, and prune anything that disappeared — so a
+    concurrent request never observes a missing file.
+    """
+    if dst.exists() and not dst.is_dir():
+        dst.unlink()
+    dst.mkdir(parents=True, exist_ok=True)
+
+    keep = set()
+    for item in src.iterdir():
+        keep.add(item.name)
+        target = dst / item.name
+        if item.is_dir() and not item.is_symlink():
+            publish(item, target)
+        else:
+            if target.is_dir() and not target.is_symlink():
+                shutil.rmtree(target)
+            os.replace(item, target)  # atomic within the same filesystem
+
+    for item in dst.iterdir():
+        if item.name not in keep:
+            if item.is_dir() and not item.is_symlink():
+                shutil.rmtree(item)
+            else:
+                item.unlink()
+
+
 def build() -> int:
     if not SRC_DIR.exists():
         print('ERROR: src directory missing', file=sys.stderr)
@@ -100,9 +135,8 @@ def build() -> int:
             if item.name == 'CNAME' or item.suffix.lower() in STATIC_FILE_EXTS:
                 copy_static_file(item, TMP_DIR / item.name)
 
-        if DIST_DIR.exists():
-            shutil.rmtree(DIST_DIR)
-        TMP_DIR.rename(DIST_DIR)
+        publish(TMP_DIR, DIST_DIR)
+        shutil.rmtree(TMP_DIR, ignore_errors=True)
     except Exception as exc:
         if TMP_DIR.exists():
             shutil.rmtree(TMP_DIR)
