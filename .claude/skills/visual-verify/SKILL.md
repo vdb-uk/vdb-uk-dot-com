@@ -77,3 +77,24 @@ prompts.
 - **Never screenshot `dist/` files directly** — always go through the local
   server URL so paths, includes and assets resolve like production.
 - Screenshots accumulate in `~/.dev-browser/tmp/`; dev-browser manages that dir.
+
+
+## Linux sandbox dependency fallback
+
+The browser installer downloads Chromium but does not always install its shared
+library dependencies in the Docker sandbox. If `shoot.sh` fails with
+`error while loading shared libraries`, diagnose the exact missing libraries:
+
+```bash
+BROWSER=$(find ~/.cache/ms-playwright -path '*chrome-headless-shell' -type f | head -1)
+ldd "$BROWSER" | grep 'not found'
+```
+
+On the Debian sandbox, install the standard Chromium runtime dependencies, then
+rerun the screenshot command:
+
+```bash
+apt-get update && apt-get install -y   libnspr4 libnss3 libatk1.0-0 libatk-bridge2.0-0 libdbus-1-3   libatspi2.0-0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2   libgbm1 libxkbcommon0 libasound2
+```
+
+Do not commit generated `dist/` files or browser caches.

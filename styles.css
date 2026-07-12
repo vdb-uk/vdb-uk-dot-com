@@ -27988,3 +27988,244 @@
 /* Header logo image — purple wordmark on light, reversed white on dark (brand rule) */
 .header__logo-img { height: 30px; width: auto; display: block; }
 [data-theme="dark"] .header__logo-img { content: url("/images/vdb-wordmark-white.png"); }
+
+
+/* Net Zero commitment */
+.track-record__intro {
+  max-width: 62ch;
+  margin: 1rem auto 0;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.65;
+}
+
+.track-record__prompt {
+  margin: 1.75rem 0 0.5rem;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.about-net-zero {
+  background: var(--slate-900);
+  color: var(--slate-100);
+  padding: var(--space-4xl) 0;
+}
+
+.about-net-zero__inner,
+.net-zero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.about-net-zero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: var(--space-2xl);
+}
+
+.about-net-zero h2 {
+  color: white;
+  margin: var(--space-sm) 0 var(--space-md);
+}
+
+.about-net-zero p {
+  color: var(--slate-200);
+  line-height: 1.7;
+  max-width: 64ch;
+}
+
+.about-net-zero__link {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 6px;
+  color: white;
+  display: inline-flex;
+  font-size: 0.95rem;
+  font-weight: 600;
+  gap: var(--space-sm);
+  padding: 13px 18px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.about-net-zero__link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-1px);
+}
+
+.net-zero {
+  background: var(--stone-50);
+}
+
+.net-zero__intro,
+.net-zero__impact {
+  padding: var(--space-5xl) 0;
+}
+
+.net-zero__target {
+  background: var(--red-700);
+  border-left: 4px solid var(--orange-500);
+  color: white;
+  margin: var(--space-lg) 0 var(--space-2xl);
+  padding: var(--space-lg) var(--space-xl);
+}
+
+.net-zero__target-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.net-zero__target-year {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+  margin: var(--space-xs) 0;
+}
+
+.net-zero__target-detail {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.net-zero__prose,
+.net-zero__impact > .net-zero__inner > p {
+  max-width: 72ch;
+}
+
+.net-zero__prose p,
+.net-zero__impact > .net-zero__inner > p {
+  color: var(--slate-600);
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin-top: var(--space-md);
+}
+
+.net-zero__section {
+  padding: var(--space-5xl) 0;
+}
+
+.net-zero__section--stone {
+  background: var(--stone-100);
+}
+
+.net-zero__inner--split {
+  display: grid;
+  gap: var(--space-4xl);
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+}
+
+.net-zero__heading h2,
+.net-zero__impact h2 {
+  color: var(--slate-900);
+  margin-top: var(--space-sm);
+}
+
+.net-zero__list {
+  display: grid;
+  gap: var(--space-lg);
+  list-style: none;
+  padding: 0;
+}
+
+.net-zero__list li {
+  color: var(--slate-600);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.net-zero__list li::before {
+  color: var(--teal-500);
+  content: '\2713';
+  font-weight: 700;
+  left: 0;
+  position: absolute;
+}
+
+.net-zero__section--dark {
+  background: var(--slate-900);
+}
+
+.net-zero__section--dark h2,
+.net-zero__section--dark .net-zero__list li {
+  color: white;
+}
+
+.net-zero__section--dark .net-zero__list li::before {
+  color: var(--gold-400);
+}
+
+.net-zero__signature {
+  border-top: 1px solid var(--stone-300);
+  margin-top: var(--space-3xl);
+  max-width: 72ch;
+  padding-top: var(--space-lg);
+}
+
+.net-zero__signature p {
+  color: var(--slate-600);
+  margin-bottom: var(--space-md);
+}
+
+[data-theme="dark"] .net-zero {
+  background: var(--slate-950);
+}
+
+[data-theme="dark"] .net-zero__intro,
+[data-theme="dark"] .net-zero__impact {
+  background: var(--slate-950);
+}
+
+[data-theme="dark"] .net-zero__section--stone {
+  background: var(--slate-800);
+}
+
+[data-theme="dark"] .net-zero__heading h2,
+[data-theme="dark"] .net-zero__impact h2 {
+  color: white;
+}
+
+[data-theme="dark"] .net-zero__prose p,
+[data-theme="dark"] .net-zero__impact > .net-zero__inner > p,
+[data-theme="dark"] .net-zero__list li,
+[data-theme="dark"] .net-zero__signature p {
+  color: var(--slate-200);
+}
+
+[data-theme="dark"] .net-zero__signature {
+  border-top-color: var(--slate-700);
+}
+
+@media (max-width: 720px) {
+  .about-net-zero__inner,
+  .net-zero__inner--split {
+    grid-template-columns: 1fr;
+  }
+
+  .about-net-zero__link {
+    justify-self: start;
+  }
+
+  .net-zero__intro,
+  .net-zero__impact,
+  .net-zero__section {
+    padding: var(--space-4xl) 0;
+  }
+}
+
+
+/* Track record uses a light surface in light mode, so white copy needs a dark equivalent. */
+[data-theme="light"] .track-record__intro {
+  color: var(--slate-700);
+}
+
+[data-theme="light"] .track-record__prompt {
+  color: var(--slate-600);
+}
